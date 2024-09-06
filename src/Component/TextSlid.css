@@ -1,0 +1,168 @@
+.texslid h3{
+    padding-top: 50px;
+    padding-left: 50px;
+    max-width: 329px !important;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #071F60;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
+.texslid p{
+    font-size: 17px;
+    max-width: 329px !important;
+    line-height: 23px;
+    color: #071F60 !important;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: 500;
+}
+.texslidd{
+    padding-top: 50px;
+    padding-left: 46px;
+    width: 76%;
+    padding-bottom: 110px;
+}
+
+.slidtext{
+    width: 100%;
+    max-width: 600px !important;
+    padding: 50px !important;
+}
+
+.hmainq{
+    padding-left: 50px;
+    margin-top: 40px;
+}
+.hmainq a{
+    padding: 10px 28px;
+    transition: all .5s;
+    background-color: #fff;
+    border: 1px solid #071F60;
+    border-width: 1px;
+    text-decoration: none;
+    color: #071F60;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    font-size: 18px;
+}
+
+.hmainq a:hover{
+    color: #fff;
+    background-color: #071F60;
+    border: 1px solid #071F60;
+    border-width: 1px;
+    transition: all .5s;
+}
+
+.clabsol a{
+    text-decoration: none;
+    color: #071F60;
+    background-color: #D4B2E2;
+    padding: 5px 10px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+}
+
+.clabsol{
+    position: absolute;
+    top: 8px;
+}
+
+.visihidd{
+  display: none;
+}
+
+.visisho:hover .visihidd{
+    display: block;
+}
+
+.claso{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.dispfle{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    background-color: #FDFBF9;
+}
+
+@media screen and (max-width: 769px) {
+    .dispfle{
+        flex-direction: column;
+    }
+    .texslid h3{
+        font-size: 25px !important;
+        text-align: center !important;
+    }
+
+    .texslid{
+        text-align: center !important;
+    }
+
+    .texslid p{
+        font-size: 14px;
+        max-width: 529px !important;
+        line-height: 23px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hmainq{
+        padding-left: 0px !important;
+        display: none;
+    }
+
+    .texslidd{
+        padding-left: 20px !important;
+        width: 100%;
+        padding-top: 20px !important;
+        padding-bottom: 50px;
+    }
+
+    .visihidd{
+        display: block !important;
+      }
+
+      .fobto{
+        width: 110% !important;
+      }
+}
+
+.fobto{
+    border: 1px solid black;
+     margin-left: 10px;
+      margin-right: 10px;
+       padding: 7px 5px;
+        width: 62%;
+         align-items: center; 
+
+}
+
+@media screen and (max-width:1215px) and (min-width:990px) {
+    .fobto{
+        width: 130% !important;
+      }
+
+      .addtbton{
+        margin-right: 10px;
+        font-size: 13px !important;
+        padding: 10px 16px !important;
+      }
+}
+
+.addtbton{
+    margin-right: 9px;
+     font-size: 15px;
+     padding: 10px 28px;
+      background-color: #071F60;
+       border: 1px solid #071F60;
+        color: #fff;
+         cursor: pointer ;
+}

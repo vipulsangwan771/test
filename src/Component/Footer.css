@@ -1,0 +1,246 @@
+.disflds{
+    display: flex;
+    padding: 0px 50px;
+    gap: 30PX;
+
+}
+.mpds{
+    background-color: #E2F1F3;
+    padding-top: 71px;
+    padding-bottom: 44px;
+}
+.maras{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.maras a{
+    display: flex;
+    gap: 10px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    color: #071F60 !important;
+text-decoration: none;
+    align-items: flex-start;
+    font-weight: 600;
+    font-size: 12px;
+
+}
+
+.texxent{
+    text-align: center;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    color: #071F60 !important;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.texxent a{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    color: #071F60 !important;
+    font-weight: 500;
+}
+
+.gdh{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+.diblonon{
+    display: none !important;
+}
+
+@media screen and (max-width:990px) {
+    .disflds{
+        flex-direction: column;
+        padding: 0 15px !important;
+    }
+    .gdh{
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 10px;
+    }
+    .gdh img{
+        width: 23px;
+        height: 23px;
+    }
+    .mpds{
+        padding-top: 41px !important;
+    }
+
+    .diblonon{
+        display: block !important;
+    }
+
+    .fthea{
+        display: none !important;
+    }
+    .parsty{
+        max-width: 600px !important;
+    }
+
+    .aswsaaq{
+        width: 100% !important;
+    }
+
+    .disflds {
+        gap: 10px !important;
+    }
+}
+
+.parsty{
+    color: #071F60;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 600;
+    max-width: 351px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
+
+.fothead h2{
+    font-family: 'Recoleta', serif;
+    font-size: 25px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.fothead p a{
+    text-decoration: none;
+    color: #071F60;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
+
+.fothead p a:hover{
+    text-decoration: underline;
+     text-underline-offset: 7px;
+}
+
+.fthea{
+    display: flex;
+    gap: 30px;
+    /* width: 100%; */
+}
+
+.theaf h2{
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #071F60;
+    font-weight: 500;
+    line-height: 22px;
+    font-family: 'Recoleta', serif;
+}
+
+.theaf p{
+    margin-bottom: 15px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #071F60;
+}
+
+.theaf{
+    max-width: 431px;
+    width: 100%;
+}
+.aswsaaq{
+    /* max-width: 50%; */
+    width: 70%;
+}
+
+.fothead{
+    min-width: 158px;
+}
+
+.styinp input {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    padding: 0 0 0 16px;
+    height: 45px;
+    text-align: left;
+    color: rgb(7, 31, 96);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(7, 31, 96);
+    transition: border-color 0.3s ease; 
+}
+
+.styinp input:focus {
+    border-color: rgb(208, 51, 31);
+    outline: none;
+}
+
+.styinp{
+    position: relative;
+}
+
+.styinp button{
+    position: absolute;
+    right: 2px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    top: 8px;
+    width: 50px;
+}
+
+.styinp button svg{
+    width: 50px;
+}
+
+
+
+.acorhe{
+    font-family: 'Recoleta', serif;
+    font-size: 25px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.acorpara a{
+    text-decoration: none;
+    color: #071F60;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
+
+.accordion-button {
+    background-color: #E2F1F3;
+}
+
+.accordion-body{
+    background-color: #E2F1F3;
+    border: none !important;
+    outline: none;
+}
+
+.accordion-item {
+    border-top: 0.5px solid #D2E6F1 !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    border-width: 0.5px !important;
+    border-radius: 0px !important;
+}
+
+.accordion-header button{   
+    outline: none !important;
+    border: none !important;
+    background-color: #E2F1F3 !important;
+}
+
+.accordion-header{
+--bs-accordion-btn-focus-box-shadow: 0 0 0 0;
+}

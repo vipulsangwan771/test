@@ -1,5 +1,79 @@
 @media screen and (max-width:767px) {
     .non{
-        display: none;
+        display: none !important;
     }
+
+    .sticknon2{
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+    .fonch h3{
+        font-size: 10px;
+        width: 100% !important;
+    }
+}
+
+.fonch h3{
+    font-size: 12px;
+}
+.non{
+    display: flex;
+    width: 40%;
+    padding-left: 25px;
+    justify-content: flex-start;
+    gap: 45px;
+    align-items: center;
+}
+
+.arem a{
+    text-decoration: none;
+    color: #071F60;
+}
+
+.arem a:hover{
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+
+.sticknon{
+   padding: '15px 25px';
+        position: fixed;
+        top: 80;
+        width: 100% !important;
+        z-index: 1000; 
+        margin-top: 29px !important;
+      background-color: #fff;
+      overflow: hidden !important;
+}
+
+@media screen and (max-width:990px) {
+    .sticknon{
+        padding: 15px 20px !important;
+        display: none !important;
+    }
+
+    .nabloon{
+        display: block !important;
+    }
+}
+
+.sticknon2{
+    background-color: #D0AF71;
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+    z-index: 1000; 
+    overflow: hidden !important;
+}
+
+.nabloon{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+    background-color: #fff;
+    margin-top: 29px  !important;
+    padding: 15px 10px 15px 10px;
+    z-index: 100;
 }
