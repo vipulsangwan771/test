@@ -1,0 +1,152 @@
+.sigmain {
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+.sinmai {
+    padding: 30px 50px;
+    text-align: center;
+}
+
+@media screen and (max-width:990px) {
+    .sinmai {
+        padding: 30px 20px;
+    }
+
+   
+    .sigmain {
+        padding-bottom: 15px !important;
+    }
+}
+
+.signheadawsq h1 {
+    margin-bottom: 30px !important;
+    font-size: 42px;
+    line-height: 45px;
+    font-family: 'Recoleta', 'serif';
+    color: #071F60;
+    text-align: center;
+}
+
+.signheadawsq h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    color: #071F60;
+    margin-bottom: 30px !important;
+    text-align: center;
+}
+
+.signinoufor {
+    margin-bottom: 15px !important;
+    padding: 14px 10px;
+    width: 100%;
+    font-size: 15px;
+    border: none !important;
+    outline: none !important;
+}
+
+.signinoufor::placeholder {
+    font-weight: 600 !important;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    color: #071F60 !important;
+}
+
+
+
+
+
+
+.signbutoisnawq {
+    padding: 10px 28px;
+    transition: all .5s;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    max-height: 45px;
+    margin-bottom: 40px;
+    font-size: 16px !important;
+    text-transform: capitalize;
+    width: 100%;
+    color: #fff;
+    background-color: #071F60;
+    border: 1px solid #071F60;
+    font-weight: 600;
+}
+
+.signbutoisnawq:hover {
+    color: #071F60;
+    background-color: #fff;
+}
+
+@media screen and (max-width:990px) {
+    .signbutoisnawq {
+        margin-bottom: 30px !important;
+        margin-top: 25px !important;
+    }
+}
+.signcreateawq a{
+    text-decoration: none;
+}
+.signcreateawq{
+    border-top: none ;
+    /* padding-top: 30px; */
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+.signcreateawq p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 28px;
+    color: #071F60;  
+      font-family: 'Libre Baskerville', 'serif';
+}
+.sigcreataswq{
+    padding: 10px 28px;
+    transition: all .5s;
+    max-height: 45px;
+    text-decoration: none;
+    color: #071F60;
+    font-weight: 600;
+    background-color: none;
+    border: 1.5px solid #071F60;
+}
+
+.sigcreataswq:hover{
+    background-color: #071F60;
+    color: #fff;
+}
+.nmensa{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    padding-top: 100px;
+}
+.nmensaa{
+    text-decoration: none;
+    opacity: .2;
+    color: #071F60;
+}
+.nmensa a{
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Open Sans', 'sans-serif' !important;
+  color: #071F60 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

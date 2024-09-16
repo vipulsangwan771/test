@@ -19,6 +19,11 @@ import dotImage2 from './Assests/dot2.png';
 import dotImage3 from './Assests/dot3.png';
 import dotImage4 from './Assests/dot4.webp';
 import dotImage5 from './Assests/dot5.webp';
+import Navbar from './Navbar'
+import Footer from './Footer'
+import TextSlider from './TextSlider'
+import IMgSlid from './IMgSlid'
+import Tabb from './Tabb'
 // TextSlider 
 
 
@@ -129,6 +134,7 @@ const Main = () => {
     }
     return (
         <>
+        <Navbar/>
             <section >
                 <section style={{ overflow: 'hidden', width: '100%' }}>
                     <div className=' bane'>
@@ -444,9 +450,10 @@ const Main = () => {
                     </div>
                 </Slider>
             </div>
-
-
-
+<TextSlider/>
+<IMgSlid/>
+<Tabb/>
+<Footer/>
         </>
     );
 };

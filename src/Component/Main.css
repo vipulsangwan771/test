@@ -50,12 +50,12 @@
 
     .bane {
         background-image: url(./Assests/baner2.webp) !important;
-    height: 450px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100% !important;
-    padding-top: 29px !important;
+        height: 450px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100% !important;
+        padding-top: 29px !important;
     }
 
 }
@@ -152,7 +152,7 @@
 .hid {
     overflow: hidden !important;
     margin-bottom: 26px;
-   
+
 }
 
 .expore h5 {
@@ -198,11 +198,11 @@
         padding-bottom: 28px !important;
     }
 
-    .hid img{
+    .hid img {
         height: 276px !important;
     }
 
-    .fontt{
+    .fontt {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -213,11 +213,11 @@
     padding-top: 24px;
 }
 
-.imamarlef{
+.imamarlef {
     margin-left: 60px !important;
 }
 
-.hid img{
+.hid img {
     height: 410px;
 }
 
@@ -437,6 +437,7 @@
         justify-content: flex-end;
         margin-top: 67.3px !important;
     }
+
     .hmainas {
         display: none;
     }
@@ -524,11 +525,11 @@
     display: none;
 }
 
-.slick-dots li{
+.slick-dots li {
     width: 185px !important;
     margin: 0px 10px !important;
 }
 
-.fonfam{
+.fonfam {
     font-family: 'Recoleta', serif;
 }

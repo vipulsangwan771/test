@@ -88,13 +88,14 @@
 .dispfle{
     display: flex;
     overflow: hidden;
-    height: 100%;
+    height: 550px;
     background-color: #FDFBF9;
 }
 
 @media screen and (max-width: 769px) {
     .dispfle{
         flex-direction: column;
+        height: 100% !important;
     }
     .texslid h3{
         font-size: 25px !important;

@@ -5,13 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CartProvider } from './Component/CartContext';
 
-
+import { SelectedImageProvider } from './Component/SelectedImageContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+       <SelectedImageProvider>
+    <CartProvider>
     <App />
+    </CartProvider>
+    </SelectedImageProvider>
   </React.StrictMode>
 );
 

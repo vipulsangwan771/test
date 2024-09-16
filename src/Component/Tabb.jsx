@@ -24,7 +24,7 @@ const Tabb = () => {
     return (
         <>
 
-            <section style={{ backgroundColor: '#D2E6F1' }}>
+            <section style={{ backgroundColor: '#D2E6F1' , overflow:'hidden'}}>
                 <div className=" tchafon ">
 
                     <Tabs
@@ -111,8 +111,8 @@ const Tabb = () => {
                         </Tab>
 
                         <Tab eventKey="nutrition" title="nutrition">
-                            <div className='w-100'>
-                                <div className='w-100 dispas' style={{  overflow: 'hidden', gap: '10px' }}>
+                            <div >
+                                <div className=' dispas' style={{  overflow: 'hidden', gap: '10px' }}>
                                     <div>
                                         <div style={{ overflow: 'hidden' }}>
                                             <a href="#" className='aimas' >
@@ -129,7 +129,7 @@ const Tabb = () => {
                                         <a href="#" className='tacva'>read now</a>
                                     </div>
                                     <div >
-                                        <div >
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{}}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab14}  alt="" />
@@ -148,7 +148,7 @@ const Tabb = () => {
                                             </div>
                                         </div>
 
-                                        <div className='w-100'>
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{ paddingTop: '10px' }}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab15}  alt="" />
@@ -164,7 +164,7 @@ const Tabb = () => {
                                             </div>
                                         </div>
 
-                                        <div className='w-100'>
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{ paddingTop: '10px' }}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab16}  alt="" />
@@ -205,7 +205,7 @@ const Tabb = () => {
                                         <a href="#" className='tacva'>read now</a>
                                     </div>
                                     <div >
-                                        <div >
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{}}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab6}  alt="" />
@@ -221,7 +221,7 @@ const Tabb = () => {
                                             </div>
                                         </div>
 
-                                        <div className='w-100'>
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{ paddingTop: '10px' }}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab7}  alt="" />
@@ -238,7 +238,7 @@ const Tabb = () => {
                                             </div>
                                         </div>
 
-                                        <div className='w-100'>
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{ paddingTop: '10px' }}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab8}  alt="" />
@@ -279,7 +279,7 @@ const Tabb = () => {
                                         <a href="#" className='tacva'>read now</a>
                                     </div>
                                     <div >
-                                        <div >
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{}}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab10}  alt="" />
@@ -295,7 +295,7 @@ const Tabb = () => {
                                             </div>
                                         </div>
 
-                                        <div className='w-100'>
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{ paddingTop: '10px' }}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab11}  alt="" />
@@ -311,7 +311,7 @@ const Tabb = () => {
                                             </div>
                                         </div>
 
-                                        <div className='w-100'>
+                                        <div style={{width:'97%'}}>
                                             <div className='grdds' style={{ paddingTop: '10px' }}>
                                                 <a href="#" className='aswas'>
                                                     <img src={tab12}  alt="" />

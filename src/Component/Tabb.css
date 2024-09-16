@@ -42,6 +42,7 @@
 .dispas{
     display: flex;
     align-items: flex-start;
+    width: 90% !important;
 }
 
 @media screen and (max-width:1030px) {
@@ -88,9 +89,11 @@
 }
 
 .grdds{
+    overflow: hidden !important;
   display: flex;
   gap: 36px;
   align-items: center;
+  width: 97% !important;
 }
 
 .codas{
