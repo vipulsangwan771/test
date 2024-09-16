@@ -96,20 +96,20 @@ const Navbar = () => {
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '50px', width: '40%' }}>
                     <Link to="/country">
-                <img src={selectedImage} width={30} height={20} style={{ borderRadius: '100%' }} alt="" />
+                <img src={selectedImage} width={25} height={25} style={{ borderRadius: '100%' }} alt="" />
             </Link>
-                        <div><Link to="/sign"><FontAwesomeIcon icon={faPersonBreastfeeding} style={{ color: 'black' }} /></Link></div>
+                        <div><Link to="/sign"><FontAwesomeIcon icon={faPersonBreastfeeding} style={{ color: 'black', height:'24px', width:'22px' }} /></Link></div>
                         <div>
                             <FontAwesomeIcon
                                 icon={faMagnifyingGlass}
-                                style={{ color: 'black', cursor: 'pointer' }}
+                                style={{ color: 'black', cursor: 'pointer',width:'21px', height:'24px' }}
                                 onClick={() => setSearchVisible(!searchVisible)}
                             />
 
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <Link to="/cart">
-                                <svg className="pointer-events-none" width="28" height="20" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg className="pointer-events-none" width="28" height="24" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.5 11H26.5V19C26.5 20.1046 25.6046 21 24.5 21H6.5C5.39543 21 4.5 20.1046 4.5 19V11Z" fill="white"></path>
                                     <path d="M25.5 21C26.0523 21 26.5 20.5523 26.5 20V11.5H4.5V20C4.5 20.5523 4.94772 21 5.5 21H25.5Z" fill="white"></path>
                                     <path d="M15.5 11.5V2L16.4161 2.09643C21.4983 2.6314 25.6119 6.46743 26.5 11.5H15.5Z" fill="white"></path>

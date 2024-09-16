@@ -98,7 +98,7 @@ const Cart = () => {
                                             </div>
                                             <div className='w-100'>
                                                 <div className='itnm' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                    <p className='itnm'>{item.name}</p>
+                                                    <p style={{paddingRight: '10px'}} className='itnm'>{item.name}</p>
                                                     <p>£{(item.price*item.quantity).toFixed(2)}</p>
                                                 </div>
                                                 <div className='pricar'>
