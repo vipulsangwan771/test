@@ -373,6 +373,9 @@
     .aslpoi {
         margin-top: -298px !important;
     }
+    .padtopbigsmall{
+        padding-top: 88px !important;
+    }
 }
 
 .doulvids {
@@ -579,4 +582,8 @@
     font-size: 15px;
     line-height: 23px;
 
+}
+
+.padtopbigsmall{
+    padding-top: 108px;
 }

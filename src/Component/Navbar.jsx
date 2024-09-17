@@ -4,13 +4,26 @@ import Slider from 'react-slick';
 import logo from './Assests/logo.svg';
 import logo2 from './Assests/logo2.avif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faPersonBreastfeeding, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faPersonBreastfeeding, faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 import './Nav.css';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import { useSelectedImage } from './SelectedImageContext';
 import resized from './Assests/resized.webp';
 import resizedd from './Assests/resizedd.webp';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+import Accordion from 'react-bootstrap/Accordion';
+
+
+
+
+
+
+
+
+
+
 const Navbar = () => {
     const { cart } = useCart();
     const [scrolled, setScrolled] = useState(false);
@@ -57,6 +70,29 @@ const Navbar = () => {
         autoplay: true,
         autoplaySpeed: 800
     };
+
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const options = [
+
+        {
+            name: 'Enable both scrolling & backdrop',
+            scroll: true,
+            backdrop: true,
+        },
+    ];
+
+
+
+
+
+
+
+
+
 
     return (
         <>
@@ -111,7 +147,7 @@ const Navbar = () => {
 
                                 <div>
                                     <div className='w-100' style={{ display: 'flex' }}>
-                                    <div className='w-100 dweop'>
+                                        <div className='w-100 dweop'>
                                             <Link to="/blog">    <h1>read all</h1></Link>
                                             <Link to="/preg">    <h1>pregnancy</h1></Link>
                                             <Link to="/feed">    <h1>feeding</h1></Link>
@@ -198,17 +234,98 @@ const Navbar = () => {
 
 
             <section className='nabloon'>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className='w-100 mx-auto '>
-                    <div style={{ display: 'flex', justifyContent: 'flex-start', width: '40%' }}>
-                        <FontAwesomeIcon icon={faBars} />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className='w-100 mx-auto '>
+                    <div style={{ display: 'flex', justifyContent: 'flex-start', width: '30%' }}>
+
+                        <button className='nachotabuon' variant="" onClick={handleShow}>
+                            <FontAwesomeIcon icon={faBars} />
+                        </button>
+                        <Offcanvas show={show} onHide={handleClose} backdrop="static" className='odalks' >
+                            <Offcanvas.Header closeButton>
+                                <Offcanvas.Title></Offcanvas.Title>
+                            </Offcanvas.Header>
+                            <Offcanvas.Body>
+                                <div>
+                                    <div className='offmaiwwwq'>
+                                        <div>
+
+                                            <Accordion className='w-100 diblonon'>
+                                                <Accordion.Item eventKey="3">
+                                                    <Accordion.Header>  <Link>shop</Link></Accordion.Header>
+                                                    <Accordion.Body>
+                                                        <Link to="/shop"><h1>shop all</h1></Link>
+                                                        <Link>    <h1>class milk</h1></Link>
+                                                        <Link>    <h1>organic milk</h1></Link>
+                                                        <Link>    <h1>goat milk</h1></Link>
+                                                        <Link>    <h1>ready to feed</h1></Link>
+                                                        <Link>    <h1>baby porridges</h1></Link>
+                                                        <Link>    <h1>speciality & supplements</h1></Link>
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+
+                                            </Accordion>
+                                        </div>
+                                        <div>
+                                            <Link to="/products">bundles</Link>
+                                        </div>
+                                        <div>
+                                            <Link to="/blog">blog</Link>
+                                        </div>
+                                        <div>
+                                            <Accordion className='w-100 diblonon'>
+                                                <Accordion.Item eventKey="4">
+                                                    <Accordion.Header>  <Link>about</Link></Accordion.Header>
+                                                    <Accordion.Body>
+                                                        <Link to="/blog">    <h1>read all</h1></Link>
+                                                        <Link to="/preg">    <h1>pregnancy</h1></Link>
+                                                        <Link to="/feed">    <h1>feeding</h1></Link>
+                                                        <Link to="/nutri">     <h1>nutrition</h1></Link>
+                                                        <Link>    <h1>parenting advice</h1></Link>
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+
+                                            </Accordion>
+                                        </div>
+                                    </div>
+                                    <div className='oflas'>
+                                        <div>
+                                            <FontAwesomeIcon
+                                                icon={faMagnifyingGlass}
+                                                style={{ color: '#071F60', cursor: 'pointer', width: '21px', height: '24px' }}
+                                                onClick={() => setSearchVisible(!searchVisible)}
+                                            />
+                                            <p>search</p>
+                                        </div>
+                                        <div>
+                                            <Link to="/sign">
+                                                {/* <FontAwesomeIcon icon={faUser} style={{ color: 'black', height: '24px', width: '22px' }} /> */}
+                                                <svg class="mb-[15px] mx-auto" width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="10.6666" cy="5.66667" r="4.66667" stroke="#071F60" stroke-width="2"></circle>
+                                                    <path d="M1 17C1 14.7909 2.79086 13 5 13H16C18.2091 13 20 14.7909 20 17V24H1L1 17Z" stroke="#071F60" stroke-width="2"></path>
+                                                </svg>
+                                            </Link>
+                                            <p>account</p>
+                                        </div>
+                                        <div>
+                                            <Link to="/country">
+                                                <img src={selectedImage} width={25} height={25} style={{ borderRadius: '100%' }} alt="" />
+
+                                            </Link>
+                                            <p>country</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Offcanvas.Body>
+                        </Offcanvas>
+
                     </div>
                     <div>
-                        <div style={{ display: 'flex', justifyContent: 'flex-start', width: '30%' }}>
+                        <div style={{ display: 'flex', justifyContent: 'flex-start', width: '40%' }}>
                             <Link to="/">
                                 {!scrolled ? (
                                     <img src={logo} width={72} height={30} alt="Logo" />
                                 ) : (
-                                    <img src={logo2} width={50} height={30} alt="Logo 2" />
+                                    <img src={logo2} width={72} style={{ paddingLeft: '12px', paddingRight: '12px' }} height={30} alt="Logo 2" />
                                 )}
                             </Link>
                         </div>

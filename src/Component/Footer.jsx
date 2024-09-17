@@ -97,7 +97,7 @@ const Footer = () => {
                                 <p>  <a href="#">Build Your Bundle</a>  </p>
                             </div>
                         </div>
-
+ 
                         <Accordion className='w-100 diblonon'>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>  <h2 className='acorhe'>Kendamil</h2></Accordion.Header>
@@ -121,7 +121,7 @@ const Footer = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header><h2 className='acorhe'>  <Link to="/">Main menu</Link></h2></Accordion.Header>
+                                <Accordion.Header><h2 className='acorhe'>  Main menu</h2></Accordion.Header>
                                 <Accordion.Body>
                                 <p className='acorpara'>  <a href="#wds">  <Link to="/about">About</Link></a>  </p>
                                 <p className='acorpara'>  <a href="#sdw">  <Link to="/shop">Shop</Link></a>  </p>

@@ -248,3 +248,104 @@
 .arem:hover .dropdown-content2 {
     display: block;
 }
+
+.nachotabuon {
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.oflas {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.oflas p {
+    color: #071F60;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.odalks {
+    background-color: #FDFBF9;
+    overflow: hidden;
+}
+
+.offmaiwwwq {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.offmaiwwwq a {
+    font-size: 28px;
+    line-height: 30px;
+    color: #071F60;
+    font-family: 'Recoleta', 'serif';
+    text-decoration: none;
+}
+
+.acorpara a {
+    text-decoration: none;
+    color: #071F60;
+    /* font-weight: 600; */
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
+
+.acorhe {
+    font-family: 'Recoleta', serif;
+    font-size: 25px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+
+.offmaiwwwq .accordion-button {
+    background-color: #FDFBF9 !important;
+    padding-left: 0px !important;
+}
+
+.offmaiwwwq .accordion-body {
+    background-color: #FDFBF9 !important;
+    border: none !important;
+    outline: none;
+}
+
+.offmaiwwwq .accordion-item {
+    border-top: 0.5px solid #FDFBF9 !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    border-width: 0.5px !important;
+    border-radius: 0px !important;
+}
+
+.accordion-header button {
+    outline: none !important;
+    border: none !important;
+    background-color: #FDFBF9 !important;
+}
+
+.accordion-header {
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
+}
+
+.accordion-button:not(.collapsed)::after {
+
+    transform: rotate(2deg);
+}
+
+.accordion-button::after {
+    transform: rotate(-90deg);
+}
