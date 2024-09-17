@@ -8,7 +8,7 @@ import applepy from './Assests/applepy.svg';
 import Recent from './Recent';
 import axios from 'axios';
 import { loadStripe } from '@stripe/stripe-js';
-const stripe = window.Stripe('pk_test_51Oho45SGowUGr9ZACVRpS9E7YNC8l02K2IrNVs7xybE5Whg1E2Yrbd7IIBtHP5jfhbyskWMIt5qYN8R8PvBJ3l3O00rJDjL6R7'); 
+const stripe = window.Stripe('stripe_publish_key'); //Replace your Stripe publish key
 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 const Cart = () => {
@@ -28,7 +28,7 @@ const Cart = () => {
     };
 
 
-    const stripePromise = loadStripe('pk_test_51Oho45SGowUGr9ZACVRpS9E7YNC8l02K2IrNVs7xybE5Whg1E2Yrbd7IIBtHP5jfhbyskWMIt5qYN8R8PvBJ3l3O00rJDjL6R7');  // Replace with your Stripe publishable key
+    const stripePromise = loadStripe('Strip_publish_key');  // Replace with your Stripe publishable key
 
     const proceedToCheckout =async (productName, productPrice, productQuantity) => {
         const lineItems = cart.items.map(item => ({
@@ -55,7 +55,7 @@ const Cart = () => {
             const response = await axios.post('https://api.stripe.com/v1/checkout/sessions', sBody, {
                 headers: {
                     'Content-Type': ' application/x-www-form-urlencoded',
-                    'Authorization': `Bearer sk_test_51Oho45SGowUGr9ZA0e7R3sX0BKCPOBpMtwGF9qPqWqJw9tzI7BCHbrIpO66oUhwuYsUUCPKJjhschVZdtewLTAT600TPopjBi1`,  // Replace with your actual secret key
+                    'Authorization': `Bearer  secret_key`,  // Replace with your actual secret key
                 },
             });
 
