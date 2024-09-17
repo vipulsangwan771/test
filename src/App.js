@@ -16,6 +16,9 @@ import Success from './Component/Success';
 import Cancel from './Component/Cancel';
 import React, { useState } from 'react';
 import Country from './Component/Country';
+import Preg from './Component/Preg';
+import Feed from './Component/Feed';
+import Nutri from './Component/Nutri';
 function App() {
   return (
     <>
@@ -36,6 +39,9 @@ function App() {
           <Route path="/cancel" element={<Cancel/>} />
           <Route path="/success" element={<Success/>} />
           <Route path="/country" element={<Country/>} />
+          <Route path="/preg" element={<Preg/>} />
+          <Route path="/feed" element={<Feed/>} />
+          <Route path="/nutri" element={<Nutri/>} />
         </Routes>
       </Router>
     </>

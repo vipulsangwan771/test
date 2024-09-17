@@ -113,9 +113,9 @@ const Navbar = () => {
                                     <div className='w-100' style={{ display: 'flex' }}>
                                     <div className='w-100 dweop'>
                                             <Link to="/blog">    <h1>read all</h1></Link>
-                                            <Link>    <h1>pregnancy</h1></Link>
-                                            <Link>    <h1>feeding</h1></Link>
-                                            <Link>    <h1>nutrition</h1></Link>
+                                            <Link to="/preg">    <h1>pregnancy</h1></Link>
+                                            <Link to="/feed">    <h1>feeding</h1></Link>
+                                            <Link to="/nutri">     <h1>nutrition</h1></Link>
                                             <Link>    <h1>parenting advice</h1></Link>
                                         </div>
                                         <div className='w-100 h-100 hoimga'>
