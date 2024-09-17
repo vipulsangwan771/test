@@ -51,7 +51,7 @@ const Blog = () => {
     return (
         <>
             <Navbar />
-            <section style={{ paddingTop: '89px' }}>
+            <section style={{ paddingTop: '108px' }}>
 
                 <div className='backblog'>
                     <div className='nmensablog'>

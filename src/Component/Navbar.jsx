@@ -9,7 +9,8 @@ import './Nav.css';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import { useSelectedImage } from './SelectedImageContext';
-import usa from './Assests/usa.svg';
+import resized from './Assests/resized.webp';
+import resizedd from './Assests/resizedd.webp';
 const Navbar = () => {
     const { cart } = useCart();
     const [scrolled, setScrolled] = useState(false);
@@ -69,17 +70,64 @@ const Navbar = () => {
                     </div>
                 </Slider>
             </section>
-            <section className='sticknon' style={{ padding: '15px 25px', overflow: 'hidden' }} >
-                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }} className='w-100 mx-auto '>
+            <section className='sticknon' style={{ padding: '10px 25px', }} >
+                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }} className='w-100 mx-auto pohodrop'>
                     <div className='non'>
-                        <div className='arem'>
-                            <Link to="/shop">shop</Link>
+                        <div className="arem">
+                            <Link to="/shop" className="shop-link">shop</Link>
+                            <div className="dropdown-content">
+                                <div>
+                                    <div className='w-100' style={{ display: 'flex' }}>
+                                        <div className='w-100 dweop'>
+                                            <Link to="/shop"><h1>shop all</h1></Link>
+                                            <Link>    <h1>class milk</h1></Link>
+                                            <Link>    <h1>organic milk</h1></Link>
+                                            <Link>    <h1>goat milk</h1></Link>
+                                            <Link>    <h1>ready to feed</h1></Link>
+                                            <Link>    <h1>baby porridges</h1></Link>
+                                            <Link>    <h1>speciality & supplements</h1></Link>
+                                        </div>
+                                        <div className='w-100 h-100 hoimga'>
+                                            <img src={resized} alt="" />
+                                            <div className='tespoialp'>
+                                                <h1>new in: Pro-Comfort Baby Drops</h1>
+                                                <h3>
+                                                    Everything you need to know about the latest addition to the Kendamil family</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div className='arem'>
                             <Link to="/products">bundles</Link>
                         </div>
                         <div className='arem'>
                             <Link to="/blog">blog</Link>
+                            <div className="dropdown-content2">
+
+
+
+                                <div>
+                                    <div className='w-100' style={{ display: 'flex' }}>
+                                    <div className='w-100 dweop'>
+                                            <Link to="/blog">    <h1>read all</h1></Link>
+                                            <Link>    <h1>pregnancy</h1></Link>
+                                            <Link>    <h1>feeding</h1></Link>
+                                            <Link>    <h1>nutrition</h1></Link>
+                                            <Link>    <h1>parenting advice</h1></Link>
+                                        </div>
+                                        <div className='w-100 h-100 hoimga'>
+                                            <img src={resizedd} alt="" />
+                                            <div className='tespoialp'>
+                                                <h1>Making the switch</h1>
+                                                <h3>Trying a new formula? We're here with everything you need to help your little one make a smooth transition.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className='arem'>
                             <Link to="/about">about</Link>
@@ -88,21 +136,21 @@ const Navbar = () => {
                     <div style={{ display: 'flex', justifyContent: 'center', width: '20%' }}>
                         <Link to="/">
                             {!scrolled ? (
-                                <img src={logo} width={181} height={30} alt="Logo" />
+                                <img src={logo} width={181} height={26} alt="Logo" />
                             ) : (
                                 <img src={logo2} width={50} height={30} alt="Logo 2" />
                             )}
                         </Link>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '50px', width: '40%' }}>
-                    <Link to="/country">
-                <img src={selectedImage} width={25} height={25} style={{ borderRadius: '100%' }} alt="" />
-            </Link>
-                        <div><Link to="/sign"><FontAwesomeIcon icon={faPersonBreastfeeding} style={{ color: 'black', height:'24px', width:'22px' }} /></Link></div>
+                        <Link to="/country">
+                            <img src={selectedImage} width={25} height={25} style={{ borderRadius: '100%' }} alt="" />
+                        </Link>
+                        <div><Link to="/sign"><FontAwesomeIcon icon={faPersonBreastfeeding} style={{ color: 'black', height: '24px', width: '22px' }} /></Link></div>
                         <div>
                             <FontAwesomeIcon
                                 icon={faMagnifyingGlass}
-                                style={{ color: 'black', cursor: 'pointer',width:'21px', height:'24px' }}
+                                style={{ color: 'black', cursor: 'pointer', width: '21px', height: '24px' }}
                                 onClick={() => setSearchVisible(!searchVisible)}
                             />
 
@@ -142,7 +190,7 @@ const Navbar = () => {
 
                     </div>
                 )}
-                
+
             </section>
 
 
