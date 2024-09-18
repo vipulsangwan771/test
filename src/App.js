@@ -20,17 +20,8 @@ import Preg from './Component/Preg';
 import Feed from './Component/Feed';
 import Nutri from './Component/Nutri';
 import CheckoutPage from './Component/CheckoutPage';
-// import { Elements } from '@stripe/react-stripe-js';
-// import { loadStripe } from '@stripe/stripe-js';
-// import StripeCheckout from './Component/StripeCheckout'; // Adjust path as needed
-
-// const stripePromise = loadStripe('pk_test_51Oho45SGowUGr9ZACVRpS9E7YNC8l02K2IrNVs7xybE5Whg1E2Yrbd7IIBtHP5jfhbyskWMIt5qYN8R8PvBJ3l3O00rJDjL6R7');
-
 function App() {
-  // const [cart, setCart] = useState([]); // Ensure cart is always initialized as an array
-
-  // // // Clear the cart after payment success
-  // const clearCart = () => setCart([]);
+;
   return (
     <>
 
@@ -54,9 +45,7 @@ function App() {
           <Route path="/feed" element={<Feed/>} />
           <Route path="/nutri" element={<Nutri/>} />
           <Route path="/checkout" element={<CheckoutPage/>} />
-        {/* <Route path="/checkout" element={<Elements stripe={stripePromise}><StripeCheckout clearCart={
-          clearCart
-          }/></Elements>} /> */}
+        
           
         </Routes>
       </Router>

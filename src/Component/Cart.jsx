@@ -25,8 +25,9 @@ const Cart = () => {
     };
 
     const handleCheckout = () => {
-        navigate('/checkout'); // Pass the cart as state
+        navigate('/checkout', { state: { cartItems: cart.items, totalPrice: cart.totalPrice } });
     };
+    
  
     return (
         <>
