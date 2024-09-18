@@ -19,7 +19,13 @@ import Country from './Component/Country';
 import Preg from './Component/Preg';
 import Feed from './Component/Feed';
 import Nutri from './Component/Nutri';
+import CheckoutPage from './Component/CheckoutPage';
+import StripeCheckout from './Component/CheckoutPage';
 function App() {
+  const [cart, setCart] = useState([]); // Ensure cart is always initialized as an array
+
+  // Clear the cart after payment success
+  const clearCart = () => setCart([]);
   return (
     <>
 
@@ -42,8 +48,11 @@ function App() {
           <Route path="/preg" element={<Preg/>} />
           <Route path="/feed" element={<Feed/>} />
           <Route path="/nutri" element={<Nutri/>} />
+          <Route path="/checkout" element={<CheckoutPage/>} />
+          {/* <StripeCheckout cart={cart} clearCart={clearCart} /> */}
         </Routes>
       </Router>
+      <StripeCheckout cart={cart} clearCart={clearCart} /> 
     </>
   );
 }
