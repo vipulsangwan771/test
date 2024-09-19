@@ -30,7 +30,7 @@ app.post('/create-payment-intent', async (req, res) => {
     }
 
     // Validate customer address fields
-    if (!customerAddress || !customerAddress.line1 || !customerAddress.city || !customerAddress.state || !customerAddress.postal_code || !customerAddress.country) {
+    if (!customerAddress || !customerAddress.line1 || !customerAddress.city || !customerAddress.postal_code) {
         return res.status(400).json({ error: 'Missing or invalid customer address information.' });
     }
 
@@ -63,7 +63,7 @@ app.post('/create-payment-intent', async (req, res) => {
                     city: customerAddress.city,
                     state: customerAddress.state,
                     postal_code: customerAddress.postal_code,
-                    country: customerAddress.country, // Ensure the country is provided
+                    country: customerAddress.country, 
                 },
             },
             metadata: {

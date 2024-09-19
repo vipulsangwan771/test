@@ -24,6 +24,14 @@ const CheckoutForm = () => {
   const elements = useElements();
   const navigate = useNavigate();
 
+  
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [postalCode, setPostalCode] = useState('');
+  // console.log(firstName)
   // Create Payment Intent on server
   const createPaymentIntent = async () => {
     const { data } = await axios.post('http://localhost:3100/create-payment-intent', {
@@ -32,13 +40,13 @@ const CheckoutForm = () => {
         quantity: item.quantity,
         price_data: { unit_amount: item.price * 83 }, // Price in cents
       })),
-      customerName: 'John Doe', // Replace with actual customer details if needed
+      customerName: `${firstName} ${lastName}`, // Replace with actual customer details if needed
+      customerEmail: email,
       customerAddress: {
-        line1: '123 Main St',
-        city: 'Mumbai',
-        state: 'Maharashtra',
-        postal_code: '400001',
-        country: 'IN',
+        line1: address,
+         city: city,
+         postal_code: postalCode,
+        country: "in",
       },
     });
     return data.clientSecret;
@@ -55,7 +63,14 @@ const CheckoutForm = () => {
       payment_method: {
         card: cardElement,
         billing_details: {
-          name: 'John Doe',
+          name: `${firstName}  ${lastName}`,
+          email: email,
+           address: {
+            line1: address,
+            city: city,
+             postal_code: postalCode,
+        country: "in",
+          },
         },
       },
     });
@@ -132,7 +147,7 @@ const CheckoutForm = () => {
                 </div>
 
                 <div>
-                    <input type="email" placeholder='Email' required className='maiccheinput' />
+                    <input type="email" placeholder='Email' required className='maiccheinput' value={email} onChange={(e) => setEmail(e.target.value)} />
                 
                 </div>
 
@@ -157,21 +172,21 @@ const CheckoutForm = () => {
                   </div>
                   <div style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
                     <div className='chename w-100'>
-                      <input type="text" placeholder='Name' required />
+                      <input type="text" placeholder='Name' required   value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
                     </div>
                     <div className='chename w-100'>
-                      <input type="text" placeholder='Last name' required />
+                      <input type="text" placeholder='Last name' value={lastName} onChange={(e) => setLastName(e.target.value)}  required />
                     </div>
                   </div>
                   <div>
-                    <input className='maiccheinput' type="text" placeholder='Apartment,suite,etc.(optional)' name="" id="" />
+                    <input className='maiccheinput' type="text" placeholder='Apartment,suite,etc.(optional)' value={address} onChange={(e) => setAddress(e.target.value)} />
                   </div>
                   <div style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
                     <div className='chename w-100' >
-                      <input type="text" placeholder='City' required />
+                      <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
                     </div>
                     <div className='chename w-100' >
-                      <input type="text" placeholder='Postal code' required />
+                      <input type="text" placeholder='Postal code' value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required />
                     </div>
                   </div>
                   <div style={{ marginTop: '15px' }}>
