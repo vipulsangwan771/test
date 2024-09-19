@@ -308,6 +308,17 @@
 
     .checright {
         height: auto !important;
+        display: none;
+    }
+
+    .maxoisdh {
+        max-width: 99% !important;
+    }
+    .chevaisdisnchbl{
+        display: block !important;
+    }
+    .chenamertya{
+        flex-direction: column !important;
     }
 }
 
@@ -317,3 +328,102 @@
     justify-content: space-between;
     gap: 90px;
 }
+
+
+.diblononche .accordion-button {
+    background-color: #FAFAFA !important;
+    display: block !important;
+}
+
+.diblononche .accordion-body{
+    background-color: #FAFAFA !important;
+    border: none !important;
+    outline: none;
+}
+
+.accordion-item {
+    border-top: 0.5px solid #D2E6F1 !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    border-width: 0.5px !important;
+    border-radius: 0px !important;
+}
+
+.accordion-header button{   
+    outline: none !important;
+    border: none !important;
+    background-color: #E2F1F3 !important;
+}
+
+.accordion-header{
+--bs-accordion-btn-focus-box-shadow: 0 0 0 0;
+}
+.diblononche .accordion-button::after {
+  
+    display: none;
+}
+/* .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+} */
+.cheacorhecfe{
+    font-size: 15px !important;
+}
+.naspoty{
+    display: none;
+}
+.accordion-button:not(.collapsed) .naspoty {
+    display: block !important;
+    transition: all 0.3s;
+}
+.accordion-button:not(.collapsed) .naspotyawq{
+    display: none;
+    transition: all 0.3s;
+}
+.naspotyawq{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.naspotyawq svg{
+    margin-top: 3px;
+}
+.chevaisdisnchbl{
+    display: none;
+}
+.fontsapoi{
+    font-size: 12px !important;
+}
+.cheupoiu{
+    padding-left: 5px !important;
+    padding-top: 3px;
+    height: 12px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

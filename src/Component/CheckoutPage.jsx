@@ -11,6 +11,9 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
+import Accordion from 'react-bootstrap/Accordion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 // Load Stripe using your publishable key
 const stripePromise = loadStripe('pk_test_51Oho45SGowUGr9ZACVRpS9E7YNC8l02K2IrNVs7xybE5Whg1E2Yrbd7IIBtHP5jfhbyskWMIt5qYN8R8PvBJ3l3O00rJDjL6R7');
@@ -124,7 +127,97 @@ const CheckoutForm = () => {
             )}
           </Link>
         </div>
+        <div className='chevaisdisnchbl'>
+          <Accordion className='w-100 diblononche'>
+            <Accordion.Item eventKey="9">
+              <Accordion.Header>  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>  <h2 className='cheacorhecfe naspotyawq' >Show order summary
+              <FontAwesomeIcon icon={faChevronDown} />
+              </h2>
+               <h2 className='cheacorhecfe naspoty'>Hide order summary 
+                <svg  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up cheupoiu" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg> </h2>
+                <strong>   ₹{(83 * cart.totalPrice).toFixed(2)}</strong> </div></Accordion.Header>
+              <Accordion.Body>
+                <div>
+                  <div className='maxoisdh'>
+                    {cart.items.map(item => (
+                      <div className='clprodetakjml' key={item.name}>
+                        <div style={{ display: 'flex', gap: '30px', justifyContent: 'space-between' }}>
+                          <div className='imdbaget'>
+                            <img src={item.img} alt={item.name}
 
+                              onError={(e) => e.target.src = 'path/to/default/image.png'}
+                            />
+                            <Badge bg="secondary">{item.quantity}</Badge>
+                          </div>
+                          <div className='cheitim' >
+                            <div>
+                              <p className='itprona'>{item.name}</p>
+                              <p className='itpronan'>Subscribe to join the family for FREE SHIPPING with priority  delivery every month. Pause, delay or cancel at any time. 1 month</p>
+                            </div>
+                            <div >
+                              <p className='itprona'>₹{(83 * item.price).toFixed(2)}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+
+
+                    <div className='martbot'>
+                      <form action="">
+                        <div style={{ display: 'flex', gap: '30px' }}>
+                          <input type="text" className='inputastys' placeholder='Discount Code' required />
+                          <button className='inputastysbtr'>Apply</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+
+
+
+                      <div>
+                        <p className='asuiyt'>   Subtotal ({totalItems} items)</p>
+                      </div>
+                      <div>
+                        <p className='asuiyt'>   ₹{(83 * cart.totalPrice).toFixed(2)}</p>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                      <div>
+                        <p className='asuiyt'>     Shipping</p>
+
+                      </div>
+                      <div>
+                        <p className='asuiyt'>   Enter shipping address</p>
+                      </div>
+                    </div>
+
+                    <div className='mabotbo' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                      <div>
+                        <strong> Total</strong>
+
+                      </div>
+                      <div>
+                        ₹<strong>{(83 * cart.totalPrice).toFixed(2)}</strong>
+                      </div>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '50px' }}>
+                      <div>
+                        This order has a recurring charge for multiple items.
+
+                      </div>
+                      <div>
+                        ₹{(83 * cart.totalPrice).toFixed(2)} every month
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Accordion.Body>
+            </Accordion.Item>
+
+          </Accordion>
+        </div>
 
 
 
@@ -172,7 +265,7 @@ const CheckoutForm = () => {
                         <option value="1">India</option>
                       </Form.Select>
                     </div>
-                    <div style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
+                    <div className='chenamertya' style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
                       <div className='chename w-100'>
                         <input type="text" placeholder='Name' required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                       </div>
@@ -183,7 +276,7 @@ const CheckoutForm = () => {
                     <div>
                       <input className='maiccheinput' type="text" placeholder='Apartment,suite,etc.(optional)' value={address} onChange={(e) => setAddress(e.target.value)} />
                     </div>
-                    <div style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
+                    <div className='chenamertya' style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
                       <div className='chename w-100' >
                         <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
                       </div>
@@ -209,6 +302,113 @@ const CheckoutForm = () => {
                     <div style={{ marginBottom: '30px' }}>
                       <CardElement />
                     </div>
+
+                    <div >
+                      <div className='chevaisdisnchbl'>
+                        <Accordion className='w-100 diblononche'>
+                          <Accordion.Item eventKey="19">
+                            <Accordion.Header> 
+                               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>  
+                              <h2 className='cheacorhecfe ' > <strong> Order summary ({totalItems} items)</strong>
+                            </h2>
+                              <div>
+                                <span className='naspotyawq fontsapoi'> Show <FontAwesomeIcon style={{ marginLeft: '3px' }} icon={faChevronDown} /></span>
+                                <span className='naspoty fontsapoi'> Hide 
+                                   <svg style={{paddingLeft:'3px', paddingTop:'3px'}} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg></span>
+                              </div>
+
+                            </div></Accordion.Header>
+                            <Accordion.Body>
+                              <div>
+                                <div className='maxoisdh'>
+                                  {cart.items.map(item => (
+                                    <div className='clprodetakjml' key={item.name}>
+                                      <div style={{ display: 'flex', gap: '30px', justifyContent: 'space-between' }}>
+                                        <div className='imdbaget'>
+                                          <img src={item.img} alt={item.name}
+
+                                            onError={(e) => e.target.src = 'path/to/default/image.png'}
+                                          />
+                                          <Badge bg="secondary">{item.quantity}</Badge>
+                                        </div>
+                                        <div className='cheitim' >
+                                          <div>
+                                            <p className='itprona'>{item.name}</p>
+                                            <p className='itpronan'>Subscribe to join the family for FREE SHIPPING with priority  delivery every month. Pause, delay or cancel at any time. 1 month</p>
+                                          </div>
+                                          <div >
+                                            <p className='itprona'>₹{(83 * item.price).toFixed(2)}</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  ))}
+
+
+
+                                </div>
+                              </div>
+                            </Accordion.Body>
+                          </Accordion.Item>
+
+                        </Accordion>
+                      </div>
+
+
+
+                      <div className='martbot'>
+                        <form action="">
+                          <div style={{ display: 'flex', gap: '30px' }}>
+                            <input type="text" className='inputastys' placeholder='Discount Code' required />
+                            <button className='inputastysbtr'>Apply</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+
+
+
+                        <div>
+                          <p className='asuiyt'>   Subtotal ({totalItems} items)</p>
+                        </div>
+                        <div>
+                          <p className='asuiyt'>   ₹{(83 * cart.totalPrice).toFixed(2)}</p>
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div>
+                          <p className='asuiyt'>     Shipping</p>
+
+                        </div>
+                        <div>
+                          <p className='asuiyt'>   Enter shipping address</p>
+                        </div>
+                      </div>
+
+                      <div className='mabotbo' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div>
+                          <strong> Total</strong>
+
+                        </div>
+                        <div>
+                          ₹<strong>{(83 * cart.totalPrice).toFixed(2)}</strong>
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '50px' }}>
+                        <div>
+                          This order has a recurring charge for multiple items.
+
+                        </div>
+                        <div>
+                          ₹{(83 * cart.totalPrice).toFixed(2)} every month
+                        </div>
+                      </div>
+
+
+
+                    </div>
+
 
                     <div>
                       <p className='checanel'>
