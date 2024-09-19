@@ -231,7 +231,7 @@ const Products = () => {
               </button>
             </div>
           </div>
-          <p><strong className="mainstrooi"> £19.99</strong></p>
+          <p><strong className="mainstrooi"> £19.09</strong></p>
         </div>
       </main>
 

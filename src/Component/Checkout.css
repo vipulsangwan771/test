@@ -221,7 +221,11 @@
     font-family: 'Recoleta', serif;
     margin-top: 30px;
 }
-
+.checanelewq{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.56);
+    font-family: 'Recoleta', serif;
+}
 .checanelty {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.56);

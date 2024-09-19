@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { useCart } from './CartContext'; 
+import { useCart } from './CartContext';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import logo from './Assests/logo.svg';
 import logo2 from './Assests/logo2.avif';
-import { Link,useNavigate  } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Checkout.css';
-import Modal from 'react-bootstrap/Modal'; 
-import Button from 'react-bootstrap/Button'; 
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
+
 // Load Stripe using your publishable key
 const stripePromise = loadStripe('pk_test_51Oho45SGowUGr9ZACVRpS9E7YNC8l02K2IrNVs7xybE5Whg1E2Yrbd7IIBtHP5jfhbyskWMIt5qYN8R8PvBJ3l3O00rJDjL6R7');
 
 const CheckoutForm = () => {
-  const { cart } = useCart();
+  const { cart, clearCart } = useCart(); 
   const [clientSecret, setClientSecret] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -24,7 +25,7 @@ const CheckoutForm = () => {
   const elements = useElements();
   const navigate = useNavigate();
 
-  
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -37,15 +38,15 @@ const CheckoutForm = () => {
       lineItems: cart.items.map(item => ({
         name: item.name,
         quantity: item.quantity,
-        price_data: { unit_amount: item.price * 83 },
+        price_data: { unit_amount: Math.round(item.price * 83 * 100), currency: 'inr'},
       })),
-      customerName: `${firstName} ${lastName}`, 
+      customerName: `${firstName} ${lastName}`,
       customerEmail: email,
       customerAddress: {
         line1: address,
-         city: city,
-         postal_code: postalCode,
-        country: "in",
+        city: city,
+        postal_code: postalCode,
+        country: "IN",
       },
     });
     return data.clientSecret;
@@ -64,39 +65,39 @@ const CheckoutForm = () => {
         billing_details: {
           name: `${firstName}  ${lastName}`,
           email: email,
-           address: {
+          address: {
             line1: address,
             city: city,
-             postal_code: postalCode,
-        country: "in",
+            postal_code: postalCode,
+            country: "IN",
           },
         },
       },
     });
+    const totalAmount = (cart.items.reduce((total, item) => total + item.price * 83 * item.quantity, 0)).toFixed(2);
 
     if (error) {
       console.error('Payment error:', error.message);
       setIsProcessing(false);
-    
+
       setModalMessage('Payment failed. Please try again.');
       setShowModal(true);
     } else if (paymentIntent.status === 'succeeded') {
       console.log('Payment succeeded:', paymentIntent);
       setIsProcessing(false);
-      
-      setModalMessage('Thank you for your purchase!');
+
+      setModalMessage('Thank you for your purchase!' );
       setShowModal(true);
     }
   };
 
-
-
   const handleCloseModal = () => {
     setShowModal(false);
     if (modalMessage.includes('Thank you')) {
-      navigate('/cart'); 
+      clearCart();
+      navigate('/');
     } else {
-      navigate('/'); 
+      navigate('/cart');
     }
   };
   const [scrolled, setScrolled] = useState(false);
@@ -108,214 +109,215 @@ const CheckoutForm = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   return (
     <>
-    <form onSubmit={handleSubmit}>
-      <div className='checkouhesd' >
-        <Link to="/">
-          {!scrolled ? (
-            <img src={logo} width={181} height={26} alt="Logo" />
-          ) : (
-            <img src={logo2} width={50} height={30} alt="Logo 2" />
-          )}
-        </Link>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className='checkouhesd' >
+          <Link to="/">
+            {!scrolled ? (
+              <img src={logo} width={181} height={26} alt="Logo" />
+            ) : (
+              <img src={logo2} width={50} height={30} alt="Logo 2" />
+            )}
+          </Link>
+        </div>
 
 
 
 
-      <div>
         <div>
-          <div className='bothcheakjs'  >
-            <div className='wchechan' >
-              <div className='cheleftyr' >
-                <div>
-                  <p className='lepssdf'>By continuing with your payment, you agree to the future charges listed on this page and the cancellation policy.</p>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <hr style={{ flex: 1, border: '1px solid #000' }} />
-                  <p className='lepsdf' style={{ margin: '0 10px' }}>or</p>
-                  <hr style={{ flex: 1, border: '1px solid #000' }} />
-                </div>
-                <div className='riocntche' style={{ display: 'flex' }}>
-                  <div><strong><p className='riocntcheas'> Contact</p></strong></div>
+          <div>
+            <div className='bothcheakjs'  >
+              <div className='wchechan' >
+                <div className='cheleftyr' >
                   <div>
-                    <Link to="/sign" className='riocntcheasqa'>Log in</Link>
+                    <p className='lepssdf'>By continuing with your payment, you agree to the future charges listed on this page and the cancellation policy.</p>
                   </div>
-                </div>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <hr style={{ flex: 1, border: '1px solid #000' }} />
+                    <p className='lepsdf' style={{ margin: '0 10px' }}>or</p>
+                    <hr style={{ flex: 1, border: '1px solid #000' }} />
+                  </div>
+                  <div className='riocntche' style={{ display: 'flex' }}>
+                    <div><strong><p className='riocntcheas'> Contact</p></strong></div>
+                    <div>
+                      <Link to="/sign" className='riocntcheasqa'>Log in</Link>
+                    </div>
+                  </div>
 
-                <div>
+                  <div>
                     <input type="email" placeholder='Email' required className='maiccheinput' value={email} onChange={(e) => setEmail(e.target.value)} />
-                
-                </div>
 
-                <div className='checheboxas'>
-                  <div>
-                    <input type="checkbox" name="" id="" checked />
-                  </div>
-                  <div>
-                    <p>Email me with news and offers</p>
                   </div>
 
-                </div>
-
-                <div>
-                  <p className='checkdeli'> <strong>Delivery</strong></p>
-
-                  <div className='marb'>
-                    <Form.Select className='chopt' aria-label="Default select example" required>
-                      <option>Country/Region</option>
-                      <option value="1">India</option>
-                    </Form.Select>
-                  </div>
-                  <div style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
-                    <div className='chename w-100'>
-                      <input type="text" placeholder='Name' required   value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
-                    </div>
-                    <div className='chename w-100'>
-                      <input type="text" placeholder='Last name' value={lastName} onChange={(e) => setLastName(e.target.value)}  required />
-                    </div>
-                  </div>
-                  <div>
-                    <input className='maiccheinput' type="text" placeholder='Apartment,suite,etc.(optional)' value={address} onChange={(e) => setAddress(e.target.value)} />
-                  </div>
-                  <div style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
-                    <div className='chename w-100' >
-                      <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
-                    </div>
-                    <div className='chename w-100' >
-                      <input type="text" placeholder='Postal code' value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required />
-                    </div>
-                  </div>
-                  <div style={{ marginTop: '15px' }}>
-                    <input type="text" className='maiccheinput' placeholder='Phone(optional)' name="" id="" />
-                  </div>
-
-                  <div style={{ marginTop: '30px' }}>
-                    <p >  <strong> Shipping method</strong></p>
-                  </div>
-                  <div>
-                    <input className='maiccheinput' type="text" disabled placeholder='Enter your shipping address to view available shipping methods.' />
-                  </div>
-
-                  <div style={{ marginTop: '30px' }}>
-                    <p> <strong> Payment</strong></p>
-                  </div>
-                  <div style={{ marginBottom: '30px' }}>
-                    <CardElement />
-                  </div>
-
-                  <div>
-                    <p className='checanel'>
-                      One or more items in your cart is a deferred or recurring purchase. By continuing with your payment,
-                      you agree that your payment method will automatically be charged at the price and frequency listed on this page
-                      until it ends or you cancel. All cancellations are subject to the <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>cancellation policy</span> .
-                    </p>
-                  </div>
-                  <button className='chepaybutomn' type="submit" disabled={!stripe || isProcessing}>
-                    {isProcessing ? 'Processing...' : `Pay now `}
-                  </button>
-                  <div>
-                    <p className='checanelty'>
-                      Your payment info will be saved to a Shop account. By continuing, you agree to Shop’s <span style={{ color: '#071F60', textDecoration: 'underline', cursor: 'pointer' }}> Terms of Service </span>
-                      and acknowledge the <span style={{ textDecoration: 'underline', cursor: 'pointer', color: '#071F60' }}>Privacy Policy. </span>
-                    </p>
-                  </div>
-                  <div className='chelastpag'>
-                    <p>Refund policy</p>
-                    <p>Shipping policy</p>
-                    <p>Privacy policy</p>
-                    <p>Terms of services</p>
-                    <p>Subscription policy</p>
-                  </div>
-
-
-                </div>
-              </div>
-            </div>
-
-            <div className='checright'>
-              <div className='maxoisdh'>
-                {cart.items.map(item => (
-                  <div className='clprodetakjml' key={item.name}>
-                    <div style={{ display: 'flex', gap: '30px', justifyContent: 'space-between' }}>
-                      <div className='imdbaget'>
-                        <img src={item.img} alt={item.name}
-
-                          onError={(e) => e.target.src = 'path/to/default/image.png'}
-                        />
-                        <Badge bg="secondary">{item.quantity}</Badge>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '90px' }}>
-                        <div>
-                          <p className='itprona'>{item.name}</p>
-                          <p className='itpronan'>Subscribe to join the family for FREE SHIPPING with priority <br /> delivery every month. Pause, delay or cancel at any time. 1 <br /> month</p>
-                        </div>
-                        <div >
-                          <p className='itprona'>₹{item.price * 83}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className='martbot'>
-                      <form action="">
-                        <div style={{ display: 'flex', gap: '30px' }}>
-                          <input type="text" className='inputastys' placeholder='Discount Code' required />
-                          <button className='inputastysbtr'>Apply</button>
-                        </div>
-                      </form>
+                  <div className='checheboxas'>
+                    <div>
+                      <input type="checkbox" name="" id="" checked />
                     </div>
                     <div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <div>
-                          <p className='asuiyt'>   Subtotal ({item.quantity} item)</p>
+                      <p>Email me with news and offers</p>
+                    </div>
+
+                  </div>
+
+                  <div>
+                    <p className='checkdeli'> <strong>Delivery</strong></p>
+
+                    <div className='marb'>
+                      <Form.Select className='chopt' aria-label="Default select example" required>
+                        <option>Country/Region</option>
+                        <option value="1">India</option>
+                      </Form.Select>
+                    </div>
+                    <div style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
+                      <div className='chename w-100'>
+                        <input type="text" placeholder='Name' required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                      </div>
+                      <div className='chename w-100'>
+                        <input type="text" placeholder='Last name' value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                      </div>
+                    </div>
+                    <div>
+                      <input className='maiccheinput' type="text" placeholder='Apartment,suite,etc.(optional)' value={address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+                    <div style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
+                      <div className='chename w-100' >
+                        <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
+                      </div>
+                      <div className='chename w-100' >
+                        <input type="text" placeholder='Postal code' value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required />
+                      </div>
+                    </div>
+                    <div style={{ marginTop: '15px' }}>
+                      <input type="text" className='maiccheinput' placeholder='Phone(optional)' name="" id="" />
+                    </div>
+
+                    <div style={{ marginTop: '30px' }}>
+                      <p >  <strong> Shipping method</strong></p>
+                    </div>
+                    <div>
+                      <input className='maiccheinput' type="text" disabled placeholder='Enter your shipping address to view available shipping methods.' />
+                    </div>
+
+                    <div style={{ marginTop: '30px' }}>
+                      <p> <strong> Payment</strong></p>
+                      <p className='checanelewq'>All transactions are secure and encrypted.</p>
+                    </div>
+                    <div style={{ marginBottom: '30px' }}>
+                      <CardElement />
+                    </div>
+
+                    <div>
+                      <p className='checanel'>
+                        One or more items in your cart is a deferred or recurring purchase. By continuing with your payment,
+                        you agree that your payment method will automatically be charged at the price and frequency listed on this page
+                        until it ends or you cancel. All cancellations are subject to the <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>cancellation policy</span> .
+                      </p>
+                    </div>
+                    <button className='chepaybutomn' type="submit" disabled={!stripe || isProcessing}>
+                      {isProcessing ? 'Processing...' : `Pay now `}
+                    </button>
+                    <div>
+                      <p className='checanelty'>
+                        Your payment info will be saved to a Shop account. By continuing, you agree to Shop’s <span style={{ color: '#071F60', textDecoration: 'underline', cursor: 'pointer' }}> Terms of Service </span>
+                        and acknowledge the <span style={{ textDecoration: 'underline', cursor: 'pointer', color: '#071F60' }}>Privacy Policy. </span>
+                      </p>
+                    </div>
+                    <div className='chelastpag'>
+                      <p>Refund policy</p>
+                      <p>Shipping policy</p>
+                      <p>Privacy policy</p>
+                      <p>Terms of services</p>
+                      <p>Subscription policy</p>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+              <div className='checright'>
+                <div className='maxoisdh'>
+                  {cart.items.map(item => (
+                    <div className='clprodetakjml' key={item.name}>
+                      <div style={{ display: 'flex', gap: '30px', justifyContent: 'space-between' }}>
+                        <div className='imdbaget'>
+                          <img src={item.img} alt={item.name}
+
+                            onError={(e) => e.target.src = 'path/to/default/image.png'}
+                          />
+                          <Badge bg="secondary">{item.quantity}</Badge>
                         </div>
-                        <div>
-                          <p className='asuiyt'>   ₹{item.price * 83 * item.quantity}</p>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '90px' }}>
+                          <div>
+                            <p className='itprona'>{item.name}</p>
+                            <p className='itpronan'>Subscribe to join the family for FREE SHIPPING with priority  delivery every month. Pause, delay or cancel at any time. 1 month</p>
+                          </div>
+                          <div >
+                            <p className='itprona'>₹{(83*item.price).toFixed(2)}</p>
+                          </div>
                         </div>
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <div>
-                          <p className='asuiyt'>     Shipping</p>
-
-                        </div>
-                        <div>
-                          <p className='asuiyt'>   Enter shipping address</p>
-                        </div>
+                      <div className='martbot'>
+                        <form action="">
+                          <div style={{ display: 'flex', gap: '30px' }}>
+                            <input type="text" className='inputastys' placeholder='Discount Code' required />
+                            <button className='inputastysbtr'>Apply</button>
+                          </div>
+                        </form>
                       </div>
-
-                      <div className='mabotbo' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <div>
-                          <strong> Total</strong>
-
+                      <div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                          <div>
+                            <p className='asuiyt'>   Subtotal ({item.quantity} item)</p>
+                          </div>
+                          <div>
+                            <p className='asuiyt'>   ₹{(item.price * 83 * item.quantity).toFixed(2)}</p>
+                          </div>
                         </div>
-                        <div>
-                          ₹<strong>{item.price * 83 * item.quantity}</strong>
-                        </div>
-                      </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                          <div>
+                            <p className='asuiyt'>     Shipping</p>
 
-                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <div>
-                          Recurring subtotal
-
+                          </div>
+                          <div>
+                            <p className='asuiyt'>   Enter shipping address</p>
+                          </div>
                         </div>
-                        <div>
-                          ₹{item.price * 83 * item.quantity} every month
+
+                        <div className='mabotbo' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                          <div>
+                            <strong> Total</strong>
+
+                          </div>
+                          <div>
+                            ₹<strong>{(item.price * 83 * item.quantity).toFixed(2)}</strong>
+                          </div>
+                        </div>
+
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                          <div>
+                            Recurring subtotal
+
+                          </div>
+                          <div>
+                            ₹{(item.price * 83 * item.quantity).toFixed(2)} every month
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
 
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div>
-      </div>
-    </form>
-    <Modal show={showModal} onHide={handleCloseModal}>
+        <div>
+        </div>
+      </form>
+      <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>{modalMessage.includes('Thank you') ? 'Success' : 'Error'}</Modal.Title>
         </Modal.Header>

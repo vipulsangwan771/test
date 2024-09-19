@@ -87,13 +87,6 @@ const Navbar = () => {
 
 
 
-
-
-
-
-
-
-
     return (
         <>
             <section className='sticknon2' style={{ textAlign: 'center', color: 'white', width: '100%' }}>
