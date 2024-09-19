@@ -221,11 +221,13 @@
     font-family: 'Recoleta', serif;
     margin-top: 30px;
 }
-.checanelewq{
+
+.checanelewq {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.56);
     font-family: 'Recoleta', serif;
 }
+
 .checanelty {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.56);
@@ -265,7 +267,12 @@
     width: 90%;
     height: 100vh;
     position: sticky;
+    overflow-y: scroll;
     top: 0;
+}
+
+.checright::-webkit-scrollbar {
+    display: none;
 }
 
 .wchechan {
@@ -294,4 +301,19 @@
         width: 100% !important;
         padding: 15px !important;
     }
+
+    .cheitim {
+        gap: 9px !important;
+    }
+
+    .checright {
+        height: auto !important;
+    }
+}
+
+.cheitim {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
 }

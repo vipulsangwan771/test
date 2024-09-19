@@ -16,7 +16,7 @@ import Badge from 'react-bootstrap/Badge';
 const stripePromise = loadStripe('pk_test_51Oho45SGowUGr9ZACVRpS9E7YNC8l02K2IrNVs7xybE5Whg1E2Yrbd7IIBtHP5jfhbyskWMIt5qYN8R8PvBJ3l3O00rJDjL6R7');
 
 const CheckoutForm = () => {
-  const { cart, clearCart } = useCart(); 
+  const { cart, clearCart } = useCart();
   const [clientSecret, setClientSecret] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -24,7 +24,7 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const navigate = useNavigate();
-
+const item = useCart();
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -38,7 +38,7 @@ const CheckoutForm = () => {
       lineItems: cart.items.map(item => ({
         name: item.name,
         quantity: item.quantity,
-        price_data: { unit_amount: Math.round(item.price * 83 * 100), currency: 'inr'},
+        price_data: { unit_amount: Math.round(item.price * 83 * 100), currency: 'inr' },
       })),
       customerName: `${firstName} ${lastName}`,
       customerEmail: email,
@@ -86,7 +86,7 @@ const CheckoutForm = () => {
       console.log('Payment succeeded:', paymentIntent);
       setIsProcessing(false);
 
-      setModalMessage('Thank you for your purchase!' );
+      setModalMessage('Thank you for your purchase!');
       setShowModal(true);
     }
   };
@@ -249,17 +249,17 @@ const CheckoutForm = () => {
                           />
                           <Badge bg="secondary">{item.quantity}</Badge>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '90px' }}>
+                        <div className='cheitim' >
                           <div>
                             <p className='itprona'>{item.name}</p>
                             <p className='itpronan'>Subscribe to join the family for FREE SHIPPING with priority  delivery every month. Pause, delay or cancel at any time. 1 month</p>
                           </div>
                           <div >
-                            <p className='itprona'>₹{(83*item.price).toFixed(2)}</p>
+                            <p className='itprona'>₹{(83 * item.price).toFixed(2)}</p>
                           </div>
                         </div>
                       </div>
-                      <div className='martbot'>
+                      {/* <div className='martbot'>
                         <form action="">
                           <div style={{ display: 'flex', gap: '30px' }}>
                             <input type="text" className='inputastys' placeholder='Discount Code' required />
@@ -296,7 +296,7 @@ const CheckoutForm = () => {
                           </div>
                         </div>
 
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '50px' }}>
                           <div>
                             Recurring subtotal
 
@@ -304,11 +304,79 @@ const CheckoutForm = () => {
                           <div>
                             ₹{(item.price * 83 * item.quantity).toFixed(2)} every month
                           </div>
-                        </div>
-                      </div>
+                        </div> */}
+                      {/* </div> */}
                     </div>
                   ))}
+                  {/* {cart.items.map(item => (
+                    <div className='clprodetakjml' key={item.name}> */}
+                  {/* <div style={{ display: 'flex', gap: '30px', justifyContent: 'space-between' }}>
+                        <div className='imdbaget'>
+                          <img src={item.img} alt={item.name}
 
+                            onError={(e) => e.target.src = 'path/to/default/image.png'}
+                          />
+                          <Badge bg="secondary">{item.quantity}</Badge>
+                        </div>
+                        <div className='cheitim' >
+                          <div>
+                            <p className='itprona'>{item.name}</p>
+                            <p className='itpronan'>Subscribe to join the family for FREE SHIPPING with priority  delivery every month. Pause, delay or cancel at any time. 1 month</p>
+                          </div>
+                          <div >
+                            <p className='itprona'>₹{(83*item.price).toFixed(2)}</p>
+                          </div>
+                        </div>
+                      </div> */}
+                  {/* <div className='martbot'>
+                        <form action="">
+                          <div style={{ display: 'flex', gap: '30px' }}>
+                            <input type="text" className='inputastys' placeholder='Discount Code' required />
+                            <button className='inputastysbtr'>Apply</button>
+                          </div>
+                        </form>
+                      </div> */}
+                  {/* <div> */}
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div>
+                      <p className='asuiyt'>   Subtotal ({item.quantity} item)</p>
+                    </div>
+                    <div>
+                      <p className='asuiyt'>   ₹{(83*cart.totalPrice).toFixed(2)}</p>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div>
+                      <p className='asuiyt'>     Shipping</p>
+
+                    </div>
+                    <div>
+                      <p className='asuiyt'>   Enter shipping address</p>
+                    </div>
+                  </div>
+
+                  <div className='mabotbo' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div>
+                      <strong> Total</strong>
+
+                    </div>
+                    <div>
+                      ₹<strong>{(83*cart.totalPrice).toFixed(2)}</strong>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '50px' }}>
+                    <div>
+                    This order has a recurring charge for multiple items.
+
+                    </div>
+                    <div>
+                      ₹{(83*cart.totalPrice).toFixed(2)} every month
+                    </div>
+                  </div>
+                  {/* </div> */}
+                  {/* </div>
+                  ))} */}
                 </div>
               </div>
             </div>

@@ -133,7 +133,7 @@ const Footer = () => {
                             </Accordion.Item>
                         </Accordion>
 
-
+ 
 
                         <div className=' theaf'>
                             <h2>join the Kendamil family</h2>

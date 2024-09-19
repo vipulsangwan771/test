@@ -273,7 +273,7 @@ const Navbar = () => {
                                                         <Link to="/preg">    <h1>pregnancy</h1></Link>
                                                         <Link to="/feed">    <h1>feeding</h1></Link>
                                                         <Link to="/nutri">     <h1>nutrition</h1></Link>
-                                                        <Link>    <h1>parenting advice</h1></Link>
+                                                        <Link to="/parentb">    <h1>parenting advice</h1></Link>
                                                     </Accordion.Body>
                                                 </Accordion.Item>
 
@@ -324,7 +324,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div style={{ width: '30%', display: 'flex', justifyContent: 'flex-end' }}>
-                        <div>
+                          <div><Link to="/cart" > 
                             <svg className="pointer-events-none" width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.5 11H26.5V19C26.5 20.1046 25.6046 21 24.5 21H6.5C5.39543 21 4.5 20.1046 4.5 19V11Z" fill="white"></path>
                                 <path d="M25.5 21C26.0523 21 26.5 20.5523 26.5 20V11.5H4.5V20C4.5 20.5523 4.94772 21 5.5 21H25.5Z" fill="white"></path>
@@ -333,8 +333,8 @@ const Navbar = () => {
                                 <path d="M0 7.5H0.5C2.70914 7.5 4.5 9.29086 4.5 11.5V11.5" stroke="#071F60" strokeWidth="2"></path>
                                 <circle cx="9.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
                                 <circle cx="21.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
-                            </svg>
-                            ({cart.totalItems})
+                            </svg></Link>
+                           ({cart.totalItems})
                         </div>
                     </div>
                 </div>
