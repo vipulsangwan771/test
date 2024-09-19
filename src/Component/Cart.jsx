@@ -25,10 +25,17 @@ const Cart = () => {
     };
 
     const handleCheckout = () => {
-        navigate('/checkout', { state: { cartItems: cart.items, totalPrice: cart.totalPrice } });
-    };
-    
- 
+        if (cart.items.length === 0) {
+          alert('Your cart is empty. Please add at least one item to proceed.');
+        } else {
+          navigate('/checkout', { 
+            state: { 
+              cartItems: cart.items, 
+              totalPrice: cart.totalPrice 
+            } 
+          });
+        }
+      };
     return (
         <>
             <Navbar />
@@ -107,7 +114,7 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div>
-                            <Link to="/checkout">    <button className='procyocheck' onClick={handleCheckout}> proceed to checkout</button></Link>
+                             <button className='procyocheck'  onClick={handleCheckout}> proceed to checkout</button>
                             </div>
                             <div className='imgsvgchs'>
                                 <div className=' gdh'>
@@ -125,7 +132,7 @@ const Cart = () => {
 
                                 </div>
                             </div>
-                            <div>
+                            <div style={{textAlign:'center'}}>
                                 <Link to="/"><a href="#as">continue shopping</a></Link>
                             </div>
                         </div>
