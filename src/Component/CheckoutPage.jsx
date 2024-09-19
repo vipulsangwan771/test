@@ -263,7 +263,20 @@ const item = useCart();
                       </div>
                     </div>
                   ))}
+
+
+<div className='martbot'>
+                        <form action="">
+                          <div style={{ display: 'flex', gap: '30px' }}>
+                            <input type="text" className='inputastys' placeholder='Discount Code' required />
+                            <button className='inputastysbtr'>Apply</button>
+                          </div>
+                        </form>
+                      </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                   
+                   
+                   
                     <div>
                       <p className='asuiyt'>   Subtotal ({totalItems} items)</p>
                     </div>
