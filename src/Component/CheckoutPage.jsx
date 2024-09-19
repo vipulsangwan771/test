@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useCart } from './CartContext'; // Adjust the import path as needed
+import { useCart } from './CartContext'; 
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from 'axios';
@@ -7,7 +7,7 @@ import logo from './Assests/logo.svg';
 import logo2 from './Assests/logo2.avif';
 import { Link,useNavigate  } from 'react-router-dom';
 import './Checkout.css';
-import Modal from 'react-bootstrap/Modal'; // For popups
+import Modal from 'react-bootstrap/Modal'; 
 import Button from 'react-bootstrap/Button'; 
 import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
@@ -31,16 +31,15 @@ const CheckoutForm = () => {
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [postalCode, setPostalCode] = useState('');
-  // console.log(firstName)
-  // Create Payment Intent on server
+
   const createPaymentIntent = async () => {
     const { data } = await axios.post('http://localhost:3100/create-payment-intent', {
       lineItems: cart.items.map(item => ({
         name: item.name,
         quantity: item.quantity,
-        price_data: { unit_amount: item.price * 83 }, // Price in cents
+        price_data: { unit_amount: item.price * 83 },
       })),
-      customerName: `${firstName} ${lastName}`, // Replace with actual customer details if needed
+      customerName: `${firstName} ${lastName}`, 
       customerEmail: email,
       customerAddress: {
         line1: address,
@@ -78,13 +77,13 @@ const CheckoutForm = () => {
     if (error) {
       console.error('Payment error:', error.message);
       setIsProcessing(false);
-      // Show failure modal
+    
       setModalMessage('Payment failed. Please try again.');
       setShowModal(true);
     } else if (paymentIntent.status === 'succeeded') {
       console.log('Payment succeeded:', paymentIntent);
       setIsProcessing(false);
-      // Show success modal and clear cart if needed
+      
       setModalMessage('Thank you for your purchase!');
       setShowModal(true);
     }
@@ -95,9 +94,9 @@ const CheckoutForm = () => {
   const handleCloseModal = () => {
     setShowModal(false);
     if (modalMessage.includes('Thank you')) {
-      navigate('/cart'); // Redirect to cart or thank you page
+      navigate('/cart'); 
     } else {
-      navigate('/'); // Redirect to main page if payment fails
+      navigate('/'); 
     }
   };
   const [scrolled, setScrolled] = useState(false);
@@ -313,36 +312,8 @@ const CheckoutForm = () => {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
       <div>
-
-        {/* {cart.items.map(item => (
-          <div key={item.name}>
-            <img
-              src={item.img}
-              alt={item.name}
-              style={{ width: '50px', height: '50px' }}
-              onError={(e) => e.target.src = 'path/to/default/image.png'}
-            />
-
-            <p>{item.name}</p>
-            <p>Price: ₹{item.price * item.quantity}</p>
-            <p>Quantity: {item.quantity}</p>
-            <p>SubPrice: ₹{item.price * 83 * item.quantity}</p>
-          </div>
-        ))} */}
-        {/* <h4>Total Price: ₹{cart.totalPrice * 83}</h4> */}
       </div>
-      {/* <CardElement /> */}
-      {/* <button type="submit" disabled={!stripe || isProcessing}>
-        {isProcessing ? 'Processing...' : `Pay now ₹${cart.totalPrice * 83}`}
-      </button> */}
     </form>
     <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
