@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {  useCart } from './CartContext';
+import { useCart } from './CartContext';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from 'axios';
@@ -24,7 +24,7 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const navigate = useNavigate();
-const item = useCart();
+  const item = useCart();
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -265,23 +265,23 @@ const item = useCart();
                   ))}
 
 
-<div className='martbot'>
-                        <form action="">
-                          <div style={{ display: 'flex', gap: '30px' }}>
-                            <input type="text" className='inputastys' placeholder='Discount Code' required />
-                            <button className='inputastysbtr'>Apply</button>
-                          </div>
-                        </form>
+                  <div className='martbot'>
+                    <form action="">
+                      <div style={{ display: 'flex', gap: '30px' }}>
+                        <input type="text" className='inputastys' placeholder='Discount Code' required />
+                        <button className='inputastysbtr'>Apply</button>
                       </div>
+                    </form>
+                  </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                   
-                   
-                   
+
+
+
                     <div>
                       <p className='asuiyt'>   Subtotal ({totalItems} items)</p>
                     </div>
                     <div>
-                      <p className='asuiyt'>   ₹{(83*cart.totalPrice).toFixed(2)}</p>
+                      <p className='asuiyt'>   ₹{(83 * cart.totalPrice).toFixed(2)}</p>
                     </div>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -300,17 +300,17 @@ const item = useCart();
 
                     </div>
                     <div>
-                      ₹<strong>{(83*cart.totalPrice).toFixed(2)}</strong>
+                      ₹<strong>{(83 * cart.totalPrice).toFixed(2)}</strong>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '50px' }}>
                     <div>
-                    This order has a recurring charge for multiple items.
+                      This order has a recurring charge for multiple items.
 
                     </div>
                     <div>
-                      ₹{(83*cart.totalPrice).toFixed(2)} every month
+                      ₹{(83 * cart.totalPrice).toFixed(2)} every month
                     </div>
                   </div>
                 </div>
