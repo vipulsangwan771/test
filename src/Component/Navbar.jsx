@@ -145,7 +145,7 @@ const Navbar = () => {
                                             <Link to="/preg">    <h1>pregnancy</h1></Link>
                                             <Link to="/feed">    <h1>feeding</h1></Link>
                                             <Link to="/nutri">     <h1>nutrition</h1></Link>
-                                            <Link>    <h1>parenting advice</h1></Link>
+                                            <Link to="/parentb">    <h1>parenting advice</h1></Link>
                                         </div>
                                         <div className='w-100 h-100 hoimga'>
                                             <img src={resizedd} alt="" />

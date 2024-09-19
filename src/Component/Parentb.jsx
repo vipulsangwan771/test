@@ -40,7 +40,7 @@ import feed24 from './Assests/feed23.webp';
 import feed25 from './Assests/feed24.webp';
 import feed26 from './Assests/feed25.webp';
 
-const Nutri = () => {
+const Parentb = () => {
     const sliderblog = {
         dots: false,
         infinite: false,
@@ -120,7 +120,7 @@ const Nutri = () => {
                 <div className='backblog'>
                     <div className='nmensablog'>
                         <a href="#" className='nmensabloga'>home/blog/</a>
-                        <a href="#" className='unlibol'>nutrition</a>
+                        <a href="#" className='unlibol'>parenting advice</a>
 
                     </div>
                     <div className="blogm">
@@ -517,4 +517,4 @@ const Nutri = () => {
     )
 }
 
-export default Nutri;
+export default Parentb;

@@ -115,7 +115,7 @@ const Feed = () => {
     return (
         <>
             <Navbar />
-            <section style={{ paddingTop: '108px' }}>
+            <section style={{ paddingTop: '94px' }}>
 
                 <div className='backblog'>
                     <div className='nmensablog'>

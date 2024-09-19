@@ -20,6 +20,7 @@ import Preg from './Component/Preg';
 import Feed from './Component/Feed';
 import Nutri from './Component/Nutri';
 import CheckoutPage from './Component/CheckoutPage';
+import Parentb from './Component/Parentb';
 function App() {
 ;
   return (
@@ -45,7 +46,7 @@ function App() {
           <Route path="/feed" element={<Feed/>} />
           <Route path="/nutri" element={<Nutri/>} />
           <Route path="/checkout" element={<CheckoutPage/>} />
-        
+          <Route path="/parentb" element={<Parentb/>} />
           
         </Routes>
       </Router>
