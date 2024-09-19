@@ -64,7 +64,7 @@ main {
 }
 
 .mainsinside {
-    flex: 1 1 calc(33.33% - 10px); 
+    flex: 1 1 calc(33.33% - 10px);
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
@@ -72,19 +72,19 @@ main {
 
 @media (max-width: 1314px) {
     .mainsinside {
-        flex: 1 1 calc(50% - 10px); 
+        flex: 1 1 calc(50% - 10px);
     }
 
     main {
-        padding-left: 20px; 
-        padding-right: 20px; 
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 
 @media (max-width: 730px) {
     .mainsinside {
-        flex: 1 1 calc(100% - 10px); 
+        flex: 1 1 calc(100% - 10px);
     }
 }
 
@@ -166,32 +166,37 @@ main {
     font-family: 'Open Sans', 'sans-serif' !important;
 }
 
-.promafle{
+.promafle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px 20px 24px;
 }
+
 @media screen and (max-width:990px) {
-    .prodadd{
+    .prodadd {
         gap: 15px !important;
     }
-    .promafle{
+
+    .promafle {
         padding: 10px 10px 10px 10px !important;
     }
 }
-.prodadd{
+
+.prodadd {
     display: flex;
     align-items: baseline !important;
     gap: 30px;
 }
-.prodadd p{
+
+.prodadd p {
     color: #071F60;
     font-size: 15px;
     line-height: 23px;
     font-weight: 500;
 }
-.bacaas{
+
+.bacaas {
     font-size: max(1em, 12px);
     line-height: max(1em, 20px);
     color: rgb(23, 23, 23);
@@ -205,14 +210,15 @@ main {
     font-family: 'Open Sans', 'sans-serif' !important;
 }
 
-.poslasfs{
+.poslasfs {
     position: fixed;
     bottom: 0;
     background-color: #fff;
     width: 100%;
     border-top: 1px solid rgb(183, 183, 183);
 }
-.butonasdsa{
+
+.butonasdsa {
     background-color: #071F60;
     border: 1px solid #071F60;
     color: #fff;
@@ -220,19 +226,52 @@ main {
     text-align: center;
     padding: 8px 20px;
 }
-.butonasdsa:hover{
+
+.butonasdsa:hover {
     color: #071F60;
     background-color: #fff;
     border: 1px solid #071F60;
 }
 
+.propopt {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0px;
+    font-weight: 500;
+}
 
+.propoptopit {
+    margin: 1rem 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
+.propoptopit button {
+    font-size: 13px;
+    color: #071F60;
+    opacity: 0.56;
+    padding: 10px 20px;
+    border: 2px solid #071F60;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
 
+.propoptopit button.active {
+    background-color: #071F60;
+    color: #fff;
+    opacity: 1;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    border-color: #071F60;
+}
 
-
-
-
-
-
-
+.propoptopit button:not(.active):hover {
+    color: #071F60;
+    opacity: 1;
+}

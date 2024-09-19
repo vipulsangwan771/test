@@ -11,7 +11,7 @@ import { useCart } from './CartContext'; // Import useCart
 
 const Products = () => {
   const navigate = useNavigate();
-  const { updateCart } = useCart(); 
+  const { updateCart } = useCart();
 
   const handleBackClick = () => {
     navigate(-1);
@@ -84,7 +84,11 @@ const Products = () => {
       navigate('/cart');
     }
   };
+  const [activeButton, setActiveButton] = useState('one-time');
 
+  const handleClick = (buttonType) => {
+    setActiveButton(buttonType);
+  };
   return (
     <>
       <div className="promain">
@@ -93,7 +97,27 @@ const Products = () => {
       <div className="promainaq">
         <h3 onClick={handleBackClick}><FontAwesomeIcon icon={faXmark} /></h3>
       </div>
-
+      <div>
+        <p className='propopt'>Delivery options</p>
+        <div className='propoptopit'>
+      <div>
+        <button
+          className={activeButton === 'one-time' ? 'active' : ''}
+          onClick={() => handleClick('one-time')}
+        >
+          One time
+        </button>
+      </div>
+      <div>
+        <button
+          className={activeButton === 'monthly' ? 'active' : ''}
+          onClick={() => handleClick('monthly')}
+        >
+          Monthly Subscription
+        </button>
+      </div>
+    </div>
+      </div>
       <div className="promainhead">
         <p>Please select between 2 and 10 cans for your subscription</p>
       </div>
@@ -231,7 +255,7 @@ const Products = () => {
               </button>
             </div>
           </div>
-          <p><strong className="mainstrooi"> £19.09</strong></p>
+          <p><strong className="mainstrooi"> £19.99</strong></p>
         </div>
       </main>
 
