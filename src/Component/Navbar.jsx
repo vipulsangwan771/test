@@ -109,12 +109,12 @@ const Navbar = () => {
                                     <div className='w-100' style={{ display: 'flex' }}>
                                         <div className='w-100 dweop'>
                                             <Link to="/shop"><h1>shop all</h1></Link>
-                                            <Link>    <h1>class milk</h1></Link>
-                                            <Link>    <h1>organic milk</h1></Link>
-                                            <Link>    <h1>goat milk</h1></Link>
-                                            <Link>    <h1>ready to feed</h1></Link>
-                                            <Link>    <h1>baby porridges</h1></Link>
-                                            <Link>    <h1>speciality & supplements</h1></Link>
+                                            <Link to="/shopcl">    <h1>class milk</h1></Link>
+                                            <Link to="/shopom">    <h1>organic milk</h1></Link>
+                                            <Link to="/shopgm">    <h1>goat milk</h1></Link>
+                                            <Link to="/shoprf">    <h1>ready to feed</h1></Link>
+                                            <Link to="/shopbp">    <h1>baby porridges</h1></Link>
+                                            <Link to="/shopss">    <h1>speciality & supplements</h1></Link>
                                         </div>
                                         <div className='w-100 h-100 hoimga'>
                                             <img src={resized} alt="" />
@@ -247,12 +247,12 @@ const Navbar = () => {
                                                     <Accordion.Header>  <Link>shop</Link></Accordion.Header>
                                                     <Accordion.Body>
                                                         <Link to="/shop"><h1>shop all</h1></Link>
-                                                        <Link>    <h1>class milk</h1></Link>
-                                                        <Link>    <h1>organic milk</h1></Link>
-                                                        <Link>    <h1>goat milk</h1></Link>
-                                                        <Link>    <h1>ready to feed</h1></Link>
-                                                        <Link>    <h1>baby porridges</h1></Link>
-                                                        <Link>    <h1>speciality & supplements</h1></Link>
+                                                        <Link to="/shopcl">    <h1>class milk</h1></Link>
+                                                        <Link to="/shopom">    <h1>organic milk</h1></Link>
+                                                        <Link to="/shopgm">    <h1>goat milk</h1></Link>
+                                                        <Link to="/shoprf">    <h1>ready to feed</h1></Link>
+                                                        <Link to="/shopbp">    <h1>baby porridges</h1></Link>
+                                                        <Link to="/shopss">    <h1>speciality & supplements</h1></Link>
                                                     </Accordion.Body>
                                                 </Accordion.Item>
 

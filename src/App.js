@@ -21,6 +21,8 @@ import Feed from './Component/Feed';
 import Nutri from './Component/Nutri';
 import CheckoutPage from './Component/CheckoutPage';
 import Parentb from './Component/Parentb';
+import ShopCl from './Component/ShopCl';
+import Shopom from './Component/Shopom';
 function App() {
 ;
   return (
@@ -47,6 +49,12 @@ function App() {
           <Route path="/nutri" element={<Nutri/>} />
           <Route path="/checkout" element={<CheckoutPage/>} />
           <Route path="/parentb" element={<Parentb/>} />
+          <Route path="/shopcl" element={<ShopCl/>} />
+          <Route path="/shopom" element={<Shopom/>} />
+          <Route path="/shopgm" element={<ShopCl/>} />
+          <Route path="/shoprf" element={<ShopCl/>} />
+          <Route path="/shopbp" element={<ShopCl/>} />
+          <Route path="/shopss" element={<ShopCl/>} />
           
         </Routes>
       </Router>

@@ -14,12 +14,7 @@ import blosa9 from './Assests/blogsa9.webp';
 import blosa10 from './Assests/blogsa10.webp';
 import './ShopAll.css'
 import { Link } from 'react-router-dom';
-import homepageicon0 from './Assests/homepage_icons0.webp';
-import homepageicon1 from './Assests/homepage_icons.webp';
-import homepageicon2 from './Assests/homepage_icons2.webp';
-import homepageicon3 from './Assests/homepage_icons3.png';
-import homepageicon4 from './Assests/homepage_icons4.png';
-import shop1m from './Assests/shop1.webp';
+import shopom from './Assests/shopor.webp';
 import shopa1 from './Assests/shopall1.webp';
 import shopa2 from './Assests/shopall2.webp';
 import shopa3 from './Assests/shopall3.webp';
@@ -28,16 +23,22 @@ import shopa6 from './Assests/shopall6.webp';
 import shopa7 from './Assests/shopall7.webp';
 import shopa8 from './Assests/shopall8.webp';
 import shopa9 from './Assests/shopall9.webp';
+import shopom1 from './Assests/shopom1.svg';
+import shopom2 from './Assests/shopom2.svg';
+import shopom3 from './Assests/shopom3.svg';
+import shopom4 from './Assests/shopom4.svg';
+import shopom5 from './Assests/shopom5.svg';
+import shopom6 from './Assests/shopom6.svg';
 import { useCart } from './CartContext';
 
-const ShopAll = () => {
+const Shopom = () => {
 
     const blodsliss = {
         dots: false,
         arrows: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 4.5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [
             {
@@ -54,7 +55,7 @@ const ShopAll = () => {
         dots: false,
         infinite: true,
         speed: 1000,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 350,
@@ -74,10 +75,6 @@ const ShopAll = () => {
         { id: 2, name: 'Premium Ready to Feed', price: 9.95, img: shopa2, date: new Date('2023-06-15'), ageGroup: '4+ months' },
         { id: 3, name: 'Super Ready to Feed', price: 12.95, img: shopa3, date: new Date('2023-04-10'), ageGroup: '7+ months' },
         { id: 4, name: 'Deluxe Ready to Feed', price: 15.95, img: shopa4, date: new Date('2023-07-20'), ageGroup: '4+ months' },
-        { id: 5, name: 'Organic First Infant Milk', price: 8.95, img: shopa6, date: new Date('2023-08-01'), ageGroup: '0-6 months' },
-        { id: 6, name: '  18x250ml Classic Follow-On Ready', price: 6.95, img: shopa7, date: new Date('2023-09-15'), ageGroup: '4+ months' },
-        { id: 7, name: 'Goat First Infant Milk', price: 11.95, img: shopa8, date: new Date('2023-01-10'), ageGroup: '7+ months' },
-        { id: 8, name: 'Pro-Comfort Baby Drops', price: 14.95, img: shopa9, date: new Date('2023-02-20'), ageGroup: '4+ months' },
     ];
 
 
@@ -154,7 +151,7 @@ const ShopAll = () => {
                 <section style={{ backgroundColor: '#F7DADF' }}>
                     <div className='nmanshop'>
                         <a href="#" className='nmensaasho'>home/</a>
-                        <a href="#" className='undlinsho'>shop all</a>
+                        <a href="#" className='undlinsho'>Organic formula</a>
 
                     </div>
                     <div className='w-100 shopallmain'>
@@ -162,12 +159,12 @@ const ShopAll = () => {
                         <div className='w-100'>
 
                             <div className='stshoplef'>
-                                <h1>Shop all</h1>
-                                <p>Meet our range</p>
+                                <h1>Organic formula</h1>
+                                <p>Meet our Kendamil Organic formula</p>
                             </div>
                         </div>
                         <div className='w-100' style={{ overflow: 'hidden' }}>
-                            <img src={shop1m} className='w-100 ' alt="" />
+                            <img src={shopom} className='w-100 ' alt="" />
                         </div>
                     </div>
                 </section>
@@ -242,68 +239,56 @@ const ShopAll = () => {
                 <section style={{ overflow: 'hidden' }}>
                     {/* <div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '61px', paddingBottom: '3px', maxWidth: '1024px' }}> */}
                     <Slider {...sho1settings} style={{ paddingTop: '50px', paddingBottom: '3px', maxWidth: '1024px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
-                        <div className=' fontt' style={{ width: '156.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon0} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>natural goodness</p>
-                            <p style={{ fontSize: '15px !Important', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Creamy whole milk & lactose from grass-fed cows</p>
-                        </div>
-
+                        
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon1} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom1} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>clean recipes </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  When  it comes to our recipe, we don't make compromises  </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Plant-Based DHA  </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> we've swapped fish oil for marine algae, for all the benefits and no fishy flavour </p>
                         </div>
 
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon4} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom2} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>family owned </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  We put your family first, because we are <br /> one </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>EU organic  </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>our recipe is certified by the Soil Association </p>
                         </div>
 
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon2} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom3} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>trusted quality </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  Millions of families across the world choose us every day</p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>no palm oil</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>Kendamil has and will NEVER used Palm Oil</p>
                         </div>
+                        <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
+                            <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom4} alt="" />
+                            </div>
 
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>with GOS   </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>with galacto-oligo saccharides to support the development of the gut flora </p>
+                        </div>
+                        <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
+                            <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom5} alt="" />
+                            </div>
 
-                        <div className='fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon3} alt="" />
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Whole milk  </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>   Whole milk sourced from Red tractor accredited farms  </p>
+                        </div>
+                        <div className='fontt' style={{ marginRight: '63px', textAlign: 'center' }}>
+                            <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth:'60px', margin:'auto' }} src={shopom6} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  We're a proud British business, at home in the Lake District</p>
-                        </div>
-
-
-                        <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon4} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>family owned </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  We put your family first, because we are <br /> one </p>
-                        </div>
-                        <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon1} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>clean recipes </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  When  it comes to our recipe, we don't make compromises  </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> made with love in the British Lake District at our Kendal HQ</p>
                         </div>
                     </Slider>
                     {/* </div> */}
@@ -315,7 +300,7 @@ const ShopAll = () => {
                     <h1>the parent support hub</h1>
                 </div>
 
-                <div className='bogslimpadd'>
+                <div className='bogslimpaddom '>
                     <Slider {...blodsliss} className='bloslicslide' style={{ overFlow: 'hidden' }}>
                         <div>
                             <div style={{ marginRight: '10px', textAlign: 'left' }}>
@@ -480,4 +465,4 @@ const ShopAll = () => {
     )
 }
 
-export default ShopAll;
+export default Shopom;

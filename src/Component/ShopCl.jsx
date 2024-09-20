@@ -14,12 +14,7 @@ import blosa9 from './Assests/blogsa9.webp';
 import blosa10 from './Assests/blogsa10.webp';
 import './ShopAll.css'
 import { Link } from 'react-router-dom';
-import homepageicon0 from './Assests/homepage_icons0.webp';
-import homepageicon1 from './Assests/homepage_icons.webp';
-import homepageicon2 from './Assests/homepage_icons2.webp';
-import homepageicon3 from './Assests/homepage_icons3.png';
-import homepageicon4 from './Assests/homepage_icons4.png';
-import shop1m from './Assests/shop1.webp';
+import shopcl from './Assests/shopcl.webp';
 import shopa1 from './Assests/shopall1.webp';
 import shopa2 from './Assests/shopall2.webp';
 import shopa3 from './Assests/shopall3.webp';
@@ -28,16 +23,22 @@ import shopa6 from './Assests/shopall6.webp';
 import shopa7 from './Assests/shopall7.webp';
 import shopa8 from './Assests/shopall8.webp';
 import shopa9 from './Assests/shopall9.webp';
+import shopcl1 from './Assests/shopcl1.svg';
+import shopcl2 from './Assests/shopcl2.svg';
+import shopcl3 from './Assests/shopcl3.svg';
+import shopcl4 from './Assests/shopcl4.svg';
+import shopcl5 from './Assests/shopcl5.svg';
+import shopcl6 from './Assests/shopcl6.svg';
 import { useCart } from './CartContext';
 
-const ShopAll = () => {
+const ShopCl = () => {
 
     const blodsliss = {
         dots: false,
         arrows: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 4.5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [
             {
@@ -54,7 +55,7 @@ const ShopAll = () => {
         dots: false,
         infinite: true,
         speed: 1000,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 350,
@@ -154,7 +155,7 @@ const ShopAll = () => {
                 <section style={{ backgroundColor: '#F7DADF' }}>
                     <div className='nmanshop'>
                         <a href="#" className='nmensaasho'>home/</a>
-                        <a href="#" className='undlinsho'>shop all</a>
+                        <a href="#" className='undlinsho'>Classic formula</a>
 
                     </div>
                     <div className='w-100 shopallmain'>
@@ -162,12 +163,12 @@ const ShopAll = () => {
                         <div className='w-100'>
 
                             <div className='stshoplef'>
-                                <h1>Shop all</h1>
-                                <p>Meet our range</p>
+                                <h1>Classic formula</h1>
+                                <p>Meet our Kendamil Classic range</p>
                             </div>
                         </div>
                         <div className='w-100' style={{ overflow: 'hidden' }}>
-                            <img src={shop1m} className='w-100 ' alt="" />
+                            <img src={shopcl} className='w-100 ' alt="" />
                         </div>
                     </div>
                 </section>
@@ -243,67 +244,63 @@ const ShopAll = () => {
                     {/* <div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '61px', paddingBottom: '3px', maxWidth: '1024px' }}> */}
                     <Slider {...sho1settings} style={{ paddingTop: '50px', paddingBottom: '3px', maxWidth: '1024px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
                         <div className=' fontt' style={{ width: '156.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon0} alt="" />
+                            <div className='imamarlefqwmkl'>
+                                <img style={{ maxWidth: '70px' }} src={shopcl1} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>natural goodness</p>
-                            <p style={{ fontSize: '15px !Important', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Creamy whole milk & lactose from grass-fed cows</p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>with GOS and FOS </p>
+                            <p style={{ fontSize: '15px !Important', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> with dietary fibres to support the development of the gut flora</p>
                         </div>
 
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon1} alt="" />
+                            <div className='imamarlefqwmkl'>
+                                <img style={{ maxWidth: '70px' }} src={shopcl2} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>clean recipes </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>award winning  </p>
                             <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  When  it comes to our recipe, we don't make compromises  </p>
                         </div>
 
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon4} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>family owned </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  We put your family first, because we are <br /> one </p>
-                        </div>
-
-                        <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon2} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>trusted quality </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  Millions of families across the world choose us every day</p>
-                        </div>
-
-
-                        <div className='fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon3} alt="" />
+                            <div className='imamarlefqwmkl'>
+                                <img style={{ maxWidth: '70px' }} src={shopcl3} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  We're a proud British business, at home in the Lake District</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>Kendamil uniquely uses Whole Milk as a source of fat </p>
                         </div>
 
-
-                        <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon4} alt="" />
+                        <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
+                            <div className='imamarlefqwmkl'>
+                                <img style={{ maxWidth: '70px' }} src={shopcl4} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>family owned </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  We put your family first, because we are <br /> one </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>no palm oil</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  Millions of families across the world choose us every day</p>
+                        </div>
+                        <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
+                            <div className='imamarlefqwmkl'>
+                                <img style={{ maxWidth: '70px' }} src={shopcl6} alt="" />
+                            </div>
+
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Plant-Based DHA  </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Kendamil sources Omega 3 from plants! </p>
                         </div>
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '70px' }} src={homepageicon1} alt="" />
+                            <div className='imamarlefqwmkl'>
+                                <img style={{ maxWidth: '70px' }} src={shopcl5} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>clean recipes </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  When  it comes to our recipe, we don't make compromises  </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Whole milk  </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>   Whole milk sourced from Red tractor accredited farms  </p>
+                        </div>
+                        <div className='fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
+                            <div className='imamarlefqwmkl'>
+                                <img style={{ maxWidth: '70px' }} src={shopcl3} alt="" />
+                            </div>
+
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Kendamil uniquely uses Whole Milk as a source of fat</p>
                         </div>
                     </Slider>
                     {/* </div> */}
@@ -315,7 +312,7 @@ const ShopAll = () => {
                     <h1>the parent support hub</h1>
                 </div>
 
-                <div className='bogslimpadd'>
+                <div className='bogslimpaddom'>
                     <Slider {...blodsliss} className='bloslicslide' style={{ overFlow: 'hidden' }}>
                         <div>
                             <div style={{ marginRight: '10px', textAlign: 'left' }}>
@@ -480,4 +477,4 @@ const ShopAll = () => {
     )
 }
 
-export default ShopAll;
+export default ShopCl;
