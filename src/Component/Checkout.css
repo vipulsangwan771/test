@@ -284,6 +284,9 @@
         flex-direction: column !important;
     }
 
+    .chedisnoanblo{
+        display: block !important;
+    }
     .cheleftyr {
         width: 100% !important;
         padding-left: 15px !important;
@@ -333,6 +336,7 @@
 .diblononche .accordion-button {
     background-color: #FAFAFA !important;
     display: block !important;
+    /* color: #071F60 !important; */
 }
 
 .diblononche .accordion-body{
@@ -341,8 +345,8 @@
     outline: none;
 }
 
-.accordion-item {
-    border-top: 0.5px solid #D2E6F1 !important;
+.diblononche .accordion-item {
+    border-top: none !important;
     border-bottom: none !important;
     border-left: none !important;
     border-right: none !important;
@@ -350,7 +354,31 @@
     border-width: 0.5px !important;
     border-radius: 0px !important;
 }
+.diblononcheaslo .accordion-button {
+    background-color: #fff !important;
+    display: block !important;
+    padding: 16px 0px !important;
+}
 
+.diblononcheaslo .accordion-body{
+    background-color: #fff !important;
+    border: none !important;
+    outline: none;
+    padding: 16px 0px !important;
+}
+
+.diblononcheaslo .accordion-item {
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    border-width: 0.5px !important;
+    border-radius: 0px !important;
+}
+.diblononcheaslo .accordion-button::after {
+    display: none;
+}
 .accordion-header button{   
     outline: none !important;
     border: none !important;
@@ -361,14 +389,12 @@
 --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
 }
 .diblononche .accordion-button::after {
-  
     display: none;
 }
-/* .accordion-button:not(.collapsed)::after {
-    transform: rotate(180deg);
-} */
+
 .cheacorhecfe{
-    font-size: 15px !important;
+    font-size: 14px !important;
+    font-weight: 400;
 }
 .naspoty{
     display: none;
@@ -394,15 +420,17 @@
 }
 .fontsapoi{
     font-size: 12px !important;
+    color: #071F60;
 }
 .cheupoiu{
     padding-left: 5px !important;
     padding-top: 3px;
     height: 12px;
-
 }
 
-
+.chedisnoanblo{
+    display: none;
+}
 
 
 

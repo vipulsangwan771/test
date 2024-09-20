@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from './CartContext';
 import { loadStripe } from '@stripe/stripe-js';
-import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { Elements, CardElement, useStripe, useElements, CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import logo from './Assests/logo.svg';
 import logo2 from './Assests/logo2.avif';
@@ -13,7 +13,7 @@ import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
 import Accordion from 'react-bootstrap/Accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 // Load Stripe using your publishable key
 const stripePromise = loadStripe('pk_test_51Oho45SGowUGr9ZACVRpS9E7YNC8l02K2IrNVs7xybE5Whg1E2Yrbd7IIBtHP5jfhbyskWMIt5qYN8R8PvBJ3l3O00rJDjL6R7');
@@ -130,12 +130,16 @@ const CheckoutForm = () => {
         <div className='chevaisdisnchbl'>
           <Accordion className='w-100 diblononche'>
             <Accordion.Item eventKey="9">
-              <Accordion.Header>  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>  <h2 className='cheacorhecfe naspotyawq' >Show order summary
-              <FontAwesomeIcon icon={faChevronDown} />
-              </h2>
-               <h2 className='cheacorhecfe naspoty'>Hide order summary 
-                <svg  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up cheupoiu" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg> </h2>
-                <strong>   ₹{(83 * cart.totalPrice).toFixed(2)}</strong> </div></Accordion.Header>
+              <Accordion.Header>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <h2 className='cheacorhecfe naspotyawq' >Show order summary
+                    <FontAwesomeIcon icon={faChevronDown} />
+                  </h2>
+                  <h2 className='cheacorhecfe naspoty'>Hide order summary
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up cheupoiu" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg> </h2>
+                  <strong style={{ fontSize: '19px' }}>   ₹{(83 * cart.totalPrice).toFixed(2)}</strong>
+                </div>
+              </Accordion.Header>
               <Accordion.Body>
                 <div>
                   <div className='maxoisdh'>
@@ -305,19 +309,23 @@ const CheckoutForm = () => {
 
                     <div >
                       <div className='chevaisdisnchbl'>
-                        <Accordion className='w-100 diblononche'>
+                        <Accordion className='w-100 diblononcheaslo'>
                           <Accordion.Item eventKey="19">
-                            <Accordion.Header> 
-                               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>  
-                              <h2 className='cheacorhecfe ' > <strong> Order summary ({totalItems} items)</strong>
-                            </h2>
-                              <div>
-                                <span className='naspotyawq fontsapoi'> Show <FontAwesomeIcon style={{ marginLeft: '3px' }} icon={faChevronDown} /></span>
-                                <span className='naspoty fontsapoi'> Hide 
-                                   <svg style={{paddingLeft:'3px', paddingTop:'3px'}} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg></span>
-                              </div>
+                            <Accordion.Header>
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <h2 className='cheacorhecfe ' >
+                                  <strong> Order summary ({totalItems} items)</strong>
+                                </h2>
+                                <div>
+                                  <span className='naspotyawq fontsapoi'> Show
+                                    <FontAwesomeIcon style={{ marginLeft: '3px' }} icon={faChevronDown} />
+                                  </span>
+                                  <span className='naspoty fontsapoi'> Hide
+                                    <svg style={{ paddingLeft: '3px', paddingTop: '3px' }} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg></span>
+                                </div>
 
-                            </div></Accordion.Header>
+                              </div>
+                            </Accordion.Header>
                             <Accordion.Body>
                               <div>
                                 <div className='maxoisdh'>
@@ -354,59 +362,59 @@ const CheckoutForm = () => {
                         </Accordion>
                       </div>
 
+                      <div className='chedisnoanblo'>
+
+                        <div className='martbot'>
+                          <form action="">
+                            <div style={{ display: 'flex', gap: '30px' }}>
+                              <input type="text" className='inputastys' placeholder='Discount Code' required />
+                              <button className='inputastysbtr'>Apply</button>
+                            </div>
+                          </form>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
 
 
-                      <div className='martbot'>
-                        <form action="">
-                          <div style={{ display: 'flex', gap: '30px' }}>
-                            <input type="text" className='inputastys' placeholder='Discount Code' required />
-                            <button className='inputastysbtr'>Apply</button>
+
+                          <div>
+                            <p className='asuiyt'>   Subtotal ({totalItems} items)</p>
                           </div>
-                        </form>
+                          <div>
+                            <p className='asuiyt'>   ₹{(83 * cart.totalPrice).toFixed(2)}</p>
+                          </div>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                          <div>
+                            <p className='asuiyt'>     Shipping</p>
+
+                          </div>
+                          <div>
+                            <p className='asuiyt'>   Enter shipping address</p>
+                          </div>
+                        </div>
+
+                        <div className='mabotbo' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                          <div>
+                            <strong> Total</strong>
+
+                          </div>
+                          <div>
+                            ₹<strong>{(83 * cart.totalPrice).toFixed(2)}</strong>
+                          </div>
+                        </div>
+
+                        <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '50px' }}>
+                          <div>
+                            This order has a recurring charge for multiple items.
+
+                          </div>
+                          <div>
+                            ₹{(83 * cart.totalPrice).toFixed(2)} every month
+                          </div>
+                        </div>
+
+
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-
-
-
-                        <div>
-                          <p className='asuiyt'>   Subtotal ({totalItems} items)</p>
-                        </div>
-                        <div>
-                          <p className='asuiyt'>   ₹{(83 * cart.totalPrice).toFixed(2)}</p>
-                        </div>
-                      </div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <div>
-                          <p className='asuiyt'>     Shipping</p>
-
-                        </div>
-                        <div>
-                          <p className='asuiyt'>   Enter shipping address</p>
-                        </div>
-                      </div>
-
-                      <div className='mabotbo' style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <div>
-                          <strong> Total</strong>
-
-                        </div>
-                        <div>
-                          ₹<strong>{(83 * cart.totalPrice).toFixed(2)}</strong>
-                        </div>
-                      </div>
-
-                      <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '50px' }}>
-                        <div>
-                          This order has a recurring charge for multiple items.
-
-                        </div>
-                        <div>
-                          ₹{(83 * cart.totalPrice).toFixed(2)} every month
-                        </div>
-                      </div>
-
-
-
                     </div>
 
 
