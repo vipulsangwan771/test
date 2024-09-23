@@ -58,7 +58,7 @@ const ShopCl = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 350,
+        autoplaySpeed: 800,
         responsive: [
             {
                 breakpoint: 968,
@@ -77,8 +77,6 @@ const ShopCl = () => {
         { id: 4, name: 'Deluxe Ready to Feed', price: 15.95, img: shopa4, date: new Date('2023-07-20'), ageGroup: '12+ months' },
         { id: 5, name: 'Organic First Infant Milk', price: 8.95, img: shopa6, date: new Date('2023-08-01'), ageGroup: '6-12 months' },
         { id: 6, name: '  18x250ml Classic Follow-On Ready', price: 6.95, img: shopa7, date: new Date('2023-09-15'), ageGroup: '0-12 months' },
-        // { id: 7, name: 'Goat First Infant Milk', price: 11.95, img: shopa8, date: new Date('2023-01-10'), ageGroup: '7+ months' },
-        // { id: 8, name: 'Pro-Comfort Baby Drops', price: 14.95, img: shopa9, date: new Date('2023-02-20'), ageGroup: '4+ months' },
     ];
 
 

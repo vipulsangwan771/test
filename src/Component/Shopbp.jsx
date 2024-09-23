@@ -57,7 +57,7 @@ const Shopbp = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 350,
+        autoplaySpeed: 800,
         responsive: [
             {
                 breakpoint: 968,

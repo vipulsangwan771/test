@@ -51,7 +51,7 @@ const Shopss = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 350,
+        autoplaySpeed: 800,
         responsive: [
             {
                 breakpoint: 968,
@@ -79,21 +79,21 @@ const Shopss = () => {
     const [sortType, setSortType] = useState('Featured');
 
     const handleAddToCart = (product) => {
-        const quantity = quantities[product.id]; 
+        const quantity = quantities[product.id];
         if (quantity > 0) {
             updateCart({ ...product, quantity, image: product.img });
         } else {
             alert('Please select a quantity greater than 0');
         }
     };
-    
+
     const handleIncrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
             [productId]: prevQuantities[productId] + 1,
         }));
     };
-    
+
     const handleDecrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
@@ -194,7 +194,7 @@ const Shopss = () => {
                                                 <img src={product.img} alt={product.name} />
                                             </div>
                                             <div className='imgsedown'>
-                                            <span style={{color:'#d0af71'}}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                                <span style={{ color: '#d0af71' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                                                 <p>{product.name}</p>
                                                 <p>£{product.price}</p>
                                                 <div className='disnobpkl'>

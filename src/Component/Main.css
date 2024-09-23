@@ -79,6 +79,8 @@
     border-width: 1px;
     text-decoration: none;
     color: #fff;
+    font-size: 15px;
+    font-family: 'Open Sans', 'sans-serif' !important;
 }
 
 .shopall a:hover {

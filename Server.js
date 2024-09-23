@@ -2,17 +2,17 @@ const express = require('express');
 const Stripe = require('stripe');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config(); 
+require('dotenv').config();
 
 if (!process.env.STRIPE_SECRET_KEY) {
     throw new Error("STRIPE_SECRET_KEY environment variable is missing.");
 }
 
 const app = express();
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY); 
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 app.use(cors());
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Stripe Checkout API');
@@ -44,9 +44,9 @@ app.post('/create-payment-intent', async (req, res) => {
         const description = `Export transaction for ${lineItems.length} item(s): ${lineItems.map(item => `${item.name} (${item.quantity} x ₹${item.price_data.unit_amount / 100})`).join(', ')}`;
 
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: amount, 
-            currency: 'inr', 
-            description:  `Purchase by ${customerName}`,
+            amount: amount,
+            currency: 'inr',
+            description: `Purchase by ${customerName}`,
             payment_method_types: ['card'],
             shipping: {
                 name: customerName,
@@ -55,11 +55,11 @@ app.post('/create-payment-intent', async (req, res) => {
                     city: customerAddress.city,
                     state: customerAddress.state,
                     postal_code: customerAddress.postal_code,
-                    country: customerAddress.country, 
+                    country: customerAddress.country,
                 },
             },
             metadata: {
-                export_description: description, 
+                export_description: description,
             },
         });
 
