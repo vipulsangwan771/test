@@ -22,9 +22,9 @@
 .non {
     display: flex;
     width: 40%;
-    padding-left: 25px;
+    padding-left: 15px;
     justify-content: flex-start;
-    gap: 42px;
+    gap: 30px;
     align-items: center;
 }
 

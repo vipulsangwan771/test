@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import logo from './Assests/logo.svg';
 import logo2 from './Assests/logo2.avif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faPersonBreastfeeding, faBars, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faBars} from '@fortawesome/free-solid-svg-icons';
 import './Nav.css';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
@@ -12,15 +12,7 @@ import { useSelectedImage } from './SelectedImageContext';
 import resized from './Assests/resized.webp';
 import resizedd from './Assests/resizedd.webp';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
 import Accordion from 'react-bootstrap/Accordion';
-
-
-
-
-
-
-
 
 
 
@@ -135,9 +127,6 @@ const Navbar = () => {
                         <div className='arem'>
                             <Link to="/blog">blog</Link>
                             <div className="dropdown-content2">
-
-
-
                                 <div>
                                     <div className='w-100' style={{ display: 'flex' }}>
                                         <div className='w-100 dweop'>
@@ -171,15 +160,47 @@ const Navbar = () => {
                             )}
                         </Link>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '50px', width: '40%' }}>
+                    <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '40px', width: '40%' }}>
                         <Link to="/country">
                             <img src={selectedImage} width={25} height={25} style={{ borderRadius: '100%' }} alt="" />
                         </Link>
-                        <div><Link to="/sign"><FontAwesomeIcon icon={faPersonBreastfeeding} style={{ color: 'black', height: '24px', width: '22px' }} /></Link></div>
+                        <div><Link to="/sign">
+                            <svg
+                                width="30"
+                                height="30"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                style={{ enableBackground: 'new 0 0 24 24' }}
+                            >
+                                <style type="text/css">
+                                    {`
+        .st0 { 
+          fill: none; 
+          stroke: #1A2E58; 
+          stroke-width: 1.5; 
+          stroke-linecap: round; 
+          stroke-linejoin: round; 
+        }
+      `}
+                                </style>
+                                <g>
+                                    <path className="st0" d="M12.1,16.2c0.6-0.1,1.2-0.1,1.8-0.1"></path>
+                                    <path className="st0" d="M12.2,22.7c-0.4,0.1-0.7,0.1-1.1,0.2c-3.5,0.4-6.5-0.8-7.2-2.7"></path>
+                                    <circle className="st0" cx="11.9" cy="5.1" r="4.4"></circle>
+                                    <path className="st0" d="M20.6,16.3c0.1,0.2,0.2,0.4,0.3,0.6c0,0,0.7,1.3,0,2.6c-0.6,1.1-3.4,3-6.3,3.6c-2.8,0.6-2.6-1.2-2.2-1.8
+        c0.5-0.8,1.7-1.8,3.1-2.8"></path>
+                                    <path className="st0" d="M6.8,16.3c4.7-0.6,5.6-0.5,5.8,0.7c0.2,1.3-2.4,2.3-4.2,2.8C7.2,20,4.8,20.7,3.5,20c-0.5-0.3-0.8-0.9-0.7-1.4
+        C3,17.2,4.1,12,9.6,10c1.9-0.7,4-0.6,5.9,0.4c0.8,0.4,1.6,1,2.5,1.9"></path>
+                                    <line className="st0" x1="7.7" y1="13.6" x2="6.8" y2="16.3"></line>
+                                    <circle className="st0" cx="17.3" cy="15.6" r="3.4"></circle>
+                                </g>
+                            </svg>
+                        </Link></div>
                         <div>
                             <FontAwesomeIcon
                                 icon={faMagnifyingGlass}
-                                style={{ color: 'black', cursor: 'pointer', width: '21px', height: '24px' }}
+                                style={{ color: '#071F60', cursor: 'pointer', width: '23px', height: '26px' }}
                                 onClick={() => setSearchVisible(!searchVisible)}
                             />
 
@@ -195,8 +216,8 @@ const Navbar = () => {
                                     <circle cx="9.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
                                     <circle cx="21.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
                                 </svg>
-                            </Link>
-                            ({cart.totalItems})
+                            </Link> 
+                          <span style={{paddingLeft:'2px', fontWeight:'600'}}>({cart.totalItems})</span>
                         </div>
                     </div>
                 </div>
@@ -284,7 +305,7 @@ const Navbar = () => {
                                         <div>
                                             <FontAwesomeIcon
                                                 icon={faMagnifyingGlass}
-                                                style={{ color: '#071F60', cursor: 'pointer', width: '21px', height: '24px' }}
+                                                style={{ color: '#071F60', cursor: 'pointer', width: '23px', height: '26px' }}
                                                 onClick={() => setSearchVisible(!searchVisible)}
                                             />
                                             <p>search</p>
@@ -324,7 +345,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div style={{ width: '30%', display: 'flex', justifyContent: 'flex-end' }}>
-                          <div><Link to="/cart" > 
+                        <div><Link to="/cart" >
                             <svg className="pointer-events-none" width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.5 11H26.5V19C26.5 20.1046 25.6046 21 24.5 21H6.5C5.39543 21 4.5 20.1046 4.5 19V11Z" fill="white"></path>
                                 <path d="M25.5 21C26.0523 21 26.5 20.5523 26.5 20V11.5H4.5V20C4.5 20.5523 4.94772 21 5.5 21H25.5Z" fill="white"></path>
@@ -334,7 +355,7 @@ const Navbar = () => {
                                 <circle cx="9.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
                                 <circle cx="21.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
                             </svg></Link>
-                           ({cart.totalItems})
+                            ({cart.totalItems})
                         </div>
                     </div>
                 </div>
