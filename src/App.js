@@ -12,9 +12,7 @@ import SignUPnext from './Component/SignUPnext';
 import Forgetpass from './Component/Forgetpass';
 import ShopAll from './Component/ShopAll';
 import Cart from './Component/Cart';
-import Success from './Component/Success';
-import Cancel from './Component/Cancel';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import Country from './Component/Country';
 import Preg from './Component/Preg';
 import Feed from './Component/Feed';
@@ -45,8 +43,6 @@ function App() {
           <Route path="/signnext" element={<SignUPnext/>} />
           <Route path="/forgotpass" element={<Forgetpass/>} />
           <Route path="/cart" element={<Cart/>} />
-          <Route path="/cancel" element={<Cancel/>} />
-          <Route path="/success" element={<Success/>} />
           <Route path="/country" element={<Country/>} />
           <Route path="/preg" element={<Preg/>} />
           <Route path="/feed" element={<Feed/>} />

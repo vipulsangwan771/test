@@ -68,7 +68,7 @@ const Country = () => {
                                 <p style={{ marginBottom: '1px', color: '#071F60', fontWeight: '600' }}>(deutsch)</p>
                             </div>
                         </div>
-                        <div className='unite12' onClick={() => handleImageClick(uk)}>
+                        <div className='unite12' onClick={() => handleImageClick(de)}>
                             <img src={de} alt="Germany" />
                             <div>
                                 <p style={{ marginBottom: '1px', color: '#071F60', fontWeight: '600' }}>germany</p>
