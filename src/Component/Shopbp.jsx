@@ -14,24 +14,23 @@ import blosa9 from './Assests/blogsa9.webp';
 import blosa10 from './Assests/blogsa10.webp';
 import './ShopAll.css'
 import { Link } from 'react-router-dom';
-import shopcl from './Assests/shopcl.webp';
-import shopa1 from './Assests/shopall1.webp';
-import shopa2 from './Assests/shopall2.webp';
-import shopa3 from './Assests/shopall3.webp';
-import shopa4 from './Assests/shopall4.webp';
-import shopa6 from './Assests/shopall6.webp';
-import shopa7 from './Assests/shopall7.webp';
-import shopa8 from './Assests/shopall8.webp';
-import shopa9 from './Assests/shopall9.webp';
-import shopcl1 from './Assests/shopcl1.svg';
-import shopcl2 from './Assests/shopcl2.svg';
-import shopcl3 from './Assests/shopcl3.svg';
-import shopcl4 from './Assests/shopcl4.svg';
-import shopcl5 from './Assests/shopcl5.svg';
-import shopcl6 from './Assests/shopcl6.svg';
+import dhspbp from './Assests/bp.webp';
+import banm1 from './Assests/1ban.webp';
+import banm2 from './Assests/2ban.webp';
+import banm3 from './Assests/3ban.webp';
+import banm4 from './Assests/4ban.webp';
+import banm5 from './Assests/5ban.webp';
+import banm6 from './Assests/6ban.webp';
+import banm7 from './Assests/7ban.webp';
+import banm8 from './Assests/8ban.webp';
+import ye1 from './Assests/ye1.svg';
+import ye2 from './Assests/ye2.svg';
+import ye3 from './Assests/ye3.svg';
+import ye4 from './Assests/ye4.svg';
+import ye5 from './Assests/ye5.svg';
 import { useCart } from './CartContext';
 
-const ShopCl = () => {
+const Shopbp = () => {
 
     const blodsliss = {
         dots: false,
@@ -71,14 +70,14 @@ const ShopCl = () => {
     };
 
     const products = [
-        { id: 1, name: 'Classic Ready to Feed', price: 7.95, img: shopa1, date: new Date('2023-05-01'), ageGroup: '0-6 months' },
-        { id: 2, name: 'Premium Ready to Feed', price: 9.95, img: shopa2, date: new Date('2023-06-15'), ageGroup: '6-12 months' },
-        { id: 3, name: 'Super Ready to Feed', price: 12.95, img: shopa3, date: new Date('2023-04-10'), ageGroup: '0-12 months' },
-        { id: 4, name: 'Deluxe Ready to Feed', price: 15.95, img: shopa4, date: new Date('2023-07-20'), ageGroup: '12+ months' },
-        { id: 5, name: 'Organic First Infant Milk', price: 8.95, img: shopa6, date: new Date('2023-08-01'), ageGroup: '6-12 months' },
-        { id: 6, name: '  18x250ml Classic Follow-On Ready', price: 6.95, img: shopa7, date: new Date('2023-09-15'), ageGroup: '0-12 months' },
-        // { id: 7, name: 'Goat First Infant Milk', price: 11.95, img: shopa8, date: new Date('2023-01-10'), ageGroup: '7+ months' },
-        // { id: 8, name: 'Pro-Comfort Baby Drops', price: 14.95, img: shopa9, date: new Date('2023-02-20'), ageGroup: '4+ months' },
+        { id: 1, name: '5-Pack Banana Baby Porridge', price: 12.50, img: banm1, date: new Date('2023-05-01'), ageGroup: '4+ months' },
+        { id: 2, name: '5-Pack Creamy Baby Porridge', price: 11.25, img: banm2, date: new Date('2023-06-15'), ageGroup: '6+ months' },
+        { id: 3, name: '5-Pack Berry Baby Porridge', price: 12.550, img: banm3, date: new Date('2023-04-10'), ageGroup: '7+ months' },
+        { id: 4, name: '5 Pack Organic Baby', price: 10.00, img: banm4, date: new Date('2023-07-20'), ageGroup: '4+ months' },
+        { id: 5, name: '5 Pack Cauliflower, Broccoli', price: 12.50, img: banm5, date: new Date('2023-05-01'), ageGroup: '6+ months' },
+        { id: 6, name: '5-Pack Apple and Blackcurrant', price: 12.50, img: banm6, date: new Date('2023-06-15'), ageGroup: '6+ months' },
+        { id: 7, name: '5-Pack Organic Banana and', price: 12.50, img: banm7, date: new Date('2023-04-10'), ageGroup: '7+ months' },
+        { id: 8, name: '5-Pack Organic Multigrain Porridge', price: 6.25, img: banm8, date: new Date('2023-07-20'), ageGroup: '7+ months' },
     ];
 
 
@@ -155,7 +154,7 @@ const ShopCl = () => {
                 <section style={{ backgroundColor: '#F7DADF' }}>
                     <div className='nmanshop'>
                         <a href="#" className='nmensaasho'>home/</a>
-                        <a href="#" className='undlinsho'>Classic formula</a>
+                        <a href="#" className='undlinsho'>baby porridges</a>
 
                     </div>
                     <div className='w-100 shopallmain'>
@@ -163,12 +162,12 @@ const ShopCl = () => {
                         <div className='w-100'>
 
                             <div className='stshoplef'>
-                                <h1>Classic formula</h1>
-                                <p>Meet our Kendamil Classic range</p>
+                                <h1>Baby Porridges</h1>
+                                <p>Meet our Baby Porridges</p>
                             </div>
                         </div>
                         <div className='w-100' style={{ overflow: 'hidden' }}>
-                            <img src={shopcl} className='w-100 ' alt="" />
+                            <img src={dhspbp} className='w-100 ' alt="" />
                         </div>
                     </div>
                 </section>
@@ -179,10 +178,9 @@ const ShopCl = () => {
                             <label htmlFor='ageGroup'>Filter: </label>
                             <select className='filselaccag' id='ageGroup' value={ageGroupFilter} onChange={(e) => setAgeGroupFilter(e.target.value)}>
                                 <option value='All'>Age range</option>
-                                <option value='0-6 months'>0-6 months(1)</option>
-                                <option value='6-12 months'>6-12 months(2)</option>
-                                <option value='0-12 months'>0-12 months(2)</option>
-                                <option value='12+ months'>12+ months(1)</option>
+                                <option value='4+ months'>4+ months(2)</option>
+                                <option value='7+ months'>7+ months(3)</option>
+                                <option value='6+ months'>6+ months(3)</option>
                             </select>
                         </div>
                         <div style={{ marginBottom: '20px' }}>
@@ -247,62 +245,46 @@ const ShopCl = () => {
                     <Slider {...sho1settings} style={{ paddingTop: '50px', paddingBottom: '3px', maxWidth: '1024px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
                         <div className=' fontt' style={{ width: '156.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl1} alt="" />
+                                <img style={{ maxWidth: '70px' }} src={ye1} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>with GOS and FOS </p>
-                            <p style={{ fontSize: '15px !Important', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> with dietary fibres to support the development of the gut flora</p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>award winning</p>
+                            <p style={{ fontSize: '15px !Important', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>awarded Gold in Made for Mum’s Awards 2021 ‘Best Baby Breakfast Food’ and 2023 ‘Best Organic Baby Food’</p>
                         </div>
 
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl2} alt="" />
+                                <img style={{ maxWidth: '70px' }} src={ye2} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>award winning  </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  When  it comes to our recipe, we don't make compromises  </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>No Added Sugar</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> ensuring your little one gets only what they need</p>
                         </div>
 
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
                             <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl3} alt="" />
+                                <img style={{ maxWidth: '70px' }} src={ye3} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>Kendamil uniquely uses Whole Milk as a source of fat </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>No Palm Oil </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>we always have been and always will be palm oil free</p>
                         </div>
 
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl4} alt="" />
+                                <img style={{ maxWidth: '70px' }} src={ye4} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>no palm oil</p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  Millions of families across the world choose us every day</p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Real Fruit & Veg</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>helping you explore new tastes, naturally</p>
                         </div>
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
                             <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl6} alt="" />
+                                <img style={{ maxWidth: '70px' }} src={ye5} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Plant-Based DHA  </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Kendamil sources Omega 3 from plants! </p>
-                        </div>
-                        <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl5} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Whole milk  </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>   Whole milk sourced from Red tractor accredited farms  </p>
-                        </div>
-                        <div className='fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl3} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Kendamil uniquely uses Whole Milk as a source of fat</p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}> Vegetarian </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>certified by the vegetarian society </p>
                         </div>
                     </Slider>
                     {/* </div> */}
@@ -479,4 +461,4 @@ const ShopCl = () => {
     )
 }
 
-export default ShopCl;
+export default Shopbp;

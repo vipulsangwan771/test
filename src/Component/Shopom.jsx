@@ -15,10 +15,9 @@ import blosa10 from './Assests/blogsa10.webp';
 import './ShopAll.css'
 import { Link } from 'react-router-dom';
 import shopom from './Assests/shopor.webp';
-import shopa1 from './Assests/shopall1.webp';
-import shopa2 from './Assests/shopall2.webp';
-import shopa3 from './Assests/shopall3.webp';
-import shopa4 from './Assests/shopall4.webp';
+import org1 from './Assests/organic1.webp';
+import org2 from './Assests/organic2.webp';
+import org3 from './Assests/organic3.webp';
 import shopom1 from './Assests/shopom1.svg';
 import shopom2 from './Assests/shopom2.svg';
 import shopom3 from './Assests/shopom3.svg';
@@ -67,16 +66,16 @@ const Shopom = () => {
     };
 
     const products = [
-        { id: 1, name: 'Classic Ready to Feed', price: 7.95, img: shopa1, date: new Date('2023-05-01'), ageGroup: '0-6 months' },
-        { id: 2, name: 'Premium Ready to Feed', price: 9.95, img: shopa2, date: new Date('2023-06-15'), ageGroup: '4+ months' },
-        { id: 3, name: 'Super Ready to Feed', price: 12.95, img: shopa3, date: new Date('2023-04-10'), ageGroup: '7+ months' },
-        { id: 4, name: 'Deluxe Ready to Feed', price: 15.95, img: shopa4, date: new Date('2023-07-20'), ageGroup: '4+ months' },
+        { id: 1, name: 'Organic First Infant Milk', price: 15.00, img: org1, date: new Date('2023-05-01'), ageGroup: '0-6 months' },
+        { id: 2, name: 'Organic Follow-On Milk', price: 15.00, img: org2, date: new Date('2023-06-15'), ageGroup: '6-12 months' },
+        { id: 3, name: 'Organic Toddler Milk', price: 15.00, img: org3, date: new Date('2023-04-10'), ageGroup: '12+ months' },
+        { id: 4, name: 'Organic First Infant Milk', price: 15.00, img: org1, date: new Date('2023-07-20'), ageGroup: ' months' },
     ];
 
 
 
     const [quantities, setQuantities] = useState(products.reduce((acc, product) => {
-        acc[product.id] = 0;
+        acc[product.id] = 1;
         return acc;
     }, {}));
     const { updateCart } = useCart();
@@ -171,9 +170,9 @@ const Shopom = () => {
                             <label htmlFor='ageGroup'>Filter: </label>
                             <select className='filselaccag' id='ageGroup' value={ageGroupFilter} onChange={(e) => setAgeGroupFilter(e.target.value)}>
                                 <option value='All'>Age range</option>
-                                <option value='0-6 months'>0-6 months</option>
-                                <option value='4+ months'>4+ months</option>
-                                <option value='7+ months'>7+ months</option>
+                                <option value='0-6 months'>0-6 months(1)</option>
+                                <option value='6-12 months'>6-12 months(1)</option>
+                                <option value='12+ months'>12+ months(1)</option>
                             </select>
                         </div>
                         <div style={{ marginBottom: '20px' }}>
@@ -200,11 +199,12 @@ const Shopom = () => {
                                                 <img src={product.img} alt={product.name} />
                                             </div>
                                             <div className='imgsedown'>
+                                            <span style={{color:'#d0af71'}}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                                                 <p>{product.name}</p>
                                                 <p>£{product.price}</p>
                                                 <div className='disnobpkl'>
                                                     <div className='buodeco '>
-                                                        <div className='buoideco w-75' >
+                                                        <div className='buoideco' >
                                                             <div onClick={() => handleDecrement(product.id)} style={{ cursor: 'pointer' }}  >
                                                                 -
                                                             </div>
@@ -215,7 +215,7 @@ const Shopom = () => {
                                                         </div>
                                                         <div className='w-100'>
                                                             <button className='buoidecooi' onClick={() => handleAddToCart(product)}>
-                                                                <p>  Add to Cart</p>
+                                                                <p>add to cart</p>
                                                                 <span><svg class="pointer-events-none" width="28" height="23" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 11H26.5V19C26.5 20.1046 25.6046 21 24.5 21H6.5C5.39543 21 4.5 20.1046 4.5 19V11Z" fill="white"></path><path d="M25.5 21C26.0523 21 26.5 20.5523 26.5 20V11.5H4.5V20C4.5 20.5523 4.94772 21 5.5 21H25.5Z" fill="white"></path><path d="M15.5 11.5V2L16.4161 2.09643C21.4983 2.6314 25.6119 6.46743 26.5 11.5H15.5Z" fill="white"></path><path d="M26.5 11.5V20C26.5 20.5523 26.0523 21 25.5 21H5.5C4.94772 21 4.5 20.5523 4.5 20V11.5H26.5ZM26.5 11.5H15.5V2L16.4161 2.09643C21.4983 2.6314 25.6119 6.46743 26.5 11.5Z" stroke="#071F60" stroke-width="2"></path><path d="M0 7.5H0.5C2.70914 7.5 4.5 9.29086 4.5 11.5V11.5" stroke="#071F60" stroke-width="2"></path><circle cx="9.5" cy="22" r="3" fill="white" stroke="#071F60" stroke-width="2"></circle><circle cx="21.5" cy="22" r="3" fill="white" stroke="#071F60" stroke-width="2"></circle></svg></span>
                                                             </button>
                                                         </div>

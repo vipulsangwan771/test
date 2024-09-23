@@ -23,6 +23,10 @@ import CheckoutPage from './Component/CheckoutPage';
 import Parentb from './Component/Parentb';
 import ShopCl from './Component/ShopCl';
 import Shopom from './Component/Shopom';
+import Shopgm from './Component/Shopgm';
+import Shoprf from './Component/Shoprf';
+import Shopbp from './Component/Shopbp';
+import Shopss from './Component/Shopss';
 function App() {
 ;
   return (
@@ -51,11 +55,11 @@ function App() {
           <Route path="/parentb" element={<Parentb/>} />
           <Route path="/shopcl" element={<ShopCl/>} />
           <Route path="/shopom" element={<Shopom/>} />
-          <Route path="/shopgm" element={<ShopCl/>} />
-          <Route path="/shoprf" element={<ShopCl/>} />
-          <Route path="/shopbp" element={<ShopCl/>} />
-          <Route path="/shopss" element={<ShopCl/>} />
-          
+          <Route path="/shopgm" element={<Shopgm/>} />
+          <Route path="/shoprf" element={<Shoprf/>} />
+          <Route path="/shopbp" element={<Shopbp/>} />
+          <Route path="/shopss" element={<Shopss/>} />
+
         </Routes>
       </Router>
     </>

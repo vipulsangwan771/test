@@ -19,10 +19,6 @@ import shopa1 from './Assests/shopall1.webp';
 import shopa2 from './Assests/shopall2.webp';
 import shopa3 from './Assests/shopall3.webp';
 import shopa4 from './Assests/shopall4.webp';
-import shopa6 from './Assests/shopall6.webp';
-import shopa7 from './Assests/shopall7.webp';
-import shopa8 from './Assests/shopall8.webp';
-import shopa9 from './Assests/shopall9.webp';
 import shopcl1 from './Assests/shopcl1.svg';
 import shopcl2 from './Assests/shopcl2.svg';
 import shopcl3 from './Assests/shopcl3.svg';
@@ -31,7 +27,7 @@ import shopcl5 from './Assests/shopcl5.svg';
 import shopcl6 from './Assests/shopcl6.svg';
 import { useCart } from './CartContext';
 
-const ShopCl = () => {
+const Shoprf = () => {
 
     const blodsliss = {
         dots: false,
@@ -71,14 +67,10 @@ const ShopCl = () => {
     };
 
     const products = [
-        { id: 1, name: 'Classic Ready to Feed', price: 7.95, img: shopa1, date: new Date('2023-05-01'), ageGroup: '0-6 months' },
-        { id: 2, name: 'Premium Ready to Feed', price: 9.95, img: shopa2, date: new Date('2023-06-15'), ageGroup: '6-12 months' },
-        { id: 3, name: 'Super Ready to Feed', price: 12.95, img: shopa3, date: new Date('2023-04-10'), ageGroup: '0-12 months' },
-        { id: 4, name: 'Deluxe Ready to Feed', price: 15.95, img: shopa4, date: new Date('2023-07-20'), ageGroup: '12+ months' },
-        { id: 5, name: 'Organic First Infant Milk', price: 8.95, img: shopa6, date: new Date('2023-08-01'), ageGroup: '6-12 months' },
-        { id: 6, name: '  18x250ml Classic Follow-On Ready', price: 6.95, img: shopa7, date: new Date('2023-09-15'), ageGroup: '0-12 months' },
-        // { id: 7, name: 'Goat First Infant Milk', price: 11.95, img: shopa8, date: new Date('2023-01-10'), ageGroup: '7+ months' },
-        // { id: 8, name: 'Pro-Comfort Baby Drops', price: 14.95, img: shopa9, date: new Date('2023-02-20'), ageGroup: '4+ months' },
+        { id: 1, name: '18x250ml Classic Ready to', price: 19.99, img: shopa1, date: new Date('2023-05-01'), ageGroup: '0-12 months' },
+        { id: 2, name: '18x250ml Classic Follow-On Ready', price: 19.99, img: shopa2, date: new Date('2023-06-15'), ageGroup: '6-12 months' },
+        { id: 3, name: 'Classic Ready to Feed', price: 7.95, img: shopa3, date: new Date('2023-04-10'), ageGroup: '0-12 months' },
+        { id: 4, name: '18x250ml Classic Ready to', price: 19.99, img: shopa4, date: new Date('2023-07-20'), ageGroup: ' months' },
     ];
 
 
@@ -155,7 +147,7 @@ const ShopCl = () => {
                 <section style={{ backgroundColor: '#F7DADF' }}>
                     <div className='nmanshop'>
                         <a href="#" className='nmensaasho'>home/</a>
-                        <a href="#" className='undlinsho'>Classic formula</a>
+                        <a href="#" className='undlinsho'>ready to Feed</a>
 
                     </div>
                     <div className='w-100 shopallmain'>
@@ -163,8 +155,8 @@ const ShopCl = () => {
                         <div className='w-100'>
 
                             <div className='stshoplef'>
-                                <h1>Classic formula</h1>
-                                <p>Meet our Kendamil Classic range</p>
+                                <h1>Ready to Feed</h1>
+                                <p>Meet our Ready to Feed</p>
                             </div>
                         </div>
                         <div className='w-100' style={{ overflow: 'hidden' }}>
@@ -179,10 +171,8 @@ const ShopCl = () => {
                             <label htmlFor='ageGroup'>Filter: </label>
                             <select className='filselaccag' id='ageGroup' value={ageGroupFilter} onChange={(e) => setAgeGroupFilter(e.target.value)}>
                                 <option value='All'>Age range</option>
-                                <option value='0-6 months'>0-6 months(1)</option>
-                                <option value='6-12 months'>6-12 months(2)</option>
+                                <option value='6-12 months'>6-12 months(1)</option>
                                 <option value='0-12 months'>0-12 months(2)</option>
-                                <option value='12+ months'>12+ months(1)</option>
                             </select>
                         </div>
                         <div style={{ marginBottom: '20px' }}>
@@ -479,4 +469,4 @@ const ShopCl = () => {
     )
 }
 
-export default ShopCl;
+export default Shoprf;

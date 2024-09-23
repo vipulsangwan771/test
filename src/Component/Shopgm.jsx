@@ -14,24 +14,19 @@ import blosa9 from './Assests/blogsa9.webp';
 import blosa10 from './Assests/blogsa10.webp';
 import './ShopAll.css'
 import { Link } from 'react-router-dom';
-import shopcl from './Assests/shopcl.webp';
-import shopa1 from './Assests/shopall1.webp';
-import shopa2 from './Assests/shopall2.webp';
-import shopa3 from './Assests/shopall3.webp';
-import shopa4 from './Assests/shopall4.webp';
-import shopa6 from './Assests/shopall6.webp';
-import shopa7 from './Assests/shopall7.webp';
-import shopa8 from './Assests/shopall8.webp';
-import shopa9 from './Assests/shopall9.webp';
-import shopcl1 from './Assests/shopcl1.svg';
-import shopcl2 from './Assests/shopcl2.svg';
-import shopcl3 from './Assests/shopcl3.svg';
-import shopcl4 from './Assests/shopcl4.svg';
-import shopcl5 from './Assests/shopcl5.svg';
-import shopcl6 from './Assests/shopcl6.svg';
+import shopgm from './Assests/shopgm.webp';
+import goat1 from './Assests/goat1.webp';
+import goat2 from './Assests/goat2.webp';
+import goat3 from './Assests/goat3.webp';
+import gm1 from './Assests/gm1.svg';
+import gm2 from './Assests/gm2.svg';
+import gm3 from './Assests/gm3.svg';
+import gm4 from './Assests/gm4.svg';
+import gm5 from './Assests/gm5.svg';
+import gm6 from './Assests/gm6.svg';
 import { useCart } from './CartContext';
 
-const ShopCl = () => {
+const Shopgm = () => {
 
     const blodsliss = {
         dots: false,
@@ -71,14 +66,10 @@ const ShopCl = () => {
     };
 
     const products = [
-        { id: 1, name: 'Classic Ready to Feed', price: 7.95, img: shopa1, date: new Date('2023-05-01'), ageGroup: '0-6 months' },
-        { id: 2, name: 'Premium Ready to Feed', price: 9.95, img: shopa2, date: new Date('2023-06-15'), ageGroup: '6-12 months' },
-        { id: 3, name: 'Super Ready to Feed', price: 12.95, img: shopa3, date: new Date('2023-04-10'), ageGroup: '0-12 months' },
-        { id: 4, name: 'Deluxe Ready to Feed', price: 15.95, img: shopa4, date: new Date('2023-07-20'), ageGroup: '12+ months' },
-        { id: 5, name: 'Organic First Infant Milk', price: 8.95, img: shopa6, date: new Date('2023-08-01'), ageGroup: '6-12 months' },
-        { id: 6, name: '  18x250ml Classic Follow-On Ready', price: 6.95, img: shopa7, date: new Date('2023-09-15'), ageGroup: '0-12 months' },
-        // { id: 7, name: 'Goat First Infant Milk', price: 11.95, img: shopa8, date: new Date('2023-01-10'), ageGroup: '7+ months' },
-        // { id: 8, name: 'Pro-Comfort Baby Drops', price: 14.95, img: shopa9, date: new Date('2023-02-20'), ageGroup: '4+ months' },
+        { id: 1, name: 'Goat First Infant Milk', price: 21.00, img: goat1, date: new Date('2023-05-01'), ageGroup: '0-6 months' },
+        { id: 2, name: 'Goat Follow-On Milk', price: 21.00, img: goat2, date: new Date('2023-06-15'), ageGroup: '6-12 months' },
+        { id: 3, name: 'Goat Toddler Milk', price:  21.00, img: goat3, date: new Date('2023-04-10'), ageGroup: '12+ months' },
+        { id: 4, name: 'Goat First Infant Milk', price:  21.00, img: goat1, date: new Date('2023-07-20') },
     ];
 
 
@@ -155,7 +146,7 @@ const ShopCl = () => {
                 <section style={{ backgroundColor: '#F7DADF' }}>
                     <div className='nmanshop'>
                         <a href="#" className='nmensaasho'>home/</a>
-                        <a href="#" className='undlinsho'>Classic formula</a>
+                        <a href="#" className='undlinsho'>Goat formula</a>
 
                     </div>
                     <div className='w-100 shopallmain'>
@@ -163,12 +154,12 @@ const ShopCl = () => {
                         <div className='w-100'>
 
                             <div className='stshoplef'>
-                                <h1>Classic formula</h1>
-                                <p>Meet our Kendamil Classic range</p>
+                                <h1>Goat formula</h1>
+                                <p>Meet our Kendamil Goat formula</p>
                             </div>
                         </div>
                         <div className='w-100' style={{ overflow: 'hidden' }}>
-                            <img src={shopcl} className='w-100 ' alt="" />
+                            <img src={shopgm} className='w-100 ' alt="" />
                         </div>
                     </div>
                 </section>
@@ -180,9 +171,8 @@ const ShopCl = () => {
                             <select className='filselaccag' id='ageGroup' value={ageGroupFilter} onChange={(e) => setAgeGroupFilter(e.target.value)}>
                                 <option value='All'>Age range</option>
                                 <option value='0-6 months'>0-6 months(1)</option>
-                                <option value='6-12 months'>6-12 months(2)</option>
-                                <option value='0-12 months'>0-12 months(2)</option>
-                                <option value='12+ months'>12+ months(1)</option>
+                                <option value='6-12 months'>4+ months(1)</option>
+                                <option value='12+ months'>7+ months(1)</option>
                             </select>
                         </div>
                         <div style={{ marginBottom: '20px' }}>
@@ -225,7 +215,7 @@ const ShopCl = () => {
                                                         </div>
                                                         <div className='w-100'>
                                                             <button className='buoidecooi' onClick={() => handleAddToCart(product)}>
-                                                                <p>add to cart</p>
+                                                                <p>  add to cart</p>
                                                                 <span><svg class="pointer-events-none" width="28" height="23" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 11H26.5V19C26.5 20.1046 25.6046 21 24.5 21H6.5C5.39543 21 4.5 20.1046 4.5 19V11Z" fill="white"></path><path d="M25.5 21C26.0523 21 26.5 20.5523 26.5 20V11.5H4.5V20C4.5 20.5523 4.94772 21 5.5 21H25.5Z" fill="white"></path><path d="M15.5 11.5V2L16.4161 2.09643C21.4983 2.6314 25.6119 6.46743 26.5 11.5H15.5Z" fill="white"></path><path d="M26.5 11.5V20C26.5 20.5523 26.0523 21 25.5 21H5.5C4.94772 21 4.5 20.5523 4.5 20V11.5H26.5ZM26.5 11.5H15.5V2L16.4161 2.09643C21.4983 2.6314 25.6119 6.46743 26.5 11.5Z" stroke="#071F60" stroke-width="2"></path><path d="M0 7.5H0.5C2.70914 7.5 4.5 9.29086 4.5 11.5V11.5" stroke="#071F60" stroke-width="2"></path><circle cx="9.5" cy="22" r="3" fill="white" stroke="#071F60" stroke-width="2"></circle><circle cx="21.5" cy="22" r="3" fill="white" stroke="#071F60" stroke-width="2"></circle></svg></span>
                                                             </button>
                                                         </div>
@@ -242,67 +232,60 @@ const ShopCl = () => {
                 </section>
 
 
+
                 <section style={{ overflow: 'hidden' }}>
                     {/* <div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '61px', paddingBottom: '3px', maxWidth: '1024px' }}> */}
                     <Slider {...sho1settings} style={{ paddingTop: '50px', paddingBottom: '3px', maxWidth: '1024px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
-                        <div className=' fontt' style={{ width: '156.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl1} alt="" />
-                            </div>
-
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>with GOS and FOS </p>
-                            <p style={{ fontSize: '15px !Important', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> with dietary fibres to support the development of the gut flora</p>
-                        </div>
-
+                        
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl2} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm1} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>award winning  </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  When  it comes to our recipe, we don't make compromises  </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Plant-Based DHA </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>we've swapped fish oil for marine algae, for all the benefits and no fishy flavour</p>
                         </div>
 
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl3} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm2} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>Kendamil uniquely uses Whole Milk as a source of fat </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>with GOS</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>with galacto-oligo saccharides to support the development of the gut flora</p>
                         </div>
 
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl4} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm3} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>no palm oil</p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>  Millions of families across the world choose us every day</p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>award winning</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>awarded Gold in Mother & Baby Awards 2022 ‘Best Product for Bottle Feeding’</p>
                         </div>
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl6} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm4} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Plant-Based DHA  </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Kendamil sources Omega 3 from plants! </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>A2 Goat Milk</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>made with whole goat milk, which forms softer, looser casein curds for gentler digestion </p>
                         </div>
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl5} alt="" />
+                            <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm5} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Whole milk  </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}>   Whole milk sourced from Red tractor accredited farms  </p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Goat Whey</p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> uniquely crafted with goat whey                            </p>
                         </div>
-                        <div className='fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
-                            <div className='imamarlefqwmkl'>
-                                <img style={{ maxWidth: '70px' }} src={shopcl3} alt="" />
+                        <div className='fontt' style={{ marginRight: '63px', textAlign: 'center' }}>
+                            <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
+                                <img style={{ maxWidth:'60px', margin:'auto' }} src={gm6} alt="" />
                             </div>
 
-                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>
-                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> Kendamil uniquely uses Whole Milk as a source of fat</p>
+                            <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>No Palm Oil </p>
+                            <p style={{ fontSize: '15px', fontWeight: '600', lineHeight: '23px', color: '#071F60', }}> we always have been and always will be palm oil free</p>
                         </div>
                     </Slider>
                     {/* </div> */}
@@ -314,7 +297,7 @@ const ShopCl = () => {
                     <h1>the parent support hub</h1>
                 </div>
 
-                <div className='bogslimpaddom'>
+                <div className='bogslimpaddom '>
                     <Slider {...blodsliss} className='bloslicslide' style={{ overFlow: 'hidden' }}>
                         <div>
                             <div style={{ marginRight: '10px', textAlign: 'left' }}>
@@ -479,4 +462,4 @@ const ShopCl = () => {
     )
 }
 
-export default ShopCl;
+export default Shopgm;

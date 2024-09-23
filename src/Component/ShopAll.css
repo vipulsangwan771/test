@@ -536,7 +536,7 @@
     padding-right: 140px;
     padding-bottom: 10px;
     padding-top: 10px;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 .shapal {
@@ -548,7 +548,7 @@
     align-items: flex-start;
     justify-content: center;
     text-align: center !important;
-    height: 430px;
+    height: 445px;
 }
 
 .shapal div {
@@ -570,19 +570,20 @@
 @media (max-width: 990px) {
     .shapal {
         flex: 1 1 calc(50% - 10px);
-        height: 320px;
+        height: 335px;
+        margin-bottom: 0px;
     }
 
     .shopalmaii {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 13px;
+        padding-right: 13px;
     }
     .shapal img {
-        height: 200px;
+        height: 180px;
     }
     .shoaii {
-        padding-left: 17px;
-        padding-right: 17px;
+        padding-left: 16px;
+        padding-right: 16px;
         padding-top: 30px;
     }
 
@@ -595,6 +596,9 @@
     }
     .disnobpkl{
         display: block !important;
+    }
+    .imgsedown p {
+        font-size: 12px !important;
     }
 
 }
@@ -649,8 +653,7 @@
     gap: 15px;
     flex-direction: row !important;
     border: 1px solid;
-    padding: 10px 15px;
-
+    padding: 8px 20px;
 }
 
 .buoidecooi {
@@ -665,19 +668,18 @@
 .buoidecooi p {
     font-size: 13px;
     color: #fff;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
-
-/* .disnobpkl{
-    display: none;
-} */
 .asshapal .disnobpkl{
 display: none;
 }
 .asshapal:hover .disnobpkl{
     display: block ;
 }
-
+.fontt{
+    padding: 10px;
+}
 
 
 
