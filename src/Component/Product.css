@@ -130,12 +130,15 @@ main {
 
 .profobto {
     border: 1px solid black;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
     padding: 7px 5px;
     align-items: center;
-    max-width: 250px;
+    max-width: 155px;
     margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px !important;
 }
 
 .proaddtbton {

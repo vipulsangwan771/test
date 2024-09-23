@@ -136,20 +136,20 @@ const Products = () => {
                 onClick={() => handleDecrease('product1')}
                 style={{ color: '#071F60', border: 'none', backgroundColor: '#fff' }}
               >
-                -
+              <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path d="M2 8.5V7h12v1.5z"></path></svg>
               </button>
               <input
                 type="text"
                 value={quantities.product1}
                 readOnly
-                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60' }}
+                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60', width:'30px' }}
               />
               <button
                 type="button"
                 onClick={() => handleIncrease('product1')}
                 style={{ border: 'none', backgroundColor: '#fff', color: '#071F60' }}
               >
-                +
+                <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 2h-1.5v5.25H2v1.5h5.25V14h1.5V8.75H14v-1.5H8.75V2z"></path></svg>
               </button>
             </div>
           </div>
@@ -170,20 +170,22 @@ const Products = () => {
                 onClick={() => handleDecrease('product2')}
                 style={{ color: '#071F60', border: 'none', backgroundColor: '#fff' }}
               >
-                -
-              </button>
+                 <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path d="M2 8.5V7h12v1.5z"></path></svg>
+             </button>
               <input
+              
                 type="text"
                 value={quantities.product2}
                 readOnly
-                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60' }}
+                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60' , width:'30px'}}
               />
-              <button
+              <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 2h-1.5v5.25H2v1.5h5.25V14h1.5V8.75H14v-1.5H8.75V2z"></path></svg>
+               <button
                 type="button"
                 onClick={() => handleIncrease('product2')}
                 style={{ border: 'none', backgroundColor: '#fff', color: '#071F60' }}
               >
-                +
+               
               </button>
             </div>
           </div>
@@ -205,21 +207,21 @@ const Products = () => {
                 onClick={() => handleDecrease('product3')}
                 style={{ color: '#071F60', border: 'none', backgroundColor: '#fff' }}
               >
-                -
-              </button>
+               <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path d="M2 8.5V7h12v1.5z"></path></svg>
+               </button>
               <input
                 type="text"
                 value={quantities.product3}
                 readOnly
-                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60' }}
+                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60', width:'30px' }}
               />
               <button
                 type="button"
                 onClick={() => handleIncrease('product3')}
                 style={{ border: 'none', backgroundColor: '#fff', color: '#071F60' }}
               >
-                +
-              </button>
+               <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 2h-1.5v5.25H2v1.5h5.25V14h1.5V8.75H14v-1.5H8.75V2z"></path></svg>
+               </button>
             </div>
           </div>
           <p><strong className="mainstrooi"> £12.00</strong></p>
@@ -238,21 +240,21 @@ const Products = () => {
                 onClick={() => handleDecrease('product4')}
                 style={{ color: '#071F60', border: 'none', backgroundColor: '#fff' }}
               >
-                -
-              </button>
+               <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path d="M2 8.5V7h12v1.5z"></path></svg>
+               </button>
               <input
                 type="text"
                 value={quantities.product4}
                 readOnly
-                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60' }}
+                style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60' , width:'30px'}}
               />
               <button
                 type="button"
                 onClick={() => handleIncrease('product4')}
                 style={{ border: 'none', backgroundColor: '#fff', color: '#071F60' }}
               >
-                +
-              </button>
+               <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 2h-1.5v5.25H2v1.5h5.25V14h1.5V8.75H14v-1.5H8.75V2z"></path></svg>
+               </button>
             </div>
           </div>
           <p><strong className="mainstrooi"> £19.99</strong></p>
