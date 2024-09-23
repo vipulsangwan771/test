@@ -54,10 +54,9 @@ const Cart = () => {
                             <div className='catrma'>
                                 <div className='cltomakscroll w-100'>
                                     {cart.items.map((item, index) => (
-                                        <div className='evyimante' key={index} style={{ marginBottom: '10px' }}>
+                                        <div className='evyimante' key={index} style={{ paddingBottom: '15px', paddingTop:'15px' }}>
                                             <div>
                                                 <img src={item.img} alt={item.name} width="140" height="170" />
-                                                {/* <img src={item.image} alt={item.name} width="140" height="170" /> */}
                                             </div>
                                             <div className='w-100'>
                                                 <div className='itnm' style={{ display: 'flex', justifyContent: 'space-between' }}>

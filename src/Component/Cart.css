@@ -145,7 +145,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    border-bottom: '1px solid #ccc';
+    border-bottom: 1px solid #ccc;
 }
 .indeccart{
     border: 1px solid #071F60;
