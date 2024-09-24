@@ -61,6 +61,8 @@ function App() {
           <Route path="/refund" element={<Refund />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<Contact />} />
+          <Route path="/delivery" element={<Contact />} />
 
         </Routes>
       </Router>
