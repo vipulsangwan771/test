@@ -73,10 +73,10 @@ const Footer = () => {
                                     <h2>Kendamil</h2>
                                     <p> <a href="#about" >Healthcare <br /> Professionals</a>  </p>
                                     <p>  <Link to='/shop'>Shop</Link>  </p>
-                                    <p> <a href="#about">learn</a>  </p>
+                                    <p> <Link to="/blog">learn</Link>  </p>
                                     <p> <Link to="/about">about</Link>  </p>
                                     <p> <a href="#about">Stockists</a>  </p>
-                                    <p>  <a href="#about">Terms of Service</a>  </p>
+                                    <p>  <Link to="/terms">Terms of Service</Link>  </p>
                                     <p>  <Link to="/refund">Refund policy</Link>  </p>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ const Footer = () => {
                                 <p>  <a href="#">FAQs</a>  </p>
                                 <p>  <a href="#">Delivery</a>  </p>
                                 <p> <Link to="/refund">Returns</Link>  </p>
-                                <p>  <a href="#">Contact</a>  </p>
+                                <p>  <Link to="/contact">Contact</Link>  </p>
                             </div>
                             <div className='fothead '>
                                 <h2>Main menu</h2>
@@ -104,10 +104,10 @@ const Footer = () => {
                                 <Accordion.Body>
                                 <p className='acorpara'> <a href="#">Healthcare Professionals</a>  </p>
                                     <p className='acorpara'>    <Link to="/shop">Shop</Link> </p>
-                                    <p className='acorpara'> <a href="#learn">learn</a>  </p>
+                                    <p className='acorpara'> <Link to="/blog">learn</Link>  </p>
                                     <p className='acorpara'>  <Link to="/about">about</Link></p>
                                     <p className='acorpara'> <a href="#sto">Stockists</a>  </p>
-                                    <p className='acorpara'>  <a href="#terms">Terms of Service</a>  </p>
+                                    <p className='acorpara'>  <Link to="/terms">Terms of Service</Link>  </p>
                                     <p className='acorpara'>  <Link to="/refund">Refund policy</Link>  </p>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -117,7 +117,7 @@ const Footer = () => {
                                 <p className='acorpara'>  <a href="#faqs">FAQs</a>  </p>
                                 <p className='acorpara'>  <a href="#del">Delivery</a>  </p>
                                 <p className='acorpara'> <Link to="/refund">Returns</Link>  </p>
-                                <p className='acorpara'>  <a href="#co">Contact</a>  </p>
+                                <p className='acorpara'>  <Link to="/contact">Contact</Link>  </p>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">

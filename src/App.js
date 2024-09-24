@@ -27,6 +27,7 @@ import Shopbp from './Component/Shopbp';
 import Shopss from './Component/Shopss';
 import Refund from './Component/Refund';
 import Terms from './Component/Terms';
+import Contact from './Component/Contact';
 function App() {
   ;
   return (
@@ -59,6 +60,7 @@ function App() {
           <Route path="/shopss" element={<Shopss />} />
           <Route path="/refund" element={<Refund />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
 
         </Routes>
       </Router>

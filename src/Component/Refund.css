@@ -68,18 +68,93 @@
 }
 
 
+/* contact page css */
 
 
+.contmain{
+    max-width: 812px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 36px;
+}
+.contmain h3{
+    margin-bottom: 23px;
+    margin-top: 23px;
+    font-size: 15px;
+    line-height: 23px;
+    color: #071F60;
 
+}
+.contmain h3 a{
+    color: #071F60;
+    font-weight: 700 !important;
+}
+.constmain{
+    padding-top: 36px;
+    padding-bottom: 36px;
+    max-width: 990px;
+    margin: auto;
+}
+.constmain h2{
+    text-align: center;
+    font-size: 42px;
+    line-height: 45px;
+    color: #071F60;
+    margin-bottom: 10px;
+    font-family: 'Recoleta', 'serif';
+}
+.contflex{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    margin-top: 20px;
+}
+.contflex input{
+    padding: 14px 10px;
+    width: 100%; 
+    border: 1.5px solid #071F60;
+    outline: none;
+}
+.contflex label{
+    font-size: 15px;
+    font-weight: 600;
+    color: #071F60;
 
-
-
-
-
-
-
-
-
+}
+.conttextar label{
+    font-size: 15px;
+    font-weight: 600;
+    color: #071F60;
+}
+@media screen and (max-width:990px) {
+    .contflex{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.conttextar{
+    margin-top: 20px;
+}
+.conttextar textarea{
+    border: 1px solid   #071F60;
+}
+.contsubbtn{
+    margin-top: 20px;
+    text-align: center;
+}
+.contsubbtn button{
+    margin-top: 30px;
+    padding: 10px 28px;
+    background-color: #071F60;
+    color: #fff;
+    border: 2px solid #071F60;
+    transition: all 0.3s;
+    font-size: 15px;
+}
+.contsubbtn button:hover{
+    background-color: #fff;
+    color: #071F60;
+    border: 2px solid #071F60;
+}
 
 
 

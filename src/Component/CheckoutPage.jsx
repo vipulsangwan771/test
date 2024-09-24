@@ -246,7 +246,7 @@ const CheckoutForm = () => {
                   </div>
 
                   <div>
-                    <input type="email" placeholder='Email' required className='maiccheinput' value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" id="email" name="email" placeholder='Email' required className='maiccheinput' value={email} onChange={(e) => setEmail(e.target.value)} />
 
                   </div>
 
@@ -271,21 +271,21 @@ const CheckoutForm = () => {
                     </div>
                     <div className='chenamertya' style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
                       <div className='chename w-100'>
-                        <input type="text" placeholder='Name' required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                        <input type="text" placeholder='Name' id="name" name="name" required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                       </div>
                       <div className='chename w-100'>
-                        <input type="text" placeholder='Last name' value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                        <input type="text" placeholder='Last name' id="name" name="name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
                       </div>
                     </div>
                     <div>
-                      <input className='maiccheinput' type="text" placeholder='Apartment,suite,etc.(optional)' value={address} onChange={(e) => setAddress(e.target.value)} />
+                      <input className='maiccheinput ' id="name" name="name" type="text" placeholder='Apartment,suite,etc.(optional)' value={address} onChange={(e) => setAddress(e.target.value)} />
                     </div>
                     <div className='chenamertya' style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
                       <div className='chename w-100' >
-                        <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
+                        <input type="text" id="name" name="name" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
                       </div>
                       <div className='chename w-100' >
-                        <input type="text" placeholder='Postal code' value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required />
+                        <input type="text" id="name" name="name" placeholder='Postal code' value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required />
                       </div>
                     </div>
                     <div style={{ marginTop: '15px' }}>
