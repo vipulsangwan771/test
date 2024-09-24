@@ -235,6 +235,13 @@
     margin-top: 20px;
     margin-bottom: 60px;
 }
+.checanelty a{
+    font-size: 14px;
+    color: #071F60;
+    font-family: 'Recoleta', serif;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
 
 .chelastpag {
     display: flex;
@@ -246,7 +253,7 @@
     padding-bottom: 30px;
 }
 
-.chelastpag p {
+.chelastpag a {
     text-decoration: underline;
     font-size: 15px;
     color: #071F60;

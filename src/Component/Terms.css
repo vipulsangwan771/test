@@ -1,0 +1,28 @@
+.termspage{
+    max-width: 48ch;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.termspage h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 10px;
+    font-family: 'Recoleta', 'serif';
+    color: #071F60;
+}
+
+.termspage h3{
+    font-size: 15px;
+    line-height: 23px;
+    color: #071F60;
+    font-weight: 600;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
+.termspage h2{
+    font-size: 25px;
+    line-height: 22px;
+    color: #071F60;
+    margin-bottom: 10px;
+    font-family: 'Recoleta', 'serif';
+}

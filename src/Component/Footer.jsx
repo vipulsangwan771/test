@@ -77,14 +77,14 @@ const Footer = () => {
                                     <p> <Link to="/about">about</Link>  </p>
                                     <p> <a href="#about">Stockists</a>  </p>
                                     <p>  <a href="#about">Terms of Service</a>  </p>
-                                    <p>  <a href="#about">Refund policy</a>  </p>
+                                    <p>  <Link to="/refund">Refund policy</Link>  </p>
                                 </div>
                             </div>
                             <div className='fothead '>
                                 <h2>Customer care</h2>
                                 <p>  <a href="#">FAQs</a>  </p>
                                 <p>  <a href="#">Delivery</a>  </p>
-                                <p> <a href="#">Returns</a>  </p>
+                                <p> <Link to="/refund">Returns</Link>  </p>
                                 <p>  <a href="#">Contact</a>  </p>
                             </div>
                             <div className='fothead '>
@@ -108,7 +108,7 @@ const Footer = () => {
                                     <p className='acorpara'>  <Link to="/about">about</Link></p>
                                     <p className='acorpara'> <a href="#sto">Stockists</a>  </p>
                                     <p className='acorpara'>  <a href="#terms">Terms of Service</a>  </p>
-                                    <p className='acorpara'>  <a href="#ref">Refund policy</a>  </p>
+                                    <p className='acorpara'>  <Link to="/refund">Refund policy</Link>  </p>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
@@ -116,7 +116,7 @@ const Footer = () => {
                                 <Accordion.Body>
                                 <p className='acorpara'>  <a href="#faqs">FAQs</a>  </p>
                                 <p className='acorpara'>  <a href="#del">Delivery</a>  </p>
-                                <p className='acorpara'> <a href="#ret">Returns</a>  </p>
+                                <p className='acorpara'> <Link to="/refund">Returns</Link>  </p>
                                 <p className='acorpara'>  <a href="#co">Contact</a>  </p>
                                 </Accordion.Body>
                             </Accordion.Item>

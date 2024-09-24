@@ -430,16 +430,16 @@ const CheckoutForm = () => {
                     </button>
                     <div>
                       <p className='checanelty'>
-                        Your payment info will be saved to a Shop account. By continuing, you agree to Shop’s <span style={{ color: '#071F60', textDecoration: 'underline', cursor: 'pointer' }}> Terms of Service </span>
-                        and acknowledge the <span style={{ textDecoration: 'underline', cursor: 'pointer', color: '#071F60' }}>Privacy Policy. </span>
+                        Your payment info will be saved to a Shop account. By continuing, you agree to Shop’s <span> <Link to="/terms"> Terms of Service </Link></span>
+                        and acknowledge the <span ><Link to="/terms">Privacy Policy. </Link></span>
                       </p>
                     </div>
                     <div className='chelastpag'>
-                      <p>Refund policy</p>
-                      <p>Shipping policy</p>
-                      <p>Privacy policy</p>
-                      <p>Terms of services</p>
-                      <p>Subscription policy</p>
+                      <Link to="/refund">Refund policy</Link>
+                      <Link to="/refund">Shipping policy</Link>
+                      <Link to="/refund">Privacy policy</Link>
+                      <Link to="/terms">Terms of services</Link>
+                      <Link to="/refund">Subscription policy</Link>
                     </div>
 
 

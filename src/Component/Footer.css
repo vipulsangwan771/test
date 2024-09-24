@@ -114,6 +114,8 @@ text-decoration: none;
     color: #071F60;
     font-weight: 600;
     margin-bottom: 15px;
+    font-size: 15px;
+    text-transform: lowercase;
     font-family: 'Open Sans', 'sans-serif' !important;
 }
 
