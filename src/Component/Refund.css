@@ -1,15 +1,16 @@
-
-.refdev a{
+.refdev a {
     text-decoration: none;
     font-size: 13px;
     font-weight: 600;
     font-family: 'Open Sans', 'sans-serif' !important;
     color: #071F60 !important;
 }
-.refdev{
+
+.refdev {
     padding: 0px 49px;
 }
-.refmaindev{
+
+.refmaindev {
     max-width: 812px;
     margin: auto;
     padding-top: 28px;
@@ -18,7 +19,8 @@
     padding-bottom: 21px;
 
 }
-.refmaindev h2{
+
+.refmaindev h2 {
     font-size: 25px;
     line-height: 22px;
     margin-bottom: 23px;
@@ -26,7 +28,8 @@
     font-family: 'Recoleta', 'serif';
     color: #071F60;
 }
-.refmaindev h3{
+
+.refmaindev h3 {
     font-size: 15px;
     line-height: 23px;
     color: #071F60;
@@ -35,7 +38,8 @@
     margin-bottom: 23px;
     margin-top: 23px;
 }
-.refmaindev h4{
+
+.refmaindev h4 {
     font-size: 15px;
     line-height: 23px;
     color: #071F60;
@@ -44,7 +48,8 @@
     margin-bottom: 23px;
     margin-top: 23px;
 }
-.refmaindev strong{
+
+.refmaindev strong {
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -52,17 +57,20 @@
     color: #071F60;
     font-family: 'Recoleta', 'serif';
 }
-.refmaindev h4 a{
+
+.refmaindev h4 a {
     text-decoration: underline;
     font-weight: 900 !important;
     color: #071F60;
 }
+
 @media screen and (max-width:990px) {
-    .refmaindev{
+    .refmaindev {
         padding-top: 21px;
         padding-bottom: 21px;
     }
-    .refdev{
+
+    .refdev {
         padding: 0px 15px;
     }
 }
@@ -71,13 +79,14 @@
 /* contact page css */
 
 
-.contmain{
+.contmain {
     max-width: 812px;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 36px;
 }
-.contmain h3{
+
+.contmain h3 {
     margin-bottom: 23px;
     margin-top: 23px;
     font-size: 15px;
@@ -85,17 +94,20 @@
     color: #071F60;
 
 }
-.contmain h3 a{
+
+.contmain h3 a {
     color: #071F60;
     font-weight: 700 !important;
 }
-.constmain{
+
+.constmain {
     padding-top: 36px;
     padding-bottom: 36px;
     max-width: 990px;
     margin: auto;
 }
-.constmain h2{
+
+.constmain h2 {
     text-align: center;
     font-size: 42px;
     line-height: 45px;
@@ -103,45 +115,54 @@
     margin-bottom: 10px;
     font-family: 'Recoleta', 'serif';
 }
-.contflex{
+
+.contflex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
     margin-top: 20px;
 }
-.contflex input{
+
+.contflex input {
     padding: 14px 10px;
-    width: 100%; 
+    width: 100%;
     border: 1.5px solid #071F60;
     outline: none;
 }
-.contflex label{
+
+.contflex label {
     font-size: 15px;
     font-weight: 600;
     color: #071F60;
 
 }
-.conttextar label{
+
+.conttextar label {
     font-size: 15px;
     font-weight: 600;
     color: #071F60;
 }
+
 @media screen and (max-width:990px) {
-    .contflex{
+    .contflex {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-.conttextar{
+
+.conttextar {
     margin-top: 20px;
 }
-.conttextar textarea{
-    border: 1px solid   #071F60;
+
+.conttextar textarea {
+    border: 1px solid #071F60;
 }
-.contsubbtn{
+
+.contsubbtn {
     margin-top: 20px;
     text-align: center;
 }
-.contsubbtn button{
+
+.contsubbtn button {
     margin-top: 30px;
     padding: 10px 28px;
     background-color: #071F60;
@@ -150,140 +171,9 @@
     transition: all 0.3s;
     font-size: 15px;
 }
-.contsubbtn button:hover{
+
+.contsubbtn button:hover {
     background-color: #fff;
     color: #071F60;
     border: 2px solid #071F60;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
