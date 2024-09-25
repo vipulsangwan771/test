@@ -64,14 +64,14 @@ const TextSlider = () => {
     };
 
     const items = [
-        { img: textimg1, namee: "Organic Follow-On Milk", price: "£12.00" },
-        { img: textimg2, namee: "Organic Follow-On Milk", price: "£12.00" },
+        { img: textimg1, namee: "Classic Follow-On Milk", price: "£12.90" },
+        { img: textimg2, namee: "Organic Follow-On Milk", price: "£12.99" },
         { img: textimg3, namee: "Organic Toddler Milk", price: "£12.00" },
-        { img: textimg4, namee: "Classic Toddler Milk", price: "£12.00" },
+        { img: textimg4, namee: "Classic Toddler Milk", price: "£12.90" },
         { img: textimg5, namee: "5-Pack Banana Baby Porridge", price: "£12.50" },
         { img: textimg6, namee: "5-Pack Creamy Baby Porridge", price: "£11.25" }, ,
         { img: textimg7, namee: "5-Pack Apple and Blackcurrant", price: "£12.50" }, ,
-        { img: textimg8, namee: "5-Pack Organic Banana and", price: "£12.50" }, ,
+        { img: textimg8, namee: "5-Pack Organic Banana and", price: "£10.50" }, ,
         { img: textimg9, namee: "5-Pack Organic Multigrain Porridge", price: "£6.25" },
     ];
     // const totalQuantity = Object.values(quantities).reduce((acc, quantity) => acc + quantity, 0);
