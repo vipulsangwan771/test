@@ -342,11 +342,11 @@
     --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
 }
 
-.accordion-button:not(.collapsed)::after {
+.offmaiwwwq .accordion-button:not(.collapsed)::after {
 
     transform: rotate(2deg);
 }
 
-.accordion-button::after {
+.offmaiwwwq .accordion-button::after {
     transform: rotate(-90deg);
 }
