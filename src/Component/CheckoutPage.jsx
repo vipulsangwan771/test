@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 // Load Stripe using your publishable key
-const stripePromise = loadStripe('Public key');
+const stripePromise = loadStripe('');
 
 const CheckoutForm = () => {
   const { cart, clearCart } = useCart();
