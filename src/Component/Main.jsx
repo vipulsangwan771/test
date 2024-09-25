@@ -166,7 +166,7 @@ const Main = () => {
 
                 <section style={{ overflow: 'hidden' }}>
                     {/* <div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '61px', paddingBottom: '3px', maxWidth: '1024px' }}> */}
-                    <Slider {...settings} style={{ paddingTop: '61px', paddingBottom: '3px', maxWidth: '1024px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
+                    <Slider {...settings} style={{ paddingTop: '61px', paddingBottom: '3px', maxWidth: '1034px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
                         <div className=' fontt' style={{ width: '156.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '150px', margin: 'auto', marginBottom: '20px' }}>
                                 <img style={{ maxWidth: '70px' }} src={homepageicon0} alt="" />
