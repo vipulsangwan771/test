@@ -65,8 +65,8 @@ const Recent = () => {
     };
 
     const items = [
-        { img: textimg1, namee: "Organic Follow-On Milk", price: "£12.00" },
-        { img: textimg2, namee: "Organic Follow-On Milk", price: "£12.00" },
+        { img: textimg1, namee: "Classic Follow-On Milk", price: "£12.99" },
+        { img: textimg2, namee: "Organic Follow-On Milk", price: "£12.98" },
         { img: textimg3, namee: "Organic Toddler Milk", price: "£12.00" },
         { img: textimg4, namee: "Classic Toddler Milk", price: "£12.00" },
         { img: textimg5, namee: "5-Pack Banana Baby Porridge", price: "£12.50" },
