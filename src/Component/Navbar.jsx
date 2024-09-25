@@ -263,7 +263,7 @@ const Navbar = () => {
                                     <div className='offmaiwwwq'>
                                         <div>
 
-                                            <Accordion className='w-100 diblonon'>
+                                            <Accordion className='w-100 '>
                                                 <Accordion.Item eventKey="3">
                                                     <Accordion.Header>  <Link>shop</Link></Accordion.Header>
                                                     <Accordion.Body>
@@ -286,7 +286,7 @@ const Navbar = () => {
                                             <Link to="/blog">blog</Link>
                                         </div>
                                         <div>
-                                            <Accordion className='w-100 diblonon'>
+                                            <Accordion className='w-100 '>
                                                 <Accordion.Item eventKey="4">
                                                     <Accordion.Header>  <Link>about</Link></Accordion.Header>
                                                     <Accordion.Body>
