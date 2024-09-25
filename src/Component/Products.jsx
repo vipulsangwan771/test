@@ -154,7 +154,6 @@ const Products = () => {
             </div>
           </div>
           <p><strong className="mainstrooi"> £21.00</strong></p>
-          {/* Optionally, you can add an "Add to Cart" button here as well */}
         </div>
 
         {/* Product 2 */}
@@ -179,18 +178,17 @@ const Products = () => {
                 readOnly
                 style={{ textAlign: 'center', border: 'none', outline: 'none', color: '#071F60' , width:'30px'}}
               />
-              <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 2h-1.5v5.25H2v1.5h5.25V14h1.5V8.75H14v-1.5H8.75V2z"></path></svg>
-               <button
+              <button
                 type="button"
                 onClick={() => handleIncrease('product2')}
                 style={{ border: 'none', backgroundColor: '#fff', color: '#071F60' }}
               >
-               
+                <svg class="css-hr47l6" style={{height:'16px', width:'16px'}} xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 2h-1.5v5.25H2v1.5h5.25V14h1.5V8.75H14v-1.5H8.75V2z"></path></svg>
+              
               </button>
             </div>
           </div>
           <p><strong className="mainstrooi"> £19.00</strong></p>
-          {/* Optionally, you can add an "Add to Cart" button here as well */}
         </div>
 
 
