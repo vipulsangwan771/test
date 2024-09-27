@@ -323,7 +323,6 @@
 .diblononche .accordion-button {
     background-color: #FAFAFA !important;
     display: block !important;
-    /* color: #071F60 !important; */
 }
 
 .diblononche .accordion-body{
@@ -458,12 +457,12 @@
     margin-bottom: 10px;
     
 }
-.checkcardnumb:active{
+.checkcardnumb.focused {
     border: 2px solid #071F60 !important;
     padding: 14px 15px;
     margin-top: 10px;
     border-radius: 4px;
-}
+  }
 .chechlavl{
     width: 100%;
     color: #071F60;

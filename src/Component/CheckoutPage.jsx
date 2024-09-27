@@ -174,7 +174,19 @@ const CheckoutForm = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  const [isCardFocused, setIsCardFocused] = useState(false);
+  const [isCardNumberFocused, setIsCardNumberFocused] = useState(false);
+  const [isCardExpiryFocused, setIsCardExpiryFocused] = useState(false);
+  const [isCardCvcFocused, setIsCardCvcFocused] = useState(false);
 
+  const handleCardNumberFocus = () => setIsCardNumberFocused(true);
+  const handleCardNumberBlur = () => setIsCardNumberFocused(false);
+
+  const handleCardExpiryFocus = () => setIsCardExpiryFocused(true);
+  const handleCardExpiryBlur = () => setIsCardExpiryFocused(false);
+
+  const handleCardCvcFocus = () => setIsCardCvcFocused(true);
+  const handleCardCvcBlur = () => setIsCardCvcFocused(false);
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -417,16 +429,20 @@ const CheckoutForm = () => {
                               <Accordion.Body>
                                 <div>
                                   <div >
-                                    <CardNumberElement className='checkcardnumb' onChange={handleCardNumberChange} />
+                                    <CardNumberElement className={`checkcardnumb ${isCardNumberFocused ? 'focused' : ''}`} onFocus={handleCardNumberFocus} onBlur={handleCardNumberBlur} onChange={handleCardNumberChange} />
                                     {cardNumberError && <div style={{ color: 'red', paddingLeft: '20px' }}>{cardNumberError}</div>}
                                     {cardType && <div style={{ color: 'green', paddingLeft: '20px' }}>Card Type: {cardType}</div>}
                                   </div>
                                   <div className='checvc'>
                                     <div className='w-100'>
-                                      <CardExpiryElement className='checkcardnumb ' />
+                                      <CardExpiryElement
+                                        className={`checkcardnumb ${isCardExpiryFocused ? 'focused' : ''}`} onFocus={handleCardExpiryFocus} onBlur={handleCardExpiryBlur}
+                                      />
                                     </div>
                                     <div className='w-100'>
-                                      <CardCvcElement className='checkcardnumb' />
+                                      <CardCvcElement
+                                        className={`checkcardnumb ${isCardCvcFocused ? 'focused' : ''}`} onFocus={handleCardCvcFocus} onBlur={handleCardCvcBlur}
+                                      />
                                     </div>
                                   </div>
                                   <div className='checkpuinput'>
