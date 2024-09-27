@@ -252,13 +252,13 @@ const About = () => {
                                                     - we promise to do our best for your little one and the world they'll inherit.
                                                 </p>
                                             </Tab.Pane>
-                                            <Tab.Pane eventKey="second"  className='maremotab'><h1 className='righttabh1'>for all families</h1>
+                                            <Tab.Pane eventKey="second" className='maremotab'><h1 className='righttabh1'>for all families</h1>
                                                 <p className='righttabp'>Supporting your individual parenting journey with options that allow you to make the right choice for your family. We’re in this together.
                                                 </p></Tab.Pane>
-                                            <Tab.Pane eventKey="third"  className='maremotab'><h1 className='righttabh1'>Every journey, every step</h1>
+                                            <Tab.Pane eventKey="third" className='maremotab'><h1 className='righttabh1'>Every journey, every step</h1>
                                                 <p className='righttabp'> We’ve got you! From first drop to fully weaned, this journey is about so much more than formula. We offer products, support and resources for the whole family.
                                                 </p></Tab.Pane>
-                                            <Tab.Pane eventKey="forth"  className='maremotab'><h1 className='righttabh1'>Always growing</h1>
+                                            <Tab.Pane eventKey="forth" className='maremotab'><h1 className='righttabh1'>Always growing</h1>
                                                 <p className='righttabp'> We work every day for the next generation. From using renewable energy in our factory and sourcing organic cow's milk locally to avoiding palm oil and minimally processing nature's ingredients - we promise to do our best for your little one and the world they'll inherit.
                                                 </p></Tab.Pane>
                                         </Tab.Content>

@@ -146,42 +146,42 @@ const Preg = () => {
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={tab10}  width={250} alt="" />
+                                    <img src={tab10} width={250} alt="" />
                                     <h2>16 Feb 2024</h2>
                                     <h3>Empowered Birth: Navigating Choices for an Optimal Birthing Experience</h3>
                                     <h4>Hey soon-to-be parents! Welcome to the rollercoaster of emotions, excitement, and a bit of nervous anticipation that is the journey to parenthood. Just like...</h4>
-                                         <a href="#12">read now</a>
+                                    <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={tab11}  width={250} alt="" />
+                                    <img src={tab11} width={250} alt="" />
                                     <h2>09 Oct 2023</h2>
                                     <h3>How To Prepare For Bringing Baby Home</h3>
                                     <h4>While your baby's due date is fast approaching, you may be searching for tips on how to get prepared and what to expect. We’ve...</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={tab12}  width={250} alt="" />
+                                    <img src={tab12} width={250} alt="" />
                                     <h2>03 Oct 2023</h2>
                                     <h3>Postpartum recovery tips for new mums</h3>
                                     <h4>You are put under so much strain physically and mentally during pregnancy and labour, so it's no surprise the body and mind needs time...</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre1}  width={250} alt="" />
+                                    <img src={pre1} width={250} alt="" />
                                     <h2>27 Sep 2023</h2>
                                     <h3>Your Guide on Exercising During Pregnancy</h3>
                                     <h4>With pregnancy comes many symptoms that might keep you from exercising. In fact for most, exercise is usually the...</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre2}  width={250} alt="" />
+                                    <img src={pre2} width={250} alt="" />
                                     <h2>24 Jul 2023</h2>
                                     <h3>What to Expect from Your Midwife Appointments</h3>
                                     <h4>When it comes to pregnancy care in the UK, midwife appointments play a crucial role in ensuring the health and well-being of both the expectant mother and the...</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre3}  width={250} alt="" />
+                                    <img src={pre3} width={250} alt="" />
                                     <h2>10 Jul 2023</h2>
                                     <h3>CUnderstanding Quickening in Pregnancy: Babies movements
                                     </h3>
@@ -189,13 +189,13 @@ const Preg = () => {
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre4}  width={250} alt="" />
+                                    <img src={pre4} width={250} alt="" />
                                     <h2>04 Jul 2023</h2>
                                     <h3>Naturally Inducing Labour: Safe and Effective Methods</h3>
                                     <h4>Preparing for the arrival of your little one is an exciting and eagerly anticipated time. As your due date approaches, you may find yourself getting impatient to meet...</h4>
                                     <a href="#12">read now</a>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div>
@@ -208,21 +208,21 @@ const Preg = () => {
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre6}  width={250} alt="" />
+                                    <img src={pre6} width={250} alt="" />
                                     <h2>13 Jun 2023</h2>
                                     <h3>Post Birth - Everything you need to know</h3>
                                     <h4>Becoming a mum is an exciting, life-changing experience, but it's not without its challenges. Already you have to adjust to a new routine and the demands of caring...</h4>
-                                         <a href="#12">read now</a>
+                                    <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre7}  width={250} alt="" />
+                                    <img src={pre7} width={250} alt="" />
                                     <h2>02 May 2023</h2>
                                     <h3>Maternal Mental Health: A guide for new mothers</h3>
                                     <h4>Becoming a mother is an extraordinary experience. It can bring immense joy, excitement, and fulfilment. So, at a time when everyone around you expects you to be floating...</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre8}  width={250} alt="" />
+                                    <img src={pre8} width={250} alt="" />
                                     <h2>25 Mar 2023</h2>
                                     <h3>Pregnancy And Caffeine - How Much Can You Safely Consume?
                                     </h3>
@@ -230,21 +230,21 @@ const Preg = () => {
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre9}  width={250} alt="" />
+                                    <img src={pre9} width={250} alt="" />
                                     <h2>17 Mar 2023</h2>
                                     <h3>What You Need to Know About Sleep During Pregnancy</h3>
                                     <h4>If you're in the third trimester, nothing can be more frustrating than hearing 'sleep while you can' or 'sleep before the baby comes'. Pregnancy is an exciting time,...</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre10}  width={250} alt="" />
+                                    <img src={pre10} width={250} alt="" />
                                     <h2>03 Feb 2023</h2>
                                     <h3>What to Pack in your Hospital Bag</h3>
                                     <h4>Packing a hospital bag for labour can be a daunting task, especially for first-time parents. But with a little bit of planning and organisation, you can ensure that...</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre11}  width={250} alt="" />
+                                    <img src={pre11} width={250} alt="" />
                                     <h2>09 Feb 2022</h2>
                                     <h3>7 ways partners can be supportive during pregnancy
                                     </h3>
@@ -252,34 +252,34 @@ const Preg = () => {
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={pre12}  width={250} alt="" />
+                                    <img src={pre12} width={250} alt="" />
                                     <h2>24 Jan 2022</h2>
                                     <h3>I'm pregnant, now what?</h3>
                                     <h4>Chances are, if you’re reading this, you’re pregnant. Or, you’re planning to get pregnant. Or someone close to you is pregnant. Whatever the circumstance: congratulations!! Growing a baby...</h4>
                                     <a href="#12">read now</a>
                                 </div>
-                                
+
                             </div>
                         </div>
 
                         <div>
                             <div className='preslflea'>
                                 <div className='itempreeg'>
-                                    <img src={prew13}  alt="" />
+                                    <img src={prew13} alt="" />
                                     <h2>23 Oct 2020</h2>
                                     <h3>Coping in Early Labour</h3>
                                     <h4>Early labour brings with it a whole host of emotions – excitement, anxiety, fear, frustration and many more (in fact, you may feel many of these emotions all at once!)....</h4>
                                     <a href="#12">read now</a>
                                 </div>
                                 <div className='itempreeg'>
-                                    <img src={prew14}  width={250} alt="" />
+                                    <img src={prew14} width={250} alt="" />
                                     <h2>21 Sep 2020</h2>
                                     <h3>Preparing for Labour</h3>
                                     <h4>You’ve spent the last 9 months eagerly awaiting the arrival of your baby and you’re just days away from your due date. But how should you prepare for labour and...</h4>
-                                         <a href="#12">read now</a>
+                                    <a href="#12">read now</a>
                                 </div>
-                                
-                                
+
+
                             </div>
                         </div>
 
@@ -399,7 +399,7 @@ const Preg = () => {
                             <p>sign up to our newsletter for all our parenting tips and tricks, as well as being the first to hear all about new products and exclusive offers. </p>
                             <form action="#search" className='aboutform'>
                                 <div className='blogbutt' style={{ position: 'relative' }}>
-                                    <input type="email"  name='email' id='email' placeholder='Enter your Email' required />
+                                    <input type="email" name='email' id='email' placeholder='Enter your Email' required />
                                     <button className='btnaawq'><FontAwesomeIcon icon={faArrowRight} /></button>
 
                                 </div>

@@ -12,10 +12,10 @@ import { SelectedImageProvider } from './Component/SelectedImageContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-       <SelectedImageProvider>
-    <CartProvider>
-    <App />
-    </CartProvider>
+    <SelectedImageProvider>
+      <CartProvider>
+        <App />
+      </CartProvider>
     </SelectedImageProvider>
   </React.StrictMode>
 );

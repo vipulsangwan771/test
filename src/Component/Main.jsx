@@ -134,7 +134,7 @@ const Main = () => {
     }
     return (
         <>
-        <Navbar/>
+            <Navbar />
             <section >
                 <section style={{ overflow: 'hidden', width: '100%' }}>
                     <div className=' bane'>
@@ -450,10 +450,10 @@ const Main = () => {
                     </div>
                 </Slider>
             </div>
-<TextSlider/>
-<IMgSlid/>
-<Tabb/>
-<Footer/>
+            <TextSlider />
+            <IMgSlid />
+            <Tabb />
+            <Footer />
         </>
     );
 };

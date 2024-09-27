@@ -363,7 +363,7 @@ const Parentb = () => {
                                     <h4>You bring home your newborn baby and for the first few weeks you’re amazed at how smoothly everything is going. Being a new parent</h4>
                                     <a href="#12">read now</a>
                                 </div>
-                               
+
 
                             </div>
                         </div>
@@ -483,7 +483,7 @@ const Parentb = () => {
                             <p>sign up to our newsletter for all our parenting tips and tricks, as well as being the first to hear all about new products and exclusive offers. </p>
                             <form action="#search" className='aboutform'>
                                 <div className='blogbutt' style={{ position: 'relative' }}>
-                                    <input type="email" placeholder='Enter your Email'   name='email' id='email' required />
+                                    <input type="email" placeholder='Enter your Email' name='email' id='email' required />
                                     <button className='btnaawq'><FontAwesomeIcon icon={faArrowRight} /></button>
 
                                 </div>

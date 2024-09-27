@@ -30,19 +30,19 @@ const TextSlider = () => {
         }));
     };
     const handleAddToCart = (index, item) => {
-        const quantity = quantities[index] || 1; 
-    
+        const quantity = quantities[index] || 1;
+
         const newItem = {
             name: item.namee,
-            img: item.img, 
-            price: parseFloat(item.price.replace('£', '')), 
-            quantity: quantity, 
+            img: item.img,
+            price: parseFloat(item.price.replace('£', '')),
+            quantity: quantity,
         };
-    
-       
+
+
         updateCart(newItem);
     };
-    
+
 
     const textsettings = {
         dots: false,

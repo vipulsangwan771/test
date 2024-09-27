@@ -176,7 +176,7 @@ const Blog = () => {
             </section>
 
             <div className='aslpoi'>
-                <Footer/>
+                <Footer />
             </div>
         </>
     )

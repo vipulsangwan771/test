@@ -271,9 +271,10 @@
         flex-direction: column !important;
     }
 
-    .chedisnoanblo{
+    .chedisnoanblo {
         display: block !important;
     }
+
     .cheleftyr {
         width: 100% !important;
         padding-left: 5px !important;
@@ -304,10 +305,12 @@
     .maxoisdh {
         max-width: 99% !important;
     }
-    .chevaisdisnchbl{
+
+    .chevaisdisnchbl {
         display: block !important;
     }
-    .chenamertya{
+
+    .chenamertya {
         flex-direction: column !important;
     }
 }
@@ -325,7 +328,7 @@
     display: block !important;
 }
 
-.diblononche .accordion-body{
+.diblononche .accordion-body {
     background-color: #FAFAFA !important;
     border: none !important;
     outline: none;
@@ -340,13 +343,14 @@
     border-width: 0.5px !important;
     border-radius: 0px !important;
 }
+
 .diblononcheaslo .accordion-button {
     background-color: #fff !important;
     display: block !important;
     padding: 16px 0px !important;
 }
 
-.diblononcheaslo .accordion-body{
+.diblononcheaslo .accordion-body {
     background-color: #fff !important;
     border: none !important;
     outline: none;
@@ -362,34 +366,39 @@
     border-width: 0.5px !important;
     border-radius: 0px !important;
 }
+
 .diblononcheaslo .accordion-button::after {
     display: none;
 }
-.accordion-header button{   
+
+.accordion-header button {
     outline: none !important;
     border: none !important;
     background-color: #E2F1F3 !important;
 }
 
-.accordion-header{
---bs-accordion-btn-focus-box-shadow: 0 0 0 0;
+.accordion-header {
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
 }
+
 .diblononche .accordion-button::after {
     display: none;
 }
-.cardacord  .accordion-button {
+
+.cardacord .accordion-button {
     background-color: #F4F4F4;
     display: block !important;
     padding: 0px 0px !important;
 }
-.cardacord  .accordion-header button{   
+
+.cardacord .accordion-header button {
     outline: none !important;
     border: none !important;
     background-color: #F4F4F4 !important;
     cursor: pointer;
-    border-bottom: 0px !important
-    ;
+    border-bottom: 0px !important;
 }
+
 .cardacord .accordion-item {
     border-top: none !important;
     border-bottom: none !important;
@@ -399,54 +408,65 @@
     border-width: 0.5px !important;
     border-radius: 0px !important;
 }
-.cardacord .accordion-body{
+
+.cardacord .accordion-body {
     background-color: #F4F4F4 !important;
     border: none !important;
     outline: none;
     padding: 16px 0px !important;
-    border-bottom-left-radius: 4px !important; 
+    border-bottom-left-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
 }
-.cheacorhecfe{
+
+.cheacorhecfe {
     font-size: 14px !important;
     font-weight: 400;
 }
-.naspoty{
+
+.naspoty {
     display: none;
 }
+
 .accordion-button:not(.collapsed) .naspoty {
     display: block !important;
     transition: all 0.3s;
 }
-.accordion-button:not(.collapsed) .naspotyawq{
+
+.accordion-button:not(.collapsed) .naspotyawq {
     display: none;
     transition: all 0.3s;
 }
-.naspotyawq{
+
+.naspotyawq {
     display: flex;
     align-items: center;
     gap: 2px;
 }
-.naspotyawq svg{
+
+.naspotyawq svg {
     margin-top: 3px;
 }
-.chevaisdisnchbl{
+
+.chevaisdisnchbl {
     display: none;
 }
-.fontsapoi{
+
+.fontsapoi {
     font-size: 12px !important;
     color: #071F60;
 }
-.cheupoiu{
+
+.cheupoiu {
     padding-left: 5px !important;
     padding-top: 3px;
     height: 12px;
 }
 
-.chedisnoanblo{
+.chedisnoanblo {
     display: none;
 }
-.checkcardnumb{
+
+.checkcardnumb {
     border: 2px solid #ccc;
     padding: 14px 15px;
     margin-top: 10px;
@@ -455,21 +475,23 @@
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 10px;
-    
+
 }
+
 .checkcardnumb.focused {
     border: 2px solid #071F60 !important;
     padding: 14px 15px;
     margin-top: 10px;
     border-radius: 4px;
-  }
-.chechlavl{
+}
+
+.chechlavl {
     width: 100%;
     color: #071F60;
     cursor: pointer;
 }
 
-.checkpuinput{
+.checkpuinput {
     margin-top: 10px;
     border-radius: 4px;
     background-color: #fff;
@@ -477,28 +499,33 @@
     margin-left: 20px;
     margin-bottom: 10px;
 }
-.checkpuinput input{
+
+.checkpuinput input {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #ccc;
 }
-.checkpuinput input:active{
+
+.checkpuinput input:active {
     border: 2px solid #071F60 !important;
 }
-.checvc{
+
+.checvc {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
+
 @media screen and (max-width:990px) {
-    .checvc{
+    .checvc {
         flex-direction: column;
         width: 100%;
         justify-content: center;
     }
 }
-.cardthead{
+
+.cardthead {
     display: flex;
     justify-content: space-between;
     border: 1.5px solid;
@@ -510,27 +537,16 @@
     align-items: center;
     cursor: pointer;
 }
-.cardshopcheck{
+
+.cardshopcheck {
     display: flex;
     align-items: center;
     padding: 10px 20px;
     gap: 10px;
 }
-.cardshopcheck h6{
+
+.cardshopcheck h6 {
     margin-bottom: 0px;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.56);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

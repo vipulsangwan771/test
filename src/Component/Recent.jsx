@@ -31,7 +31,7 @@ const Recent = () => {
     };
     const handleAddToCart = (index, item) => {
         const quantity = quantities[index] || 1; // Get quantity or default to 1
-    
+
         // Create a new item object to be added or updated in the cart
         const newItem = {
             name: item.namee, // Assuming item.alt holds the name of the item
@@ -39,11 +39,11 @@ const Recent = () => {
             price: parseFloat(item.price.replace('£', '')), // Convert price to a number
             quantity: quantity, // Quantity from the user input
         };
-    
+
         // Use the updateCart function from CartContext to update the cart
         updateCart(newItem);
     };
-    
+
 
     const textsettings = {
         dots: false,
@@ -80,10 +80,10 @@ const Recent = () => {
     return (
         <section>
             <div className='w-100 dispfleas' >
-               
-<div>
-    <h1 className='yourew'>You may also like</h1>
-</div>
+
+                <div>
+                    <h1 className='yourew'>You may also like</h1>
+                </div>
                 <div className='texsliddaswqa'>
                     <Slider {...textsettings}>
                         {items.map((item, index) => (

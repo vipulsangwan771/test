@@ -14,7 +14,7 @@ import blosa10 from './Assests/blogsa10.webp';
 
 
 const Blogs = () => {
- 
+
     const blodsliss = {
         dots: true,
         arrows: false,

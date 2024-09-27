@@ -68,8 +68,8 @@ const Shopgm = () => {
     const products = [
         { id: 1, name: 'Goat First Infant Milk', price: 21.00, img: goat1, date: new Date('2023-05-01'), ageGroup: '0-6 months' },
         { id: 2, name: 'Goat Follow-On Milk', price: 21.00, img: goat2, date: new Date('2023-06-15'), ageGroup: '6-12 months' },
-        { id: 3, name: 'Goat Toddler Milk', price:  21.00, img: goat3, date: new Date('2023-04-10'), ageGroup: '12+ months' },
-        { id: 4, name: 'Goat First Infant Milk', price:  21.00, img: goat1, date: new Date('2023-07-20') },
+        { id: 3, name: 'Goat Toddler Milk', price: 21.00, img: goat3, date: new Date('2023-04-10'), ageGroup: '12+ months' },
+        { id: 4, name: 'Goat First Infant Milk', price: 21.00, img: goat1, date: new Date('2023-07-20') },
     ];
 
 
@@ -83,21 +83,21 @@ const Shopgm = () => {
     const [sortType, setSortType] = useState('Featured');
 
     const handleAddToCart = (product) => {
-        const quantity = quantities[product.id]; 
+        const quantity = quantities[product.id];
         if (quantity > 0) {
             updateCart({ ...product, quantity, image: product.img });
         } else {
             alert('Please select a quantity greater than 0');
         }
     };
-    
+
     const handleIncrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
             [productId]: prevQuantities[productId] + 1,
         }));
     };
-    
+
     const handleDecrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
@@ -199,7 +199,7 @@ const Shopgm = () => {
                                                 <img src={product.img} alt={product.name} />
                                             </div>
                                             <div className='imgsedown'>
-                                            <span style={{color:'#d0af71'}}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                                <span style={{ color: '#d0af71' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                                                 <p>{product.name}</p>
                                                 <p>£{product.price}</p>
                                                 <div className='disnobpkl'>
@@ -236,10 +236,10 @@ const Shopgm = () => {
                 <section style={{ overflow: 'hidden' }}>
                     {/* <div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '61px', paddingBottom: '3px', maxWidth: '1024px' }}> */}
                     <Slider {...sho1settings} style={{ paddingTop: '50px', paddingBottom: '3px', maxWidth: '1024px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
-                        
+
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm1} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={gm1} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Plant-Based DHA </p>
@@ -248,7 +248,7 @@ const Shopgm = () => {
 
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm2} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={gm2} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>with GOS</p>
@@ -257,7 +257,7 @@ const Shopgm = () => {
 
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm3} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={gm3} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>award winning</p>
@@ -265,7 +265,7 @@ const Shopgm = () => {
                         </div>
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm4} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={gm4} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>A2 Goat Milk</p>
@@ -273,7 +273,7 @@ const Shopgm = () => {
                         </div>
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={gm5} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={gm5} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Goat Whey</p>
@@ -281,7 +281,7 @@ const Shopgm = () => {
                         </div>
                         <div className='fontt' style={{ marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '115px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth:'60px', margin:'auto' }} src={gm6} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={gm6} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>No Palm Oil </p>

@@ -159,12 +159,14 @@
     max-width: 431px;
     width: 100%;
 }
+
 @media screen and (max-width:990px) {
     .theaf {
         max-width: 100%;
         width: 100%;
     }
 }
+
 .aswsaaq {
     /* max-width: 50%; */
     width: 70%;

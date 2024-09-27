@@ -24,12 +24,12 @@ import mark8 from './Assests/maerq8.png'
 import chekion from './Assests/chekion.webp'
 
 const slides = [
-    { image: polard1,aest: 'Liv |', atext: ' 5-Pack Banana Baby Porridge (4+ months)',  marginLeft: '-2px -21px 0px 22px', rotation: 'rotate(-5deg)', tess: 'Liv absolutely loves this porridge from Kendamil but so do I because it’s soooo easy to make & sometimes that’s just what you need as a busy mum 😍🤝🏼', text: 'Liv absolutely loves this porridge!', imgt: 'Liv' },
-    { image: polard2, aest: 'Beau |',  atext: ' Organic Follow-On Milk', marginLeft: '-2px -17px 0px 18.5px', rotation: 'rotate(-4deg)', tess: 'Beau has been on the follow on milk for a few months now. He absolutely loves Kendamil!', text: 'Beau absolutely loves Kendamil', imgt: 'Beau' },
+    { image: polard1, aest: 'Liv |', atext: ' 5-Pack Banana Baby Porridge (4+ months)', marginLeft: '-2px -21px 0px 22px', rotation: 'rotate(-5deg)', tess: 'Liv absolutely loves this porridge from Kendamil but so do I because it’s soooo easy to make & sometimes that’s just what you need as a busy mum 😍🤝🏼', text: 'Liv absolutely loves this porridge!', imgt: 'Liv' },
+    { image: polard2, aest: 'Beau |', atext: ' Organic Follow-On Milk', marginLeft: '-2px -17px 0px 18.5px', rotation: 'rotate(-4deg)', tess: 'Beau has been on the follow on milk for a few months now. He absolutely loves Kendamil!', text: 'Beau absolutely loves Kendamil', imgt: 'Beau' },
     { image: polard3, aest: 'Arley  |', atext: ' Goat Follow-On Milk', marginLeft: '-2px -27px 0px 25px', rotation: 'rotate(-6deg)', tess: 'With all natural ingredients its the perfect way to transition your little one onto follow on milk. Its also vegetarian-friendly.', text: 'perfect way to transition', imgt: 'Arley' },
-    { image: polard4, aest: 'Hudson | ',  atext: 'Classic Follow-On Milk', marginLeft: '-2px 12.5px 0px -13px', rotation: 'rotate(3deg)', tess: 'Its safe to say Hudson loves Kendamil! He also loves the porridge 😋', text: 'Hudson loves Kendamil', imgt: 'Hudson' },
-    { image: polard5, aest: 'Daphne  |',  atext: ' 5-Pack Banana Baby Porridge (4+ months)',  marginLeft: '-2px -17px 0px 18.5px', rotation: 'rotate(-4deg)', tess: 'Daphne is a breakfast girl and Kendamil Banana Porridge is proving a firm favourite', text: 'proving a firm favourite', imgt: 'Daphne' },
-    { image: polard6, aest: 'Avery  |',  atext: ' Classic Toddler Milk', marginLeft: '-3px 18px 0px -17.5px', rotation: 'rotate(4deg)', tess: 'Avery is a big fan !! We have tried her with other formulas in the past and she wasn’t keen but she genuinely loves kendamil. [Ash is still mainly breastfeeding but] it’s reassuring to know that we have found an alternative with the best ingredients that we can be confident in 😊🙌🏻', text: 'Avery is a big fan!', imgt: 'Avery' }
+    { image: polard4, aest: 'Hudson | ', atext: 'Classic Follow-On Milk', marginLeft: '-2px 12.5px 0px -13px', rotation: 'rotate(3deg)', tess: 'Its safe to say Hudson loves Kendamil! He also loves the porridge 😋', text: 'Hudson loves Kendamil', imgt: 'Hudson' },
+    { image: polard5, aest: 'Daphne  |', atext: ' 5-Pack Banana Baby Porridge (4+ months)', marginLeft: '-2px -17px 0px 18.5px', rotation: 'rotate(-4deg)', tess: 'Daphne is a breakfast girl and Kendamil Banana Porridge is proving a firm favourite', text: 'proving a firm favourite', imgt: 'Daphne' },
+    { image: polard6, aest: 'Avery  |', atext: ' Classic Toddler Milk', marginLeft: '-3px 18px 0px -17.5px', rotation: 'rotate(4deg)', tess: 'Avery is a big fan !! We have tried her with other formulas in the past and she wasn’t keen but she genuinely loves kendamil. [Ash is still mainly breastfeeding but] it’s reassuring to know that we have found an alternative with the best ingredients that we can be confident in 😊🙌🏻', text: 'Avery is a big fan!', imgt: 'Avery' }
 ];
 
 const IMgSlid = () => {
@@ -51,64 +51,64 @@ const IMgSlid = () => {
         cssEase: 'linear',
         responsive: [
             {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-              }
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
             }
-          ]
+        ]
     }
     return (
         <>
-        <div className="slider">
-            <div className="slide-content">
-                <div className="imgbor">
-                    {slides.map((slide, index) => (
-                        <div 
-                            key={index}
-                            style={{
-                                display: index === currentSlide || index > currentSlide ? 'block' : 'none', 
-                                zIndex: index === currentSlide ? 10 : index > currentSlide ? 5 : 1, 
-                                position: index === currentSlide ? 'relative' : 'absolute',
-                                top: 10,
-                                transform: slide.rotation,
-                                margin: slide.marginLeft,
-                                opacity: index === currentSlide ? 1 : 0.9 
-                            }}
-                        >
-                            <img src={slide.image} alt={`Slide ${index}`} style={{ width: '100%' }} />
-                            <p>{slide.imgt}</p>
-                        </div>
-                    ))}
-                </div>
-                <div className='flright'>
-                    <div style={{ marginTop: '5px', marginBottom: '5px' }}>
-                        {[...Array(5)].map((_, i) => (
-                            <svg key={i} width="45" height="45" viewBox="0 0 24 24" fill="#CB4D6A" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2l2.39 7.26L22 9.27l-5.69 4.14L17.89 21 12 16.75 6.11 21l1.58-7.59L2 9.27l7.61-1.01L12 2z" />
-                            </svg>
+            <div className="slider">
+                <div className="slide-content">
+                    <div className="imgbor">
+                        {slides.map((slide, index) => (
+                            <div
+                                key={index}
+                                style={{
+                                    display: index === currentSlide || index > currentSlide ? 'block' : 'none',
+                                    zIndex: index === currentSlide ? 10 : index > currentSlide ? 5 : 1,
+                                    position: index === currentSlide ? 'relative' : 'absolute',
+                                    top: 10,
+                                    transform: slide.rotation,
+                                    margin: slide.marginLeft,
+                                    opacity: index === currentSlide ? 1 : 0.9
+                                }}
+                            >
+                                <img src={slide.image} alt={`Slide ${index}`} style={{ width: '100%' }} />
+                                <p>{slide.imgt}</p>
+                            </div>
                         ))}
                     </div>
-                    <p className="text">{slides[currentSlide].text}</p>
-                    <p className="tesmall">{slides[currentSlide].tess}</p>
-                    <a href="#" className='afletrext'> {slides[currentSlide].aest}
-                    <p className='atrext'>{slides[currentSlide].atext}</p>
-                    </a>
-                    <div className="dots">
-                        {slides.map((_, index) => (
-                            <span
-                                key={index}
-                                className={`dot ${currentSlide === index ? 'active' : ''}`}
-                                onClick={() => handleDotClick(index)}
-                            ></span>
-                        ))}
+                    <div className='flright'>
+                        <div style={{ marginTop: '5px', marginBottom: '5px' }}>
+                            {[...Array(5)].map((_, i) => (
+                                <svg key={i} width="45" height="45" viewBox="0 0 24 24" fill="#CB4D6A" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2l2.39 7.26L22 9.27l-5.69 4.14L17.89 21 12 16.75 6.11 21l1.58-7.59L2 9.27l7.61-1.01L12 2z" />
+                                </svg>
+                            ))}
+                        </div>
+                        <p className="text">{slides[currentSlide].text}</p>
+                        <p className="tesmall">{slides[currentSlide].tess}</p>
+                        <a href="#" className='afletrext'> {slides[currentSlide].aest}
+                            <p className='atrext'>{slides[currentSlide].atext}</p>
+                        </a>
+                        <div className="dots">
+                            {slides.map((_, index) => (
+                                <span
+                                    key={index}
+                                    className={`dot ${currentSlide === index ? 'active' : ''}`}
+                                    onClick={() => handleDotClick(index)}
+                                ></span>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <section>
+            <section>
                 <div style={{ height: '500px', maxHeight: '500px', width: '100%' }}>
                     <video style={{ width: '100%', objectFit: 'cover', height: '500px' }} src={vide} loop="loop" autoplay="autoplay" muted="muted" preload="metadata"></video>
                 </div>

@@ -9,12 +9,12 @@ const Sign = () => {
         <>
             <Navbar />
             <div className='nmensa'>
-                    <a href="#" className='nmensaa'>home/</a>
-                    <a href="#" className='undlin'>account</a>
+                <a href="#" className='nmensaa'>home/</a>
+                <a href="#" className='undlin'>account</a>
 
-                </div>
+            </div>
             <div className='sigmain'>
-          
+
                 <div>
                     <div style={{ backgroundColor: '#D2E6F1', maxWidth: '611px', margin: 'auto' }}>
                         <div className='sinmai'>
@@ -36,7 +36,7 @@ const Sign = () => {
                                         </div>
 
                                         <div className='signforg'>
-                                  <Link to="/forgotpass">          <a href="#aspo">Forgot your password?</a></Link>
+                                            <Link to="/forgotpass">          <a href="#aspo">Forgot your password?</a></Link>
                                         </div>
                                     </div>
 
@@ -45,7 +45,7 @@ const Sign = () => {
                                 <div className='signcreate'>
                                     <p>Don’t have an account?</p>
                                     <div>
-                                    <Link to="/createaccount">     <a href="#aspso" className='sigcreat'>Create an Account</a></Link></div>
+                                        <Link to="/createaccount">     <a href="#aspso" className='sigcreat'>Create an Account</a></Link></div>
                                 </div>
                             </div>
                         </div>

@@ -83,21 +83,21 @@ const Shopom = () => {
     const [sortType, setSortType] = useState('Featured');
 
     const handleAddToCart = (product) => {
-        const quantity = quantities[product.id]; 
+        const quantity = quantities[product.id];
         if (quantity > 0) {
             updateCart({ ...product, quantity, image: product.img });
         } else {
             alert('Please select a quantity greater than 0');
         }
     };
-    
+
     const handleIncrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
             [productId]: prevQuantities[productId] + 1,
         }));
     };
-    
+
     const handleDecrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
@@ -199,7 +199,7 @@ const Shopom = () => {
                                                 <img src={product.img} alt={product.name} />
                                             </div>
                                             <div className='imgsedown'>
-                                            <span style={{color:'#d0af71'}}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                                <span style={{ color: '#d0af71' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                                                 <p>{product.name}</p>
                                                 <p>£{product.price}</p>
                                                 <div className='disnobpkl'>
@@ -235,10 +235,10 @@ const Shopom = () => {
                 <section style={{ overflow: 'hidden' }}>
                     {/* <div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '61px', paddingBottom: '3px', maxWidth: '1024px' }}> */}
                     <Slider {...sho1settings} style={{ paddingTop: '50px', paddingBottom: '3px', maxWidth: '1024px', margin: 'auto', textAlign: 'center', margin: 'auto' }}>
-                        
+
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom1} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={shopom1} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Plant-Based DHA  </p>
@@ -247,7 +247,7 @@ const Shopom = () => {
 
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom2} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={shopom2} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>EU organic  </p>
@@ -256,7 +256,7 @@ const Shopom = () => {
 
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom3} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={shopom3} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>no palm oil</p>
@@ -264,7 +264,7 @@ const Shopom = () => {
                         </div>
                         <div className='fontt' style={{ width: '150.4px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom4} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={shopom4} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>with GOS   </p>
@@ -272,7 +272,7 @@ const Shopom = () => {
                         </div>
                         <div className=' fontt' style={{ width: '154.4px', marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth: '60px', margin:'auto' }} src={shopom5} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={shopom5} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>Whole milk  </p>
@@ -280,7 +280,7 @@ const Shopom = () => {
                         </div>
                         <div className='fontt' style={{ marginRight: '63px', textAlign: 'center' }}>
                             <div className='imamarlef' style={{ maxWidth: '130px', margin: 'auto', marginBottom: '20px' }}>
-                                <img style={{ maxWidth:'60px', margin:'auto' }} src={shopom6} alt="" />
+                                <img style={{ maxWidth: '60px', margin: 'auto' }} src={shopom6} alt="" />
                             </div>
 
                             <p style={{ fontSize: '18px', fontWeight: '600', lineHeight: '23px', color: '#071F60', marginBottom: '15px', textTransform: 'capitalize' }}>British </p>

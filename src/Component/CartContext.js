@@ -6,12 +6,12 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState({ items: [], totalItems: 0, totalPrice: 0 });
     const clearCart = () => {
         setCart(prevCart => ({
-          ...prevCart,
-          items: [],         
-          totalItems: 0  ,
-          totalPrice : 0,
+            ...prevCart,
+            items: [],
+            totalItems: 0,
+            totalPrice: 0,
         }));
-      };
+    };
     // Add or update an item in the cart
     const updateCart = (newItem) => {
         setCart((prevCart) => {
@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
             if (existingItemIndex >= 0) {
                 updatedItems = prevCart.items.map((item, index) =>
                     index === existingItemIndex
-                        ? { ...item, quantity: item.quantity + newItem.quantity, image: newItem.image } 
+                        ? { ...item, quantity: item.quantity + newItem.quantity, image: newItem.image }
                         : item
                 );
             } else {
@@ -40,7 +40,7 @@ export const CartProvider = ({ children }) => {
         setCart((prevCart) => {
             const updatedItems = prevCart.items.map(item =>
                 item.name === name
-                    ? { ...item, quantity: Math.max(item.quantity + quantity, 0) } 
+                    ? { ...item, quantity: Math.max(item.quantity + quantity, 0) }
                     : item
             ).filter(item => item.quantity > 0);
 
@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
         });
     };
 
- 
+
     const removeItem = (name) => {
         setCart((prevCart) => {
             const updatedItems = prevCart.items.filter(item => item.name !== name);

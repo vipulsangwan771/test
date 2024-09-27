@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import logo from './Assests/logo.svg';
 import logo2 from './Assests/logo2.avif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faBars} from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
 import './Nav.css';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
@@ -216,8 +216,8 @@ const Navbar = () => {
                                     <circle cx="9.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
                                     <circle cx="21.5" cy="22" r="3" fill="white" stroke="#071F60" strokeWidth="2"></circle>
                                 </svg>
-                            </Link> 
-                          <span style={{paddingLeft:'2px', fontWeight:'600'}}>({cart.totalItems})</span>
+                            </Link>
+                            <span style={{ paddingLeft: '2px', fontWeight: '600' }}>({cart.totalItems})</span>
                         </div>
                     </div>
                 </div>
@@ -242,11 +242,7 @@ const Navbar = () => {
                 )}
 
             </section>
-
-
-
-
-
+            
             <section className='nabloon'>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className='w-100 mx-auto '>
                     <div style={{ display: 'flex', justifyContent: 'flex-start', width: '30%' }}>

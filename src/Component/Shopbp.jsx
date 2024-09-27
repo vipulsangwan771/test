@@ -91,21 +91,21 @@ const Shopbp = () => {
     const [sortType, setSortType] = useState('Featured');
 
     const handleAddToCart = (product) => {
-        const quantity = quantities[product.id]; 
+        const quantity = quantities[product.id];
         if (quantity > 0) {
             updateCart({ ...product, quantity, image: product.img });
         } else {
             alert('Please select a quantity greater than 0');
         }
     };
-    
+
     const handleIncrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
             [productId]: prevQuantities[productId] + 1,
         }));
     };
-    
+
     const handleDecrement = (productId) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
@@ -207,7 +207,7 @@ const Shopbp = () => {
                                                 <img src={product.img} alt={product.name} />
                                             </div>
                                             <div className='imgsedown'>
-                                            <span style={{color:'#d0af71'}}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                                <span style={{ color: '#d0af71' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                                                 <p>{product.name}</p>
                                                 <p>£{product.price}</p>
                                                 <div className='disnobpkl'>

@@ -14,7 +14,6 @@ import Badge from 'react-bootstrap/Badge';
 import Accordion from 'react-bootstrap/Accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
@@ -178,7 +177,7 @@ const CheckoutForm = () => {
   const [isCardNumberFocused, setIsCardNumberFocused] = useState(false);
   const [isCardExpiryFocused, setIsCardExpiryFocused] = useState(false);
   const [isCardCvcFocused, setIsCardCvcFocused] = useState(false);
-  
+
   const handleCardNumberFocus = () => setIsCardNumberFocused(true);
   const handleCardNumberBlur = () => setIsCardNumberFocused(false);
 

@@ -18,6 +18,7 @@
         align-items: flex-start !important;
         padding-top: 13px !important;
     }
+
     .sigmain {
         padding-bottom: 15px !important;
     }
@@ -159,23 +160,27 @@
         margin-top: 25px !important;
     }
 }
-.signcreate{
+
+.signcreate {
     border-top: 1px solid #60aed8;
     padding-top: 30px;
     padding-bottom: 20px;
     margin-top: 10px;
 }
-.signcreate a{
+
+.signcreate a {
     text-decoration: none;
 }
-.signcreate p{
+
+.signcreate p {
     font-size: 20px;
     text-align: center;
     margin-bottom: 28px;
-    color: #071F60;  
-      font-family: 'Libre Baskerville', 'serif';
+    color: #071F60;
+    font-family: 'Libre Baskerville', 'serif';
 }
-.sigcreat{
+
+.sigcreat {
     padding: 10px 28px;
     transition: all .5s;
     max-height: 45px;
@@ -186,42 +191,28 @@
     border: 2px solid #071F60;
 }
 
-.sigcreat:hover{
+.sigcreat:hover {
     background-color: #071F60;
     color: #fff;
 }
-.nmensa{
+
+.nmensa {
     display: flex;
     align-items: center;
     margin-left: 50px;
     padding-top: 100px;
 }
-.nmensaa{
+
+.nmensaa {
     text-decoration: none;
     opacity: .2;
     color: #071F60;
 }
-.nmensa a{
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  font-family: 'Open Sans', 'sans-serif' !important;
-  color: #071F60 !important;
+
+.nmensa a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Open Sans', 'sans-serif' !important;
+    color: #071F60 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

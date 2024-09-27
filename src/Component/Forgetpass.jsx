@@ -10,7 +10,7 @@ const Forgetpass = () => {
             <Navbar />
             <div className='nmensa'>
                 <a href="#" className='nmensaa'>home/</a>
-      <Link to="/sign">          <a href="#" className='undlin'>account</a></Link>
+                <Link to="/sign">          <a href="#" className='undlin'>account</a></Link>
 
             </div>
             <div className='sigmain'>
@@ -26,7 +26,7 @@ const Forgetpass = () => {
                                     <input className='signinoufor' type="email" placeholder='email address*' required />
 
 
-                              <Link to="/sign">      <button className='signbutoisnforbut'>reset password</button></Link>
+                                    <Link to="/sign">      <button className='signbutoisnforbut'>reset password</button></Link>
                                 </form>
                                 <div className='signcreatefasd'>
                                     <p>don’t have an account?</p>

@@ -1,4 +1,4 @@
-.texslid h3{
+.texslid h3 {
     padding-top: 50px;
     padding-left: 50px;
     max-width: 329px !important;
@@ -7,7 +7,8 @@
     color: #071F60;
     font-family: 'Open Sans', 'sans-serif' !important;
 }
-.texslid p{
+
+.texslid p {
     font-size: 17px;
     max-width: 329px !important;
     line-height: 23px;
@@ -18,24 +19,26 @@
     padding-bottom: 30px;
     font-weight: 500;
 }
-.texslidd{
+
+.texslidd {
     padding-top: 50px;
     padding-left: 46px;
     width: 76%;
     padding-bottom: 110px;
 }
 
-.slidtext{
+.slidtext {
     width: 100%;
     max-width: 600px !important;
     padding: 50px !important;
 }
 
-.hmainq{
+.hmainq {
     padding-left: 50px;
     margin-top: 40px;
 }
-.hmainq a{
+
+.hmainq a {
     padding: 10px 28px;
     transition: all .5s;
     background-color: #fff;
@@ -47,7 +50,7 @@
     font-size: 18px;
 }
 
-.hmainq a:hover{
+.hmainq a:hover {
     color: #fff;
     background-color: #071F60;
     border: 1px solid #071F60;
@@ -55,7 +58,7 @@
     transition: all .5s;
 }
 
-.clabsol a{
+.clabsol a {
     text-decoration: none;
     color: #071F60;
     background-color: #D4B2E2;
@@ -65,27 +68,27 @@
     border-radius: 4px;
 }
 
-.clabsol{
+.clabsol {
     position: absolute;
     top: 8px;
 }
 
-.visihidd{
-  display: none;
+.visihidd {
+    display: none;
 }
 
-.visisho:hover .visihidd{
+.visisho:hover .visihidd {
     display: block;
 }
 
-.claso{
+.claso {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
 
-.dispfle{
+.dispfle {
     display: flex;
     overflow: hidden;
     height: 550px;
@@ -93,20 +96,21 @@
 }
 
 @media screen and (max-width: 769px) {
-    .dispfle{
+    .dispfle {
         flex-direction: column;
         height: 100% !important;
     }
-    .texslid h3{
+
+    .texslid h3 {
         font-size: 25px !important;
         text-align: center !important;
     }
 
-    .texslid{
+    .texslid {
         text-align: center !important;
     }
 
-    .texslid p{
+    .texslid p {
         font-size: 14px;
         max-width: 529px !important;
         line-height: 23px;
@@ -115,55 +119,55 @@
         padding-right: 20px;
     }
 
-    .hmainq{
+    .hmainq {
         padding-left: 0px !important;
         display: none;
     }
 
-    .texslidd{
+    .texslidd {
         padding-left: 20px !important;
         width: 100%;
         padding-top: 20px !important;
         padding-bottom: 50px;
     }
 
-    .visihidd{
+    .visihidd {
         display: block !important;
-      }
+    }
 
-      .fobto{
+    .fobto {
         width: 110% !important;
-      }
+    }
 }
 
-.fobto{
+.fobto {
     border: 1px solid black;
-     margin-left: 10px;
-      margin-right: 10px;
-       padding: 7px 5px;
-        width: 62%;
-         align-items: center; 
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 7px 5px;
+    width: 62%;
+    align-items: center;
 
 }
 
 @media screen and (max-width:1215px) and (min-width:990px) {
-    .fobto{
+    .fobto {
         width: 130% !important;
-      }
+    }
 
-      .addtbton{
+    .addtbton {
         margin-right: 10px;
         font-size: 13px !important;
         padding: 10px 16px !important;
-      }
+    }
 }
 
-.addtbton{
+.addtbton {
     margin-right: 9px;
-     font-size: 15px;
-     padding: 10px 28px;
-      background-color: #071F60;
-       border: 1px solid #071F60;
-        color: #fff;
-         cursor: pointer ;
+    font-size: 15px;
+    padding: 10px 28px;
+    background-color: #071F60;
+    border: 1px solid #071F60;
+    color: #fff;
+    cursor: pointer;
 }

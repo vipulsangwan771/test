@@ -1,23 +1,25 @@
-.catrma{
+.catrma {
     width: 100%;
     padding-bottom: 40px;
     padding-top: 30px;
 }
-.cartphea{
-    padding: 10px 0px ;
+
+.cartphea {
+    padding: 10px 0px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
 }
-.cartphea p{
-    color: #071F60;    
+
+.cartphea p {
+    color: #071F60;
     font-family: 'Open Sans', 'sans-serif' !important;
-    font-size: 15px ;
+    font-size: 15px;
     line-height: 23px;
     font-weight: 600;
 }
 
-.yourcar{
+.yourcar {
     font-size: 42px;
     line-height: 45px;
     margin-bottom: 30px;
@@ -25,23 +27,26 @@
     color: #071F60;
     padding-left: 200px;
 }
+
 .dyitmlef {
     padding-right: 50px;
     scrollbar-width: none;
-    -ms-overflow-style: none;  
+    -ms-overflow-style: none;
 }
 
 .dyitmlef::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
-.cltomakscroll{
+
+.cltomakscroll {
     height: 300px;
     overflow-y: scroll;
-    
+
     scrollbar-width: none;
-    -ms-overflow-style: none; 
+    -ms-overflow-style: none;
 }
-.cartbeffle{
+
+.cartbeffle {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -50,30 +55,36 @@
     margin: auto;
     padding-bottom: 80px;
 }
+
 @media screen and (max-width:990px) {
-    .yourcar{
+    .yourcar {
         font-size: 35px;
         line-height: 28px;
         margin-bottom: 30px;
         padding-left: 15px;
     }
-.cartbeffle{
-    flex-direction: column !important;
+
+    .cartbeffle {
+        flex-direction: column !important;
+    }
+
+    .dyitmrig {
+        padding-left: 15px !important;
+        padding-right: 15px;
+    }
+
+    .dyitmlef {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
-.dyitmrig{
-    padding-left: 15px !important;
-    padding-right: 15px;
-}
-.dyitmlef{
-    padding-right: 15px;
-    padding-left: 15px;
-}
-}
-.dyitmrig{
+
+.dyitmrig {
     padding-left: 50px;
     border-left: 1px solid #ccc;
 }
-.odesymp{
+
+.odesymp {
     text-align: center;
     color: #071F60;
     margin-bottom: 0px;
@@ -84,34 +95,39 @@
     border-bottom: 1px solid rgb(165, 164, 164) !important;
     font-family: 'Open Sans', 'sans-serif' !important;
 }
-.rigordval{
+
+.rigordval {
     padding-top: 20px;
 }
-.carsubtot{
+
+.carsubtot {
     border-top: 1px solid #ccc;
     padding-top: 20px;
     padding-bottom: 40px;
 }
-.carsubtot p{
-    
+
+.carsubtot p {
+
     color: #071F60;
     font-weight: 600;
-    font-family: 'Open Sans', 'sans-serif' !important;
-}
-.shipcll p{
-    color: #071F60;
-    font-weight: 600;
- 
     font-family: 'Open Sans', 'sans-serif' !important;
 }
 
-.empmess{
+.shipcll p {
     color: #071F60;
     font-weight: 600;
- padding-top: 30px;
+
     font-family: 'Open Sans', 'sans-serif' !important;
 }
-.procyocheck{
+
+.empmess {
+    color: #071F60;
+    font-weight: 600;
+    padding-top: 30px;
+    font-family: 'Open Sans', 'sans-serif' !important;
+}
+
+.procyocheck {
     text-align: center;
     width: 100%;
     color: #fff;
@@ -121,104 +137,55 @@
     background-color: #071F60;
     transition: all 0.5s;
     padding: 10px 28px;
-    border: 1px solid  #071F60 !important;
+    border: 1px solid #071F60 !important;
 }
-.procyocheck:hover{
+
+.procyocheck:hover {
     color: #071F60;
     background-color: #fff;
 }
-.dyitmrigdi a{
+
+.dyitmrigdi a {
     max-width: 100px;
     margin: auto;
     color: #071F60;
     font-weight: 600;
     font-family: 'Open Sans', 'sans-serif' !important;
 }
-.imgsvgchs{
+
+.imgsvgchs {
     margin-bottom: 30px;
 }
-.evyimante{
+
+.evyimante {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     border-bottom: 1px solid #ccc;
 }
-.indeccart{
+
+.indeccart {
     border: 1px solid #071F60;
 }
 
-.indeccart p{
-   padding: 10px 15px;
-   margin-bottom: 0px;
-   font-family: 'Open Sans', 'sans-serif' !important;
+.indeccart p {
+    padding: 10px 15px;
+    margin-bottom: 0px;
+    font-family: 'Open Sans', 'sans-serif' !important;
 }
-.itnm{
+
+.itnm {
     color: #071F60;
     font-size: 15px;
     font-weight: 600;
     font-family: 'Open Sans', 'sans-serif' !important;
 }
-.pricar{
+
+.pricar {
     color: #071F60;
     font-size: 15px;
     font-weight: 600;
     font-family: 'Open Sans', 'sans-serif' !important;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

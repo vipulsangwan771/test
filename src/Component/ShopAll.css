@@ -256,6 +256,7 @@
     padding-left: 165px;
     padding-right: 165px;
 }
+
 .bogslimpadd {
     padding-left: 165px;
 }
@@ -264,6 +265,7 @@
     .bogslimpadd {
         padding-left: 15px !important;
     }
+
     .bogslimpaddom {
         padding-left: 16px !important;
         padding-right: 16px !important;
@@ -501,21 +503,25 @@
         line-height: 18px;
         padding-bottom: 50px;
     }
-    .imamarlef{
+
+    .imamarlef {
         max-width: 60px !important;
         margin: auto;
     }
 }
-.imamarlefqwmkl{
+
+.imamarlefqwmkl {
     max-width: 70px;
     margin: auto;
     margin-bottom: 20px;
 }
-.imamarlef{
+
+.imamarlef {
     max-width: 130px;
     margin: auto;
     margin-bottom: 20px;
 }
+
 .shoaii {
     width: 100%;
     display: flex;
@@ -578,9 +584,11 @@
         padding-left: 13px;
         padding-right: 13px;
     }
+
     .shapal img {
         height: 180px;
     }
+
     .shoaii {
         padding-left: 16px;
         padding-right: 16px;
@@ -594,9 +602,11 @@
     .buoidecooi span {
         display: block !important;
     }
-    .disnobpkl{
+
+    .disnobpkl {
         display: block !important;
     }
+
     .imgsedown p {
         font-size: 12px !important;
     }
@@ -671,20 +681,15 @@
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.asshapal .disnobpkl{
-display: none;
+
+.asshapal .disnobpkl {
+    display: none;
 }
-.asshapal:hover .disnobpkl{
-    display: block ;
+
+.asshapal:hover .disnobpkl {
+    display: block;
 }
-.fontt{
+
+.fontt {
     padding: 10px;
 }
-
-
-
-
-
-
-
-
