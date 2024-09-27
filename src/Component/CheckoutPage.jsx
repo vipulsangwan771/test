@@ -390,7 +390,7 @@ const CheckoutForm = () => {
                                           </Tooltip>
                                         }
                                       >
-                                        <Button variant="secondary" style={{ color: '#000', background: '#fff', backgroundColor: "#fff", padding: '5px' }}>+4</Button>
+                                        <Button variant="secondary" style={{ color: '#071F60', fontSize:'12px', background: '#fff', backgroundColor: "#fff", padding: '5px' }}>+4</Button>
                                       </OverlayTrigger>
                                     </div>
                                   </div>
