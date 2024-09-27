@@ -17,12 +17,13 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 // Load Stripe using your publishable key
 const stripePromise = loadStripe('');
 
 const CheckoutForm = () => {
   const { cart, clearCart } = useCart();
-  const [clientSecret, setClientSecret] = useState('');
+  // const [clientSecret, setClientSecret] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
@@ -303,13 +304,18 @@ const CheckoutForm = () => {
                   </div>
 
                   <div>
-                    <input type="email" id="email" name="email" placeholder='Email' required className='maiccheinput' value={email} onChange={(e) => setEmail(e.target.value)} />
-
+                    <FloatingLabel
+                      controlId="floatingEmail"
+                      label="Email "
+                      className="mb-3"
+                    >
+                      <Form.Control type="email" placeholder="Email" name="email" required className='maiccheinput' value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </FloatingLabel>
                   </div>
 
                   <div className='checheboxas'>
                     <div>
-                      <input type="checkbox" name="" id="" checked />
+                      <input type="checkbox" defaultChecked />
                     </div>
                     <div>
                       <p>Email me with news and offers</p>
@@ -321,32 +327,44 @@ const CheckoutForm = () => {
                     <p className='checkdeli'> <strong>Delivery</strong></p>
 
                     <div className='marb'>
-                      <Form.Select className='chopt' aria-label="Default select example" required>
+                      <Form.Select className='chopt' aria-label="Country/Region" required>
                         <option>Country/Region</option>
                         <option value="1">India</option>
                       </Form.Select>
                     </div>
                     <div className='chenamertya' style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
                       <div className='chename w-100'>
-                        <input type="text" placeholder='Name' id="name" name="name" required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                        <FloatingLabel controlId="floatingFirstName" label="First Name">
+                          <Form.Control type="text" placeholder="Name" name="name" required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                        </FloatingLabel>
                       </div>
                       <div className='chename w-100'>
-                        <input type="text" placeholder='Last name' id="name" name="name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                        <FloatingLabel controlId="floatingLastName" label="Last Name">
+                          <Form.Control type="text" placeholder="Last name" name="name" required value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                        </FloatingLabel>
                       </div>
                     </div>
                     <div>
-                      <input className='maiccheinput ' type="text" placeholder='Apartment,suite,etc.(optional)' value={address} onChange={(e) => setAddress(e.target.value)} />
+                      <FloatingLabel controlId="floatingApartment" label="Apartment, suite, etc. (optional)" className="mb-3">
+                        <Form.Control type="text" className='maiccheinput ' placeholder="Apartment,suite,etc.(optional)" required value={address} onChange={(e) => setAddress(e.target.value)} />
+                      </FloatingLabel>
                     </div>
                     <div className='chenamertya' style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
                       <div className='chename w-100' >
-                        <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required />
+                        <FloatingLabel controlId="floatingCity" label="City">
+                          <Form.Control type="text" placeholder="City" required value={city} onChange={(e) => setCity(e.target.value)} />
+                        </FloatingLabel>
                       </div>
                       <div className='chename w-100' >
-                        <input type="text" placeholder='Postal code' value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required />
+                        <FloatingLabel controlId="floatingPostalCode" label="Postal Code">
+                          <Form.Control type="text" placeholder="Postal code" required value={postalCode} onChange={(e) => setPostalCode(e.target.value)} />
+                        </FloatingLabel>
                       </div>
                     </div>
                     <div style={{ marginTop: '15px' }}>
-                      <input type="text" className='maiccheinput' placeholder='Phone(optional)' name="" id="" />
+                      <FloatingLabel controlId="floatingPhone" label="Phone (optional)">
+                        <Form.Control type="text" className='maiccheinput' placeholder="Phone(optional)" />
+                      </FloatingLabel>
                     </div>
 
                     <div style={{ marginTop: '30px' }}>
@@ -390,7 +408,7 @@ const CheckoutForm = () => {
                                           </Tooltip>
                                         }
                                       >
-                                        <Button variant="secondary" style={{ color: '#071F60', fontSize:'12px', background: '#fff', backgroundColor: "#fff", padding: '5px' }}>+4</Button>
+                                        <Button variant="secondary" style={{ color: '#071F60', fontSize: '12px', background: '#fff', backgroundColor: "#fff", padding: '5px' }}>+4</Button>
                                       </OverlayTrigger>
                                     </div>
                                   </div>
@@ -412,7 +430,12 @@ const CheckoutForm = () => {
                                     </div>
                                   </div>
                                   <div className='checkpuinput'>
-                                    <input type="text" placeholder='Name on card' name='name' required id='name' />
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Name on card"
+                                    >
+                                      <Form.Control type="text" className='maiccheinput' name='name' placeholder="Name on card" required />
+                                    </FloatingLabel>
                                   </div>
                                   <div className='cardshopcheck'>
                                     <input type="checkbox" required defaultChecked />
