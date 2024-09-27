@@ -373,7 +373,8 @@
     .aslpoi {
         margin-top: -298px !important;
     }
-    .padtopbigsmall{
+
+    .padtopbigsmall {
         padding-top: 88px !important;
     }
 }
@@ -584,6 +585,6 @@
 
 }
 
-.padtopbigsmall{
+.padtopbigsmall {
     padding-top: 94px;
 }

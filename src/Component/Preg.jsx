@@ -131,9 +131,6 @@ const Preg = () => {
                 </div>
             </section>
 
-
-
-
             <section style={{ backgroundColor: '#fff', paddingTop: '50px', paddingBottom: '40px', overflow: 'hidden' }}>
                 <div className='preg'>
                     <h1>articles tagged with: Pregnancy</h1>
@@ -315,16 +312,6 @@ const Preg = () => {
                 </div>
             </section>
 
-
-
-
-
-
-
-
-
-
-
             <section style={{ backgroundColor: '#FDFBF9', paddingTop: '50px', paddingBottom: '40px', overflow: 'hidden' }}>
                 <div className='blodsl1h1'>
                     <h1>popular topics</h1>
@@ -404,7 +391,6 @@ const Preg = () => {
 
             <Blogs />
 
-
             <section style={{ backgroundColor: '#B4D2DF' }}>
                 <div className='bloglassec'>
                     <div className=" clbloasg">
@@ -413,7 +399,7 @@ const Preg = () => {
                             <p>sign up to our newsletter for all our parenting tips and tricks, as well as being the first to hear all about new products and exclusive offers. </p>
                             <form action="#search" className='aboutform'>
                                 <div className='blogbutt' style={{ position: 'relative' }}>
-                                    <input type="email" placeholder='Enter your Email' required />
+                                    <input type="email"  name='email' id='email' placeholder='Enter your Email' required />
                                     <button className='btnaawq'><FontAwesomeIcon icon={faArrowRight} /></button>
 
                                 </div>

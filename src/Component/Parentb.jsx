@@ -71,7 +71,6 @@ const Parentb = () => {
         afterChange: (index) => setCurrentPage(index + 1),
     };
 
-
     const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
     const endPage = Math.min(totalPages, startPage + visiblePages - 1);
     const sliderRef = useRef(null);
@@ -140,9 +139,6 @@ const Parentb = () => {
                     </div>
                 </div>
             </section>
-
-
-
 
             <section style={{ backgroundColor: '#fff', paddingTop: '50px', paddingBottom: '40px', overflow: 'hidden' }}>
                 <div className='preg'>
@@ -400,16 +396,6 @@ const Parentb = () => {
                 </div>
             </section>
 
-
-
-
-
-
-
-
-
-
-
             <section style={{ backgroundColor: '#FDFBF9', paddingTop: '50px', paddingBottom: '40px', overflow: 'hidden' }}>
                 <div className='blodsl1h1'>
                     <h1>popular topics</h1>
@@ -489,7 +475,6 @@ const Parentb = () => {
 
             <Blogs />
 
-
             <section style={{ backgroundColor: '#B4D2DF' }}>
                 <div className='bloglassec'>
                     <div className=" clbloasg">
@@ -498,7 +483,7 @@ const Parentb = () => {
                             <p>sign up to our newsletter for all our parenting tips and tricks, as well as being the first to hear all about new products and exclusive offers. </p>
                             <form action="#search" className='aboutform'>
                                 <div className='blogbutt' style={{ position: 'relative' }}>
-                                    <input type="email" placeholder='Enter your Email' required />
+                                    <input type="email" placeholder='Enter your Email'   name='email' id='email' required />
                                     <button className='btnaawq'><FontAwesomeIcon icon={faArrowRight} /></button>
 
                                 </div>
@@ -508,7 +493,6 @@ const Parentb = () => {
                     </div>
                 </div>
             </section>
-
 
             <div className='aslpoi'>
                 <Footer />
