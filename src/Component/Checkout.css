@@ -215,32 +215,10 @@
     color: #071F60;
 }
 
-.checanel {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.56);
-    font-family: 'Recoleta', serif;
-    margin-top: 30px;
-}
-
 .checanelewq {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.56);
     font-family: 'Recoleta', serif;
-}
-
-.checanelty {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.56);
-    font-family: 'Recoleta', serif;
-    margin-top: 20px;
-    margin-bottom: 60px;
-}
-.checanelty a{
-    font-size: 14px;
-    color: #071F60;
-    font-family: 'Recoleta', serif;
-    margin-top: 20px;
-    margin-bottom: 60px;
 }
 
 .chelastpag {
@@ -398,7 +376,36 @@
 .diblononche .accordion-button::after {
     display: none;
 }
-
+.cardacord  .accordion-button {
+    background-color: #F4F4F4;
+    display: block !important;
+    padding: 0px 0px !important;
+}
+.cardacord  .accordion-header button{   
+    outline: none !important;
+    border: none !important;
+    background-color: #F4F4F4 !important;
+    cursor: pointer;
+    border-bottom: 0px !important
+    ;
+}
+.cardacord .accordion-item {
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    border-width: 0.5px !important;
+    border-radius: 0px !important;
+}
+.cardacord .accordion-body{
+    background-color: #F4F4F4 !important;
+    border: none !important;
+    outline: none;
+    padding: 16px 0px !important;
+    border-bottom-left-radius: 4px !important; 
+    border-bottom-right-radius: 4px !important;
+}
 .cheacorhecfe{
     font-size: 14px !important;
     font-weight: 400;
@@ -438,17 +445,81 @@
 .chedisnoanblo{
     display: none;
 }
+.checkcardnumb{
+    border: 2px solid #ccc;
+    padding: 14px 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
+.checkcardnumb:active{
+    border: 2px solid #071F60 !important;
+    padding: 14px 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+.chechlavl{
+    width: 100%;
+    color: #071F60;
+    cursor: pointer;
+}
 
-
-
-
-
-
-
-
-
-
-
+.checkpuinput{
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.checkpuinput input{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+}
+.checkpuinput input:active{
+    border: 2px solid #071F60 !important;
+}
+.checvc{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:990px) {
+    .checvc{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+}
+.cardthead{
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid;
+    width: 100%;
+    padding: 15px 20px;
+    color: #071F60;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+.cardshopcheck{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+}
+.cardshopcheck h6{
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.56);
+}
 
 
 
