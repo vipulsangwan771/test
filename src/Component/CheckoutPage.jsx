@@ -178,7 +178,7 @@ const CheckoutForm = () => {
   const [isCardNumberFocused, setIsCardNumberFocused] = useState(false);
   const [isCardExpiryFocused, setIsCardExpiryFocused] = useState(false);
   const [isCardCvcFocused, setIsCardCvcFocused] = useState(false);
-
+  
   const handleCardNumberFocus = () => setIsCardNumberFocused(true);
   const handleCardNumberBlur = () => setIsCardNumberFocused(false);
 
