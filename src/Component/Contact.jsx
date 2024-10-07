@@ -23,15 +23,11 @@ const Contact = () => {
         }
 
         // Log submissions
-        console.log('Previous Submissions:');
-        if (isLoading) {
-            console.log('Loading...');
-        } else {
-            submissions.forEach(submission => {
-                console.log(`${submission.name} - ${submission.email}`);
-            });
-        }
-    }, [error, isLoading, submissions]);
+        // console.log('Previous Submissions:');
+        // if (isLoading) {
+        //     console.log('Loading...');
+        // } 
+    }, [error, isLoading]);
 
     const fetchSubmissions = async () => {
         setIsLoading(true);
