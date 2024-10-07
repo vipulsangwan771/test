@@ -3,21 +3,64 @@ const Stripe = require('stripe');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config();
+const mongoose = require('mongoose');
+
+const app = express();
+
+// contact submissions
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
+app.use(express.json());
+mongoose.connect('mongodb://localhost:27017/tryself', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log('Connected to MongoDB');
+}).catch(err => {
+    console.error('MongoDB connection error:', err);
+});
+
+// Define schema and model for your submissions
+const SubmissionSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    message: String
+});
+
+const Submission = mongoose.model('Submission', SubmissionSchema);
+app.post('/api/submissions', async (req, res) => {
+    try {
+        const submission = new Submission(req.body);
+        await submission.save();
+        res.status(201).json(submission);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+
+app.get('/api/submissions', async (req, res) => {
+    try {
+        const submissions = await Submission.find();
+        res.json(submissions);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+// contact submissions ends here
 
 if (!process.env.STRIPE_SECRET_KEY) {
     throw new Error("STRIPE_SECRET_KEY environment variable is missing.");
 }
 
-const app = express();
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
-app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Stripe Checkout API');
 });
-
+//Payment code
 app.post('/create-payment-intent', async (req, res) => {
     const { lineItems, customerName, customerAddress } = req.body;
 
