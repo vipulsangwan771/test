@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// contact submissions
+// contact submissions star
 app.use(cors({
     origin: 'http://localhost:3000'
 }));
@@ -58,7 +58,7 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the Stripe Checkout API');
+    res.send('Welcome to the Stripe Checkout API, Your server is Online');
 });
 //Payment code
 app.post('/create-payment-intent', async (req, res) => {
