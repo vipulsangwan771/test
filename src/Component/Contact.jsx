@@ -14,7 +14,7 @@ const Contact = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const API_URL = 'http://localhost:3100/api/submissions';
+    const API_URL = 'http://localhost:3100/contact/submissions';
 
     useEffect(() => {
         // Log error if any
@@ -60,7 +60,7 @@ const Contact = () => {
             if (!response.ok) throw new Error('Failed to submit form');
 
             const result = await response.json();
-            console.log('Form submitted:', result);
+            // console.log('Form submitted:', result);
 
             setFormData({ name: '', email: '', message: '' });
             fetchSubmissions();
